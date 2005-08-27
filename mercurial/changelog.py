@@ -1,19 +1,16 @@
 
-copyrev: 79bd2e10567756efea8c5a37c31369910f170772
+copyrev: 32f05a0058761e6ada90fbb2a4c2970942e318eb
 copy: mercurial/hg.py
 
-# hg.py - repository classes for mercurial
+# changelog.py - changelog class for mercurial
 #
 # Copyright 2005 Matt Mackall <mpm@selenic.com>
 #
 # This software may be used and distributed according to the terms
 # of the GNU General Public License, incorporated herein by reference.
 
-import sys, struct, os
-import util
+import os, time
 from revlog import *
-from demandload import *
-demandload(globals(), "time")
 
 class changelog(revlog):
     def __init__(self, opener):
