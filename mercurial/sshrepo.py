@@ -1,7 +1,3 @@
-
-copyrev: 32f05a0058761e6ada90fbb2a4c2970942e318eb
-copy: mercurial/hg.py
-
 # sshrepo.py - ssh repository proxy class for mercurial
 #
 # Copyright 2005 Matt Mackall <mpm@selenic.com>
@@ -10,6 +6,8 @@ copy: mercurial/hg.py
 # of the GNU General Public License, incorporated herein by reference.
 
 import os, re, select
+from node import *
+from remoterepo import *
 
 class sshrepository(remoterepository):
     def __init__(self, ui, path):
