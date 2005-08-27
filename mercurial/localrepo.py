@@ -1,5 +1,5 @@
 
-copyrev: 32f05a0058761e6ada90fbb2a4c2970942e318eb
+copyrev: 66dd66c860ab1c3ff9100759026be48b97942631
 copy: mercurial/hg.py
 
 # localrepo.py - read/write repository class for mercurial
@@ -16,7 +16,7 @@ from demandload import *
 demandload(globals(), "re lock transaction tempfile stat mdiff")
 
 class localrepository:
-    def __init__(self, ui, opener, path=None, create=0):
+    def __init__(self, ui, path=None, create=0):
         if not path:
             p = os.getcwd()
             while not os.path.isdir(os.path.join(p, ".hg")):
@@ -36,8 +36,8 @@ class localrepository:
             os.mkdir(self.path)
             os.mkdir(self.join("data"))
 
-        self.opener = opener(self.path)
-        self.wopener = opener(self.root)
+        self.opener = util.opener(self.path)
+        self.wopener = util.opener(self.root)
         self.manifest = manifest.manifest(self.opener)
         self.changelog = changelog.changelog(self.opener)
         self.tagscache = None
