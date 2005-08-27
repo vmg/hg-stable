@@ -1,5 +1,5 @@
 
-copyrev: 79bd2e10567756efea8c5a37c31369910f170772
+copyrev: 8153b78f8a16f257ee0a238e2c112be38bcb8d09
 copy: mercurial/hg.py
 
 """
@@ -11,8 +11,8 @@ This software may be used and distributed according to the terms
 of the GNU General Public License, incorporated herein by reference.
 """
 
-import sys, struct, os
-from revlog import *
+import struct, os
+from node import *
 from demandload import *
 demandload(globals(), "time bisect stat util")
 
