@@ -1,5 +1,5 @@
 
-copyrev: 79bd2e10567756efea8c5a37c31369910f170772
+copyrev: 32f05a0058761e6ada90fbb2a4c2970942e318eb
 copy: mercurial/hg.py
 
 # localrepo.py - read/write repository class for mercurial
@@ -9,14 +9,14 @@ copy: mercurial/hg.py
 # This software may be used and distributed according to the terms
 # of the GNU General Public License, incorporated herein by reference.
 
-import sys, struct, os, util
+import struct, os, util
 from repo import *
 from revlog import *
 from filelog import *
 from manifest import *
 from changelog import *
-from demandload import *
 from dirstate import *
+from demandload import *
 demandload(globals(), "re lock transaction tempfile stat")
 
 class localrepository:
@@ -1327,8 +1327,8 @@ class localrepository:
             try:
                 delta = mdiff.patchtext(self.manifest.delta(n))
             except KeyboardInterrupt:
-                self.ui.warn("aborted")
-                sys.exit(0)
+                self.ui.warn("interrupted")
+                raise
             except Exception, inst:
                 self.ui.warn("unpacking manifest %s: %s\n"
                              % (short(n), inst))
