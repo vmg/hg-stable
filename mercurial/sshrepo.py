@@ -1,8 +1,8 @@
 
-copyrev: 79bd2e10567756efea8c5a37c31369910f170772
+copyrev: 32f05a0058761e6ada90fbb2a4c2970942e318eb
 copy: mercurial/hg.py
 
-# hg.py - repository classes for mercurial
+# sshrepo.py - ssh repository proxy class for mercurial
 #
 # Copyright 2005 Matt Mackall <mpm@selenic.com>
 #
