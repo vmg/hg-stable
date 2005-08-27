@@ -1,7 +1,3 @@
-
-copyrev: 8153b78f8a16f257ee0a238e2c112be38bcb8d09
-copy: mercurial/hg.py
-
 """
 dirstate.py - working directory tracking for mercurial
 
@@ -14,7 +10,7 @@ of the GNU General Public License, incorporated herein by reference.
 import struct, os
 from node import *
 from demandload import *
-demandload(globals(), "time bisect stat util")
+demandload(globals(), "time bisect stat util re")
 
 class dirstate:
     def __init__(self, opener, ui, root):
