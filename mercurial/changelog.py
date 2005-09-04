@@ -1,7 +1,3 @@
-
-copyrev: 32f05a0058761e6ada90fbb2a4c2970942e318eb
-copy: mercurial/hg.py
-
 # changelog.py - changelog class for mercurial
 #
 # Copyright 2005 Matt Mackall <mpm@selenic.com>
@@ -35,7 +31,10 @@ class changelog(revlog):
 
     def add(self, manifest, list, desc, transaction, p1=None, p2=None,
                   user=None, date=None):
-        if not date:
+        if date:
+            when, offset = map(int, date.split())
+            assert abs(offset) < 43200, 'bad time zone offset: %d' % offset
+        else:
             if time.daylight: offset = time.altzone
             else: offset = time.timezone
             date = "%d %d" % (time.time(), offset)
