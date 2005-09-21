@@ -1,3 +1,7 @@
+
+copyrev: d80aa1bbf05805ea5e114b99b28853988a971b39
+copy: mercurial/ext/win32text.py
+
 import mercurial.util
 
 def dumbdecode(s, cmd):
