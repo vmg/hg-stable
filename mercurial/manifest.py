@@ -1,7 +1,3 @@
-
-copyrev: 32f05a0058761e6ada90fbb2a4c2970942e318eb
-copy: mercurial/hg.py
-
 # manifest.py - manifest revision class for mercurial
 #
 # Copyright 2005 Matt Mackall <mpm@selenic.com>
@@ -11,6 +7,7 @@ copy: mercurial/hg.py
 
 import sys, struct
 from revlog import *
+from i18n import gettext as _
 from demandload import *
 demandload(globals(), "bisect")
 
