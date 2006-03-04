@@ -1,0 +1,11 @@
+
+copyrev: f802618a43bc3b114e8615de4fe880c4f6004cdb
+copy: templates/map-log.compact
+
+changeset = '{rev}{tags}{parents}   {node|short}   {date|isodate}   {author|user}\n  {desc|firstline|strip}\n\n'
+start_tags = '['
+tag = '{tag},'
+last_tag = '{tag}]'
+start_parents = ':'
+parent = '{rev},'
+last_parent = '{rev}'
