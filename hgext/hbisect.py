@@ -1,4 +1,11 @@
+
+copyrev: 6cfb03cc765ff7a0cb395b228776fe6d0320663b
+copy: contrib/hbisect.py
+
 # bisect extension for mercurial
+#
+# Copyright 2005, 2006 Benoit Boissinot <benoit.boissinot@ens-lyon.org>
+# Inspired by git bisect, extension skeleton taken from mq.py.
 #
 # This software may be used and distributed according to the terms
 # of the GNU General Public License, incorporated herein by reference.
