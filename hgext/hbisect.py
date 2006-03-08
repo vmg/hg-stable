@@ -1,3 +1,7 @@
+
+copyrev: 6cfb03cc765ff7a0cb395b228776fe6d0320663b
+copy: contrib/hbisect.py
+
 # bisect extension for mercurial
 #
 # Copyright 2005, 2006 Benoit Boissinot <benoit.boissinot@ens-lyon.org>
