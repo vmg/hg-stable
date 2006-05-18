@@ -1,7 +1,3 @@
-
-copyrev: 6cfb03cc765ff7a0cb395b228776fe6d0320663b
-copy: contrib/hbisect.py
-
 # bisect extension for mercurial
 #
 # Copyright 2005, 2006 Benoit Boissinot <benoit.boissinot@ens-lyon.org>
@@ -177,7 +173,7 @@ class bisect(object):
                 self.ui.warn("Could not find the first bad revision\n")
                 sys.exit(1)
             self.ui.write(
-                "The first bad revision is : %s\n" % hg.hex(self.badrev))
+                "The first bad revision is: %s\n" % hg.hex(self.badrev))
             sys.exit(0)
         self.ui.write("%d revisions left\n" % tot)
         best_rev = None
