@@ -1,7 +1,3 @@
-
-copyrev: a173ff3b4acce6b75469fb81fa84296c7cfddeb4
-copy: mercurial/hgweb.py
-
 # hgweb.py - web interface to a mercurial repository
 #
 # Copyright 21 May 2005 - (c) 2005 Jake Edge <jake@edge2.net>
@@ -523,7 +519,8 @@ class hgweb(object):
         mnode = hex(mn)
         mf = man.read(mn)
         rev = man.rev(mn)
-        node = self.repo.changelog.node(rev)
+        changerev = man.linkrev(mn)
+        node = self.repo.changelog.node(changerev)
         mff = man.readflags(mn)
 
         files = {}
