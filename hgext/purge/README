@@ -1,3 +1,7 @@
+
+copyrev: 5a7fc5d81ff88a7526e4dfc94f42afed7c15e694
+copy: README
+
 What is "hg purge"?
 ===================
 "purge" is a simple extension for the Mercurial source control management

@@ -1,3 +1,7 @@
+
+copyrev: 9f8506b222c3055250cb7533e8241bf2b8843f83
+copy: purge.py
+
 #!/usr/bin/env python
 #
 # Copyright (C) 2006 - Marco Barisione <marco@barisione.org>
