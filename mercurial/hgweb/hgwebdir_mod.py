@@ -1,7 +1,3 @@
-
-copyrev: ad69b4b3c9509b0f813461e55207f052544b4055
-copy: mercurial/hgweb/__init__.py
-
 # hgweb.py - web interface to a mercurial repository
 #
 # Copyright 21 May 2005 - (c) 2005 Jake Edge <jake@edge2.net>
@@ -62,8 +58,9 @@ class hgwebdir(object):
                                              "footer": footer})
 
         def archivelist(ui, nodeid, url):
+            al = ui.config("web", "allow_archive", "").split()
             for i in ['zip', 'gz', 'bz2']:
-                if ui.configbool("web", "allow" + i, False):
+                if i in al or ui.configbool("web", "allow" + i, False):
                     yield {"type" : i, "node": nodeid, "url": url}
 
         def entries(sortcolumn="", descending=False, **map):

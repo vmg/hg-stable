@@ -1,7 +1,3 @@
-
-copyrev: ad69b4b3c9509b0f813461e55207f052544b4055
-copy: mercurial/hgweb/__init__.py
-
 # hgweb.py - web interface to a mercurial repository
 #
 # Copyright 21 May 2005 - (c) 2005 Jake Edge <jake@edge2.net>
@@ -52,8 +48,9 @@ class hgweb(object):
             self.allowpull = self.repo.ui.configbool("web", "allowpull", True)
 
     def archivelist(self, nodeid):
+        al = self.repo.ui.config("web", "allow_archive", "").split()
         for i in self.archives:
-            if self.repo.ui.configbool("web", "allow" + i, False):
+            if i in al or self.repo.ui.configbool("web", "allow" + i, False):
                 yield {"type" : i, "node" : nodeid, "url": ""}
 
     def listfiles(self, files, mf):
@@ -807,8 +804,9 @@ class hgweb(object):
         elif cmd == 'archive':
             changeset = self.repo.lookup(req.form['node'][0])
             type = req.form['type'][0]
-            if (type in self.archives and
-                self.repo.ui.configbool("web", "allow" + type, False)):
+            allowed = self.repo.ui.config("web", "allow_archive", "").split()
+            if (type in self.archives and (type in allowed or
+                self.repo.ui.configbool("web", "allow" + type, False))):
                 self.archive(req, changeset, type)
                 return
 
