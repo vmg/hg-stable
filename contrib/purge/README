@@ -1,3 +1,7 @@
+
+copyrev: 0b805ca1b5d60bef56700178d856a321bac28014
+copy: hgext/purge/README
+
 What is "hg purge"?
 ===================
 "purge" is a simple extension for the Mercurial source control management

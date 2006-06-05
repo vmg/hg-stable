@@ -1,3 +1,7 @@
+
+copyrev: 0e83f06189870c32a515841e909d7a86b4649560
+copy: hgext/purge/__init__.py
+
 #!/usr/bin/env python
 #
 # Copyright (C) 2006 - Marco Barisione <marco@barisione.org>
