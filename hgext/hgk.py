@@ -1,7 +1,3 @@
-
-copyrev: 8c183bcd38f8f74fdd2275b1459a21c726ff767b
-copy: contrib/hgk.py
-
 # Minimal support for git commands on an hg repository
 #
 # Copyright 2005 Chris Mason <mason@suse.com>
@@ -135,7 +131,7 @@ def catcommit(repo, n, prefix, changes=None):
     date_ar = changes[2]
     date = int(float(date_ar[0]))
     lines = changes[4].splitlines()
-    if lines[-1].startswith('committer:'):
+    if lines and lines[-1].startswith('committer:'):
         committer = lines[-1].split(': ')[1].rstrip()
     else:
         committer = changes[1]
