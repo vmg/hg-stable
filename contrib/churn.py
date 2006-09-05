@@ -1,7 +1,3 @@
-
-copyrev: 85022c7731574bf7d1e8c492671fc976290d9a69
-copy: hgext/churn.py
-
 # churn.py - create a graph showing who changed the most lines
 #
 # Copyright 2006 Josef "Jeff" Sipek <jeffpc@josefsipek.net>
@@ -160,7 +156,7 @@ def churn(ui, repo, **opts):
 
     # make a list of tuples (name, lines) and sort it in descending order
     ordered = stats.items()
-    ordered.sort(cmp=lambda x, y: cmp(y[1], x[1]))
+    ordered.sort(lambda x, y: cmp(y[1], x[1]))
 
     maximum = ordered[0][1]
 
