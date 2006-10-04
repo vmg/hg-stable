@@ -1,7 +1,3 @@
-
-copyrev: 5ae4f640510d6261586830233c0ee87f00e8874c
-copy: templates/summary-gitweb.tmpl
-
 #header#
 <title>#repo|escape#: Summary</title>
 <link rel="alternate" type="application/rss+xml"
@@ -13,7 +9,7 @@ copy: templates/summary-gitweb.tmpl
 <a href="http://www.selenic.com/mercurial/" title="Mercurial"><div style="float:right;">Mercurial</div></a><a href="?cmd=summary;style=gitweb">#repo|escape#</a> / summary
 </div>
 <div class="page_nav">
-summary | <a href="?cmd=shortlog;style=gitweb">shortlog</a> | <a href="?cmd=changelog;style=gitweb">changelog</a> | <a href="?cmd=tags;style=gitweb">tags</a> | <a href="?cmd=mf=#node|short#;path=/;style=gitweb">manifest</a>#archives%archiveentry#
+summary | <a href="?cmd=shortlog;style=gitweb">shortlog</a> | <a href="?cmd=changelog;style=gitweb">changelog</a> | <a href="?cmd=tags;style=gitweb">tags</a> | <a href="?mf=#node|short#;path=/;style=gitweb">manifest</a>#archives%archiveentry#
 <br/>
 </div>
 
