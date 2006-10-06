@@ -1,6 +1,10 @@
-header = raw/header.tmpl
+
+copyrev: 159d0f557ce476d50e1a846c1090027bfacace69
+copy: templates/map-raw
+
+header = header.tmpl
 footer = ''
-changeset = raw/changeset.tmpl
+changeset = changeset.tmpl
 difflineplus = '#line#'
 difflineminus = '#line#'
 difflineat = '#line#'
@@ -11,6 +15,6 @@ filenodelink = ''
 filerevision = '#rawfileheader##raw#'
 fileline = '#line#'
 diffblock = '#lines#'
-filediff = raw/filediff.tmpl
-fileannotate = raw/fileannotate.tmpl
+filediff = filediff.tmpl
+fileannotate = fileannotate.tmpl
 annotateline = '#author#@#rev#: #line#'
