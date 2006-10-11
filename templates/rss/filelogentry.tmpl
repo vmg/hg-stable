@@ -1,0 +1,11 @@
+
+copyrev: 2eba384832cf26bfc5505ae4dde554dda2970072
+copy: templates/filelogentry-rss.tmpl
+
+<item>
+    <title>#desc|strip|firstline|strip|escape#</title>
+    <link>#url#?f=#node|short#;file=#file|urlescape#</link>
+    <description><![CDATA[#desc|strip|escape|addbreaks#]]></description>
+    <author>#author|obfuscate#</author>
+    <pubDate>#date|rfc822date#</pubDate>>
+</item>
