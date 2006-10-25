@@ -1,3 +1,7 @@
+
+copyrev: ba482ed4039607e36c9905b4fac95e01a8c7a143
+copy: rewrite-log
+
 #!/usr/bin/env python
 import sys, os
 from mercurial import hg
