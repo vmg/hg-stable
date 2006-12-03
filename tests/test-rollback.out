@@ -1,0 +1,22 @@
+
+copyrev: 24df4008ffbf597e8060c44abf07ed4be22a4d89
+copy: tests/test-undo.out
+
+checking changesets
+checking manifests
+crosschecking files in changesets and manifests
+checking files
+1 files, 1 changesets, 1 total revisions
+changeset:   0:0acdaf898367
+tag:         tip
+user:        test
+date:        Mon Jan 12 13:46:40 1970 +0000
+summary:     test
+
+rolling back last transaction
+checking changesets
+checking manifests
+crosschecking files in changesets and manifests
+checking files
+0 files, 0 changesets, 0 total revisions
+A a
