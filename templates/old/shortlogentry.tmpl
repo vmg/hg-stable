@@ -1,0 +1,11 @@
+
+copyrev: ca288061ee90908076428f4db596568470b9dfa8
+copy: templates/shortlogentry.tmpl
+
+<table class="slogEntry parity#parity#">
+ <tr>
+  <td class="age">#date|age#</td>
+  <td class="author">#author|obfuscate#</td>
+  <td class="node"><a href="?cs=#node|short#">#desc|strip|firstline|escape#</a></td>
+ </tr>
+</table>
