@@ -1,3 +1,7 @@
+
+copyrev: f438403931a679d2e417ffad6f1bc1a2224d8d43
+copy: contrib/purge/purge.py
+
 # Copyright (C) 2006 - Marco Barisione <marco@barisione.org>
 #
 # This is a small extension for Mercurial (http://www.selenic.com/mercurial)
@@ -8,7 +12,7 @@
 #
 # To enable the "purge" extension put these lines in your ~/.hgrc:
 #  [extensions]
-#  purge = /path/to/purge.py
+#  hgext.purge =
 #
 # For help on the usage of "hg purge" use:
 #  hg help purge
