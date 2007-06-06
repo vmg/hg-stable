@@ -1,3 +1,7 @@
+
+copyrev: 5d68faedb876a19f7ee7cbff2c726117a7ff94ea
+copy: contrib/convert-repo
+
 #!/usr/bin/env python
 #
 # This is a generalized framework for converting between SCM
