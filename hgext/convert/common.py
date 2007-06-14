@@ -1,7 +1,3 @@
-
-copyrev: 3c42ffdf7ca30c23fea6c9d5df6bbfe1c6409346
-copy: hgext/convert/__init__.py
-
 # common code for the convert extension
 
 class NoRepo(Exception): pass
@@ -64,6 +60,12 @@ class converter_sink(object):
         """Path to a file that will contain lines
         source_rev_id sink_rev_id
         mapping equivalent revision identifiers for each system."""
+        raise NotImplementedError()
+
+    def authorfile(self):
+        """Path to a file that will contain lines
+        srcauthor=dstauthor
+        mapping equivalent authors identifiers for each system."""
         raise NotImplementedError()
 
     def putfile(self, f, e, data):

@@ -1,7 +1,3 @@
-
-copyrev: 3c42ffdf7ca30c23fea6c9d5df6bbfe1c6409346
-copy: hgext/convert/__init__.py
-
 # hg backend for convert extension
 
 import os, time
@@ -20,6 +16,9 @@ class convert_mercurial(converter_sink):
 
     def mapfile(self):
         return os.path.join(self.path, ".hg", "shamap")
+
+    def authorfile(self):
+        return os.path.join(self.path, ".hg", "authormap")
 
     def getheads(self):
         h = self.repo.changelog.heads()
