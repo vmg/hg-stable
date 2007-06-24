@@ -1,7 +1,3 @@
-
-copyrev: 3c42ffdf7ca30c23fea6c9d5df6bbfe1c6409346
-copy: hgext/convert/__init__.py
-
 # CVS conversion code inspired by hg-cvs-import and git-cvsimport
 
 import os, locale, re, socket
@@ -54,10 +50,11 @@ class convert_cvs(converter_source):
                         self.parent[id] = self.lastbranch[ancestor]
                     elif l.startswith("Author"):
                         author = self.recode(l[8:-1])
-                    elif l.startswith("Tag: "):
-                        t = l[5:-1].rstrip()
-                        if t != "(none)":
-                            self.tags[t] = id
+                    elif l.startswith("Tag:") or l.startswith("Tags:"):
+                        t = l[l.index(':')+1:]
+                        t = [ut.strip() for ut in t.split(',')]
+                        if (len(t) > 1) or (t[0] and (t[0] != "(none)")):
+                            self.tags.update(dict.fromkeys(t, id))
                     elif l.startswith("Log:"):
                         state = 1
                         log = ""
