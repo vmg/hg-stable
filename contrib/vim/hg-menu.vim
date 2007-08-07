@@ -1,7 +1,3 @@
-
-copyrev: 65b5339de44e4cbf47b46b1bbd556131f5edc2ce
-copy: contrib/hg-menu.vim
-
 " vim600: set foldmethod=marker:
 " =============================================================================
 "  Name Of File: hg-menu.vim
@@ -13,7 +9,7 @@ copy: contrib/hg-menu.vim
 "         Usage: These command and gui menu displays useful hg functions
 " Configuration: Your hg executable must be in your path.
 " =============================================================================
- 
+
 " Section: Init {{{1
 if exists("loaded_hg_menu")
   finish
