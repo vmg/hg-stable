@@ -1,0 +1,12 @@
+
+copyrev: bf23fa20a5d6c37195d93addc23102144a7aabec
+copy: templates/map-rss
+
+default = 'changelog'
+header = header.tmpl
+changelog = changelog.tmpl
+changelogentry = changelogentry.tmpl
+filelog = filelog.tmpl
+filelogentry = filelogentry.tmpl
+tags = tags.tmpl
+tagentry = tagentry.tmpl
