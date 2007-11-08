@@ -1,3 +1,7 @@
+
+copyrev: 2561f3a3ab22f32717003b6e1abd1cf008c1f737
+copy: tests/test-convert-svn.out
+
 % initial svn import
 Adding         t/a
 
