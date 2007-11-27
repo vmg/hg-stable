@@ -1,7 +1,3 @@
-
-copyrev: 2561f3a3ab22f32717003b6e1abd1cf008c1f737
-copy: tests/test-convert-svn.out
-
 % initial svn import
 Adding         t/a
 
@@ -29,7 +25,6 @@ Transmitting file data ..
 Committed revision 3.
 % test incremental conversion
 assuming destination trunk-hg
-destination trunk-hg is a Mercurial repository
 scanning source...
 sorting...
 converting...
@@ -90,7 +85,6 @@ Sending        letter2.txt
 Transmitting file data .
 Committed revision 11.
 % test incremental conversion
-destination A-hg is a Mercurial repository
 scanning source...
 sorting...
 converting...
