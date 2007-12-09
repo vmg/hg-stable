@@ -1,7 +1,3 @@
-
-copyrev: ddbefa7651be81902494d156ddbe6490f049e648
-copy: hgext/convert/__init__.py
-
 # convcmd - convert extension commands definition
 #
 # Copyright 2005-2007 Matt Mackall <mpm@selenic.com>
