@@ -1,0 +1,19 @@
+
+copyrev: e22446297cdefafc1a83cdc7fd347c5190b11a56
+copy: tests/test-undo
+
+#!/bin/sh
+
+mkdir t
+cd t
+hg init
+echo a > a
+hg add a
+hg commit -m "test" -d "1000000 0"
+hg verify
+hg parents
+hg status
+hg rollback
+hg verify
+hg parents
+hg status
