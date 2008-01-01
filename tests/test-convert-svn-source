@@ -1,7 +1,3 @@
-
-copyrev: 802044f8d35519749678485b4de1cbd5c5976139
-copy: tests/test-convert-svn
-
 #!/bin/sh
 
 "$TESTDIR/hghave" svn svn-bindings || exit 80
@@ -61,6 +57,9 @@ hg convert --filemap filemap $svnurl fmap
 echo '[extensions]' >> $HGRCPATH
 echo 'hgext.graphlog =' >> $HGRCPATH
 hg glog -R fmap --template '#rev# #desc|firstline# files: #files#\n'
+
+echo % test stop revision
+hg convert --rev 1 $svnurl stoprev
 
 ########################################
 
