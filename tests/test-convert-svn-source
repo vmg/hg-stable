@@ -1,7 +1,3 @@
-
-copyrev: dae88709e2990e7b629a674c308d4cd39d89cf52
-copy: tests/test-convert-svn
-
 #!/bin/sh
 
 "$TESTDIR/hghave" svn svn-bindings || exit 80
@@ -53,7 +49,7 @@ svn ci -m changeb
 cd ..
 
 echo % test incremental conversion
-hg convert $svnurl
+hg convert -v $svnurl | sed 's/source:.*/source:/'
 
 echo % test filemap
 echo 'include b' > filemap
