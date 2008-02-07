@@ -1,7 +1,3 @@
-
-copyrev: 24df4008ffbf597e8060c44abf07ed4be22a4d89
-copy: tests/test-undo.out
-
 checking changesets
 checking manifests
 crosschecking files in changesets and manifests
@@ -20,3 +16,6 @@ crosschecking files in changesets and manifests
 checking files
 0 files, 0 changesets, 0 total revisions
 A a
+marked working directory as branch test
+rolling back last transaction
+default

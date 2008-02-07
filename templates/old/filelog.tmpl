@@ -1,9 +1,7 @@
-
-copyrev: 9ee4ebb87cd56b0afbacf76a95e8634d5a357737
-copy: templates/filelog.tmpl
-
 #header#
 <title>#repo|escape#: #file|escape# history</title>
+<link rel="alternate" type="application/atom+xml"
+   href="#url#atom-log/tip/#file|urlescape#" title="Atom feed for #repo|escape#:#file#">
 <link rel="alternate" type="application/rss+xml"
    href="?fl=0;file=#file|urlescape#;style=rss" title="RSS feed for #repo|escape#:#file#">
 </head>
@@ -17,6 +15,7 @@ copy: templates/filelog.tmpl
 <a href="?f=#node|short#;file=#file|urlescape#">file</a>
 <a href="?fa=#node|short#;file=#file|urlescape#">annotate</a>
 <a type="application/rss+xml" href="?fl=0;file=#file|urlescape#;style=rss">rss</a>
+<a type="application/atom+xml" href="#url#atom-log/tip/#file|urlescape#" title="Atom feed for #repo|escape#:#file#">atom</a>
 </div>
 
 <h2>#file|escape# revision history</h2>

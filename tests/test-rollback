@@ -1,7 +1,3 @@
-
-copyrev: e22446297cdefafc1a83cdc7fd347c5190b11a56
-copy: tests/test-undo
-
 #!/bin/sh
 
 mkdir t
@@ -17,3 +13,9 @@ hg rollback
 hg verify
 hg parents
 hg status
+
+# Test issue 902
+hg commit -m "test"
+hg branch test
+hg rollback
+hg branch
