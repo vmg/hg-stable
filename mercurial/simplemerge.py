@@ -1,7 +1,3 @@
-
-copyrev: d1dc0aa0c7740dbb91a30f3187c011493f551a7e
-copy: contrib/simplemerge
-
 #!/usr/bin/env python
 # Copyright (C) 2004, 2005 Canonical Ltd
 #
@@ -23,7 +19,7 @@ copy: contrib/simplemerge
 # s: "i hate that."
 
 from i18n import _
-import util, mdiff, fancyopts, sys, os
+import util, mdiff, sys, os
 
 class CantReprocessAndShowBase(Exception):
     pass
