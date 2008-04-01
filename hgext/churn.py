@@ -1,7 +1,3 @@
-
-copyrev: c05651ca4851a0290bd709819764b304fd464fae
-copy: contrib/churn.py
-
 # churn.py - create a graph showing who changed the most lines
 #
 # Copyright 2006 Josef "Jeff" Sipek <jeffpc@josefsipek.net>
@@ -159,7 +155,7 @@ def churn(ui, repo, **opts):
 
         for l in f.readlines():
             l = l.strip()
-            alias, actual = l.split(" ")
+            alias, actual = l.split()
             aliases[alias] = actual
 
         return aliases
