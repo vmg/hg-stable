@@ -1,7 +1,3 @@
-
-copyrev: 78328fbd3241cbf3fd62900274c6219cb873e37c
-copy: templates/static/style-coal.css
-
 body {
   margin: 0;
   padding: 0;
@@ -153,4 +149,45 @@ div.description {
   border-left: 2px solid #999;
   margin: 1em 0 1em 0;
   padding: .3em;
+}
+
+div#wrapper {
+	position: relative;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin: 0;
+	padding: 0;
+}
+
+canvas {
+	position: absolute;
+	z-index: 5;
+	top: -0.7em;
+	margin: 0;
+}
+
+ul#graphnodes {
+	position: absolute;
+	z-index: 10;
+	top: -1.0em;
+	list-style: none inside none;
+	padding: 0;
+}
+
+ul#nodebgs {
+	list-style: none inside none;
+	padding: 0;
+	margin: 0;
+	top: -0.7em;
+}
+
+ul#graphnodes li, ul#nodebgs li {
+	height: 39px;
+}
+
+ul#graphnodes li .info {
+	display: block;
+	font-size: 70%;
+	position: relative;
+	top: -3px;
 }
