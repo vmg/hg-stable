@@ -1,7 +1,3 @@
-
-copyrev: b9f5db546e087215252fd90e354e1d36777e0358
-copy: hgext/highlight.py
-
 # highlight extension implementation file
 #
 # The original module was split in an interface and an implementation
@@ -32,6 +28,9 @@ def pygmentize(field, fctx, style, tmpl):
     text = fctx.data()
     if util.binary(text):
         return
+
+    # avoid UnicodeDecodeError in pygments
+    text = util.tolocal(text)
 
     # To get multi-line strings right, we can't format line-by-line
     try:
