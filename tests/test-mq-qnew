@@ -1,7 +1,3 @@
-
-copyrev: c9a92dbb2771e2ec438e79c454b2d049411ddfa0
-copy: tests/test-mq-qnew-twice
-
 #!/bin/sh
 
 echo "[extensions]" >> $HGRCPATH
@@ -48,4 +44,13 @@ hg qnew first.patch
 touch ../first.patch
 hg qimport ../first.patch
 
-exit 0
+echo '% qnew -f from a subdirectory'
+hg qpop -a
+mkdir d
+cd d
+echo b > b
+hg ci -Am t
+echo b >> b
+hg st
+hg qnew -g -f p
+cat ../.hg/patches/p

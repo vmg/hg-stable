@@ -1,7 +1,3 @@
-
-copyrev: 23bb6306b544d3bf38699edc6d7a65d4be4690be
-copy: tests/test-mq-qnew-twice.out
-
 adding a
 % qnew should refuse bad patch names
 abort: "series" cannot be used as the name of a patch
@@ -22,3 +18,13 @@ foo bar
 % qnew twice
 abort: patch "first.patch" already exists
 abort: patch "first.patch" already exists
+% qnew -f from a subdirectory
+Patch queue now empty
+adding d/b
+M d/b
+diff --git a/d/b b/d/b
+--- a/d/b
++++ b/d/b
+@@ -1,1 +1,2 @@
+ b
++b
