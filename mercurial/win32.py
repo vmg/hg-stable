@@ -1,15 +1,20 @@
-# util_win32.py - utility functions that use win32 API
-#
-# Copyright 2005 Matt Mackall <mpm@selenic.com>
-# Copyright 2006 Vadim Gelfer <vadim.gelfer@gmail.com>
-#
-# This software may be used and distributed according to the terms of
-# the GNU General Public License, incorporated herein by reference.
+
+copyrev: 0e90c9e334c8712188053fe0e8fd3f964ea7fa79
+copy: mercurial/util_win32.py
+
+'''
+win32.py - utility functions that use win32 API
 
-# Mark Hammond's win32all package allows better functionality on
-# Windows.  this module overrides definitions in util.py.  if not
-# available, import of this module will fail, and generic code will be
-# used.
+Copyright 2005-2009 Matt Mackall <mpm@selenic.com> and others
+
+This software may be used and distributed according to the terms of
+the GNU General Public License, incorporated herein by reference.
+
+Mark Hammond's win32all package allows better functionality on
+Windows.  this module overrides definitions in util.py.  if not
+available, import of this module will fail, and generic code will be
+used.
+'''
 
 import win32api
 
@@ -363,7 +368,9 @@ class posixfile_nt(object):
         except pywintypes.error, err:
             raise WinIOError(err)
 
-getuser_fallback = win32api.GetUserName
+def getuser():
+    '''return name of current user'''
+    return win32api.GetUserName()
 
 def set_signal_handler_win32():
     """Register a termination handler for console events including
@@ -373,3 +380,4 @@ def set_signal_handler_win32():
     def handler(event):
         win32process.ExitProcess(1)
     win32api.SetConsoleCtrlHandler(handler)
+
