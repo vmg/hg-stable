@@ -1,3 +1,7 @@
+
+copyrev: ba5592eabe5a4b389adb99b9ae8b334cf19bd12d
+copy: i18n/zh.po
+
 #
 # Chinese (simplified) translation for Mercurial
 # This file is distributed under the same license as Mercurial
