@@ -1,10 +1,6 @@
-
-copyrev: a8efdb4a6bdf70b75abce7f2bcfeb16ab318975a
-copy: templates/filelog-rss.tmpl
-
-#header#
-    <title>#repo|escape#: #file|escape# history</title>
-    <description>#file|escape# revision history</description>
-    #entries%filelogentry#
+{header}
+    <title>{repo|escape}: {file|escape} history</title>
+    <description>{file|escape} revision history</description>
+    {entries%filelogentry}
   </channel>
 </rss>
