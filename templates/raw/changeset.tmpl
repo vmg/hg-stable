@@ -1,13 +1,9 @@
-
-copyrev: e453d9d5b14f9d01c9507ea5b8c23e7905497485
-copy: templates/changeset-raw.tmpl
-
-#header#
+{header}
 # HG changeset patch
-# User #author#
-# Date #date|hgdate#
-# Node ID #node#
-#parent%changesetparent#
-#desc#
+# User {author}
+# Date {date|hgdate}
+# Node ID {node}
+{parent%changesetparent}
+{desc}
 
-#diff#
+{diff}
