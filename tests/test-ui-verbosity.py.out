@@ -1,3 +1,7 @@
+
+copyrev: b0b9976bac9c84a4da3535292bea877ae2a3fa21
+copy: tests/test-ui-verbosity.out
+
       hgrc settings    command line options      final result   
     quiet verbo debug   quiet verbo debug      quiet verbo debug
  0  False False False   False False False  ->  False False False

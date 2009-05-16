@@ -1,3 +1,7 @@
+
+copyrev: 7234169cc12e84b578bba5438ed25251b37c1f05
+copy: tests/test-bdiff.out
+
 *** 'a\nc\n\n\n\n' 'a\nb\n\n\n'
 *** 'a\nb\nc\n' 'a\nc\n'
 *** '' ''

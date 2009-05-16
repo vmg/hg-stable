@@ -1,3 +1,7 @@
+
+copyrev: 0336840a2f81a4b47606f525d3d3ecf6ab34861f
+copy: tests/test-demandimport
+
 #!/usr/bin/env python
 
 from mercurial import demandimport
