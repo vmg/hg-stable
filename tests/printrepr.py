@@ -1,3 +1,7 @@
+
+copyrev: 597803216f9b430af638a8a80d4317dee8ef122f
+copy: tests/repr.py
+
 #!/usr/bin/env python
 #
 # Copyright 2009 Matt Mackall <mpm@selenic.com> and others

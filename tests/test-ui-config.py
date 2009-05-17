@@ -1,3 +1,7 @@
+
+copyrev: 3ae8e01b087c1db6597978a18674f7174104f563
+copy: tests/test-ui-config
+
 #!/usr/bin/env python
 
 from mercurial import ui, util, dispatch, error

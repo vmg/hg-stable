@@ -1,3 +1,7 @@
+
+copyrev: 0a43258e8dc17d3efd9609b9f0afbd2ae670ffc1
+copy: tests/test-demandimport.out
+
 os = <unloaded module 'os'>
 os.system = <built-in function system>
 os = <module 'os' from '?'>
