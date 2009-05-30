@@ -1,10 +1,6 @@
-
-copyrev: 94cffdcb98a35aac2ba2fdf9f674f4e70f66ca89
-copy: tests/test-bdiff
-
 #!/usr/bin/env python
 
-import sys, struct
+import struct
 from mercurial import bdiff, mpatch
 
 def test1(a, b):
