@@ -1,3 +1,7 @@
+
+copyrev: fe2b35c2b4ccedd1c5433fcd6435bb8957f97de3
+copy: tests/test-convert-cvs-builtincvsps-cvsnt-mergepoints.rlog
+
 head: 1.2
 branch:
 locks: strict

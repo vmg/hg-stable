@@ -1,3 +1,7 @@
+
+copyrev: 0eb379f0c150d18b287dccf6c85011c0a27e45cd
+copy: tests/test-convert-cvs-builtincvsps-cvsnt-mergepoints
+
 #!/bin/sh
 
 "$TESTDIR/hghave" cvs || exit 80
@@ -73,7 +77,7 @@ cvscall -q up -P -jMYBRANCH1_2 | sed 's/RCS file: .*,v/merging MYBRANCH1_2/g'
 cvscall -q ci -m "merge" | sed 's/.*,v.*/checking in/g'
 
 REALCVS=`which cvs`
-echo "for x in \$*; do if [ \"\$x\" = \"rlog\" ]; then echo \"RCS file: $CVSROOT/foo/foo.txt,v\"; cat $TESTDIR/test-convert-cvs-builtincvsps-cvsnt-mergepoints.rlog; exit 0; fi; done; $REALCVS \$*" > cvs
+echo "for x in \$*; do if [ \"\$x\" = \"rlog\" ]; then echo \"RCS file: $CVSROOT/foo/foo.txt,v\"; cat $TESTDIR/test-convert-cvsnt-mergepoints.rlog; exit 0; fi; done; $REALCVS \$*" > cvs
 chmod +x cvs
 PATH=.:${PATH} hg debugcvsps --parents foo | sed -e 's/Author:.*/Author:/' -e 's/Date:.*/Date:/'
 
