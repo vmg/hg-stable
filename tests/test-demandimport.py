@@ -1,7 +1,3 @@
-
-copyrev: 0336840a2f81a4b47606f525d3d3ecf6ab34861f
-copy: tests/test-demandimport
-
 #!/usr/bin/env python
 
 from mercurial import demandimport
@@ -40,5 +36,5 @@ print "fred.sub =", f(fred.sub)
 print "fred =", f(fred)
 
 print "re =", f(re)
-print "re.stdout =", f(re.stdout)
+print "re.stderr =", f(re.stderr)
 print "re =", f(re)
