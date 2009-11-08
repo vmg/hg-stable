@@ -1,7 +1,3 @@
-
-copyrev: 0821d64e080bb40b8990b860793f8f3b6d280c1e
-copy: contrib/hg-relink
-
 # Mercurial extension to provide 'hg relink' command
 #
 # Copyright (C) 2007 Brendan Cully <brendan@kublai.com>
@@ -139,7 +135,7 @@ def do_relink(src, dst, files, ui):
             relinked += 1
             savedbytes += sz
         except OSError, inst:
-            ui.warn(_('%s: %s\n') % (tgt, str(inst)))
+            ui.warn('%s: %s\n' % (tgt, str(inst)))
 
     ui.status(_('relinked %d files (%d bytes reclaimed)\n') %
               (relinked, savedbytes))
