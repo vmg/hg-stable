@@ -1,3 +1,7 @@
+
+copyrev: a740be39f7bea1da84e046dc2e00f614b397038c
+copy: tests/test-diff-inverse.out
+
 adding a
 diff -r 2855cdcfcbb7 -r 8e1805a3cf6e a
 --- a/a	Thu Jan 01 00:00:00 1970 +0000
