@@ -1,7 +1,3 @@
-
-copyrev: da54cfc5389c89b34d81c420f2fe9519d1dd014d
-copy: hgext/inotify/server.py
-
 # linuxserver.py - inotify status server for linux
 #
 # Copyright 2006, 2007, 2008 Bryan O'Sullivan <bos@serpentine.com>
@@ -254,7 +250,7 @@ class repowatcher(server.repowatcher, pollable):
             self.update_hgignore()
         try:
             st = self.stat(wpath)
-            if stat.S_ISREG(st[0]):
+            if stat.S_ISREG(st[0]) or stat.S_ISLNK(st[0]):
                 self.updatefile(wpath, st)
         except OSError:
             pass
