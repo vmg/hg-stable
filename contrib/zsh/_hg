@@ -1,3 +1,7 @@
+
+copyrev: e89cb0d84822d5ad9c3a0ee0cabae66e77091043
+copy: contrib/zsh_completion
+
 #compdef hg
 
 # Zsh completion script for mercurial.  Rename this file to _hg and copy

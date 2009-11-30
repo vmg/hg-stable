@@ -1,3 +1,7 @@
+
+copyrev: 4ec4efd3802f03cac0cabd82bd03cd0efec513ad
+copy: contrib/bash_completion
+
 # bash completion for the Mercurial distributed SCM
 
 # Docs:
