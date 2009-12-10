@@ -1,6 +1,6 @@
 
-copyrev: e89cb0d84822d5ad9c3a0ee0cabae66e77091043
-copy: contrib/zsh_completion
+copyrev: 10a24d51bbcbc04dcdecd5eb461d26474ab22564
+copy: contrib/zsh/_hg
 
 #compdef hg
 
