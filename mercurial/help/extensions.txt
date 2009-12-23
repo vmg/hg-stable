@@ -1,5 +1,5 @@
 
-copyrev: 10fa9d1e418b6ed14ec962ae731f65b181dff8f5
+copyrev: 677e602ce743abd02391a34854e2594e2cb98aa2
 copy: help/extensions.txt
 
 Mercurial has the ability to add new features through the use of
@@ -32,6 +32,6 @@ scope, prepend its path with !::
 
   [extensions]
   # disabling extension bar residing in /path/to/extension/bar.py
-  hgext.bar = !/path/to/extension/bar.py
+  bar = !/path/to/extension/bar.py
   # ditto, but no path was supplied for extension baz
-  hgext.baz = !
+  baz = !
