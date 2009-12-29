@@ -1,0 +1,13 @@
+
+copyrev: 45814b4ace6fcc602c675a3540dbd23f816d9b04
+copy: templates/map-cmdline.compact
+
+changeset = '{rev}{tags}{parents}   {node|short}   {date|isodate}   {author|user}\n  {desc|firstline|strip}\n\n'
+changeset_quiet = '{rev}:{node|short}\n'
+changeset_verbose = '{rev}{tags}{parents}   {node|short}   {date|isodate}   {author}\n  {desc|strip}\n\n'
+start_tags = '['
+tag = '{tag},'
+last_tag = '{tag}]'
+start_parents = ':'
+parent = '{rev},'
+last_parent = '{rev}'
