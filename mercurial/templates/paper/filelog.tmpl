@@ -1,7 +1,3 @@
-
-copyrev: 7878f8fcc82b358e208ae2ffd774cbc45a108057
-copy: templates/paper/filelog.tmpl
-
 {header}
 <title>{repo|escape}: {file|escape} history</title>
 <link rel="alternate" type="application/atom+xml"
@@ -47,7 +43,10 @@ copy: templates/paper/filelog.tmpl
 files, or words in the commit message</div>
 </form>
 
-<div class="navigate">{nav%filenaventry}</div>
+<div class="navigate">
+<a href="{url}log/{node|short}/{file|urlescape}{lessvars%urlparameter}">less</a>
+<a href="{url}log/{node|short}/{file|urlescape}{morevars%urlparameter}">more</a>
+| {nav%filenaventry}</div>
 
 <table class="bigtable">
  <tr>
@@ -57,6 +56,12 @@ files, or words in the commit message</div>
  </tr>
 {entries%filelogentry}
 </table>
+
+<div class="navigate">
+<a href="{url}log/{node|short}/{file|urlescape}{lessvars%urlparameter}">less</a>
+<a href="{url}log/{node|short}/{file|urlescape}{morevars%urlparameter}">more</a>
+| {nav%filenaventry}
+</div>
 
 </div>
 </div>

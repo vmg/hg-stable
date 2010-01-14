@@ -1,7 +1,3 @@
-
-copyrev: 81d6c363f4ed300d27362a6e84a8e4b806a017b8
-copy: templates/paper/shortlog.tmpl
-
 {header}
 <title>{repo|escape}: log</title>
 <link rel="alternate" type="application/atom+xml"
@@ -43,7 +39,11 @@ copy: templates/paper/shortlog.tmpl
 files, or words in the commit message</div>
 </form>
 
-<div class="navigate">rev {rev}: {changenav%navshortentry}</div>
+<div class="navigate">
+<a href="{url}shortlog/{rev}{lessvars%urlparameter}">less</a>
+<a href="{url}shortlog/{rev}{morevars%urlparameter}">more</a>
+| rev {rev}: {changenav%navshortentry}
+</div>
 
 <table class="bigtable">
  <tr>
@@ -54,7 +54,12 @@ files, or words in the commit message</div>
 {entries%shortlogentry}
 </table>
 
-<div class="navigate">rev {rev}: {changenav%navshortentry}</div>
+<div class="navigate">
+<a href="{url}shortlog/{rev}{lessvars%urlparameter}">less</a>
+<a href="{url}shortlog/{rev}{morevars%urlparameter}">more</a>
+| rev {rev}: {changenav%navshortentry}
+</div>
+
 </div>
 </div>
 
