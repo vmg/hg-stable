@@ -1,7 +1,3 @@
-
-copyrev: 511fd06414a25090d87f83adaf922651d2cdfa97
-copy: templates/gitweb/shortlog.tmpl
-
 {header}
 <title>{repo|escape}: Shortlog</title>
 <link rel="alternate" type="application/atom+xml"
@@ -29,8 +25,7 @@ shortlog |
 <a href="{url}tags{sessionvars%urlparameter}">tags</a> |
 <a href="{url}branches{sessionvars%urlparameter}">branches</a> |
 <a href="{url}file/{node|short}{sessionvars%urlparameter}">files</a>{archives%archiveentry}
-<br/>
-{changenav%navshortentry}<br/>
+<br/>{changenav%navshort}<br/>
 </div>
 
 <div class="title">&nbsp;</div>
@@ -39,7 +34,7 @@ shortlog |
 </table>
 
 <div class="page_nav">
-{changenav%navshortentry}
+{changenav%navshort}
 </div>
 
 {footer}

@@ -1,7 +1,3 @@
-
-copyrev: 164d0e7d743fbf394fd7922c357d36b7299223b0
-copy: templates/paper/map
-
 default = 'shortlog'
 
 mimetype = 'text/html; charset={encoding}'
@@ -26,6 +22,11 @@ changelogentry = shortlogentry.tmpl
 searchentry = shortlogentry.tmpl
 changeset = changeset.tmpl
 manifest = manifest.tmpl
+
+nav = '{before%naventry} {after%naventry}'
+navshort = '{before%navshortentry}{after%navshortentry}'
+navgraph = '{before%navgraphentry}{after%navgraphentry}'
+filenav = '{before%filenaventry}{after%filenaventry}'
 
 direntry = '
   <tr class="fileline parity{parity}">

@@ -1,7 +1,3 @@
-
-copyrev: 6fdc50d0485a8a00794a2af6c5597a0116b9e9e5
-copy: templates/spartan/filelog.tmpl
-
 {header}
 <title>{repo|escape}: {file|escape} history</title>
 <link rel="alternate" type="application/atom+xml"
@@ -25,7 +21,7 @@ copy: templates/spartan/filelog.tmpl
 
 <h2>{file|escape} revision history</h2>
 
-<p>navigate: <small class="navigate">{nav%filenaventry}</small></p>
+<p>navigate: <small class="navigate">{nav%filenav}</small></p>
 
 {entries%filelogentry}
 

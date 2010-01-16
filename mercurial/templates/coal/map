@@ -1,7 +1,3 @@
-
-copyrev: 39a504e56ca2d4997194a8f262449d26f7091ecc
-copy: templates/coal/map
-
 default = 'shortlog'
 
 mimetype = 'text/html; charset={encoding}'
@@ -26,6 +22,11 @@ changelogentry = ../paper/shortlogentry.tmpl
 searchentry = ../paper/shortlogentry.tmpl
 changeset = ../paper/changeset.tmpl
 manifest = ../paper/manifest.tmpl
+
+nav = '{before%naventry} {after%naventry}'
+navshort = '{before%navshortentry}{after%navshortentry}'
+navgraph = '{before%navgraphentry}{after%navgraphentry}'
+filenav = '{before%filenaventry}{after%filenaventry}'
 
 direntry = '
   <tr class="fileline parity{parity}">

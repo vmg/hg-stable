@@ -1,7 +1,3 @@
-
-copyrev: 69e9a221cff81415d0bb4560ed23a6449a82da9f
-copy: templates/gitweb/filelog.tmpl
-
 {header}
 <title>{repo|escape}: File revisions</title>
 <link rel="alternate" type="application/atom+xml"
@@ -28,7 +24,7 @@ revisions |
 <a href="{url}diff/{node|short}/{file|urlescape}{sessionvars%urlparameter}">diff</a> |
 <a href="{url}rss-log/{node|short}/{file|urlescape}">rss</a>
 <br/>
-{nav%filenaventry}
+{nav%filenav}
 </div>
 
 <div class="title" >{file|urlescape}</div>
@@ -38,7 +34,7 @@ revisions |
 </table>
 
 <div class="page_nav">
-{nav%filenaventry}
+{nav%filenav}
 </div>
 
 {footer}

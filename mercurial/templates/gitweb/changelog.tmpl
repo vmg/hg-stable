@@ -1,7 +1,3 @@
-
-copyrev: 7176004926445cadde3eddcc98fd82839c3d8334
-copy: templates/gitweb/changelog.tmpl
-
 {header}
 <title>{repo|escape}: Changelog</title>
 <link rel="alternate" type="application/atom+xml"
@@ -31,13 +27,13 @@ changelog |
 <a href="{url}branches{sessionvars%urlparameter}">branches</a> |
 <a href="{url}file/{node|short}{sessionvars%urlparameter}">files</a>{archives%archiveentry}
 <br/>
-{changenav%naventry}<br/>
+{changenav%nav}<br/>
 </div>
 
 {entries%changelogentry}
 
 <div class="page_nav">
-{changenav%naventry}<br/>
+{changenav%nav}<br/>
 </div>
 
 {footer}

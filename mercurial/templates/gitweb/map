@@ -1,7 +1,3 @@
-
-copyrev: 33ca70ed50eb1d1da5e4c7fe8f87404c9e401bcd
-copy: templates/gitweb/map
-
 default = 'summary'
 mimetype = 'text/html; charset={encoding}'
 header = header.tmpl
@@ -38,6 +34,12 @@ filenolink = '
       <a href="{url}log/{node|short}/{file|urlescape}{sessionvars%urlparameter}">revisions</a>
     </td>
   </tr>'
+
+nav = '{before%naventry} {after%naventry}'
+navshort = '{before%navshortentry}{after%navshortentry}'
+navgraph = '{before%navgraphentry}{after%navgraphentry}'
+filenav = '{before%filenaventry}{after%filenaventry}'
+
 fileellipses = '...'
 changelogentry = changelogentry.tmpl
 searchentry = changelogentry.tmpl

@@ -1,7 +1,3 @@
-
-copyrev: fdc15c9e00e9720bc32584043a37eb84910b4f7d
-copy: templates/spartan/graph.tmpl
-
 {header}
 <title>{repo|escape}: graph</title>
 <link rel="alternate" type="application/atom+xml"
@@ -27,7 +23,7 @@ copy: templates/spartan/graph.tmpl
 <p>
 <label for="search1">search:</label>
 <input name="rev" id="search1" type="text" size="30">
-navigate: <small class="navigate">{changenav%navgraphentry}</small>
+navigate: <small class="navigate">{changenav%navgraph}</small>
 </p>
 </form>
 
@@ -93,7 +89,7 @@ graph.render(data);
 <p>
 <label for="search1">search:</label>
 <input name="rev" id="search1" type="text" size="30">
-navigate: <small class="navigate">{changenav%navgraphentry}</small>
+navigate: <small class="navigate">{changenav%navgraph}</small>
 </p>
 </form>
 

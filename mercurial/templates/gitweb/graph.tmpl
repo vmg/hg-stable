@@ -1,7 +1,3 @@
-
-copyrev: 2b6f69fdc47ff3de0a3293bf12aca9c68865d016
-copy: templates/gitweb/graph.tmpl
-
 {header}
 <title>{repo|escape}: Graph</title>
 <link rel="alternate" type="application/atom+xml"
@@ -33,7 +29,7 @@ graph |
 <br/>
 <a href="{url}graph/{rev}{lessvars%urlparameter}">less</a>
 <a href="{url}graph/{rev}{morevars%urlparameter}">more</a>
-| {changenav%navgraphentry}<br/>
+| {changenav%navgraph}<br/>
 </div>
 
 <div class="title">&nbsp;</div>
@@ -119,7 +115,7 @@ graph.render(data);
 <div class="page_nav">
 <a href="{url}graph/{rev}{lessvars%urlparameter}">less</a>
 <a href="{url}graph/{rev}{morevars%urlparameter}">more</a>
-| {changenav%navgraphentry}
+| {changenav%navgraph}
 </div>
 
 {footer}

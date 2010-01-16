@@ -1,7 +1,3 @@
-
-copyrev: 9e63dcfc902de24730da09cb6a228c1eced12de3
-copy: templates/spartan/map
-
 default = 'shortlog'
 mimetype = 'text/html; charset={encoding}'
 header = header.tmpl
@@ -23,6 +19,11 @@ changelogentry = changelogentry.tmpl
 searchentry = changelogentry.tmpl
 changeset = changeset.tmpl
 manifest = manifest.tmpl
+
+nav = '{before%naventry} {after%naventry}'
+navshort = '{before%navshortentry}{after%navshortentry}'
+navgraph = '{before%navgraphentry}{after%navgraphentry}'
+filenav = '{before%filenaventry}{after%filenaventry}'
 
 direntry = '
   <tr class="parity{parity}">
