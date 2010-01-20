@@ -1,10 +1,14 @@
+
+copyrev: 95bda0468a293f63221352db15c115a97cc9d925
+copy: hgext/inotify/server.py
+
 # linuxserver.py - inotify status server for linux
 #
 # Copyright 2006, 2007, 2008 Bryan O'Sullivan <bos@serpentine.com>
 # Copyright 2007, 2008 Brendan Cully <brendan@kublai.com>
 #
 # This software may be used and distributed according to the terms of the
-# GNU General Public License version 2, incorporated herein by reference.
+# GNU General Public License version 2 or any later version.
 
 from mercurial.i18n import _
 from mercurial import osutil, util
