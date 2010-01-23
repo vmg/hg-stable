@@ -1,3 +1,7 @@
+
+copyrev: ebb5ea728e3ad3df36bb65309369f2a1c4e8792c
+copy: templates/spartan/map
+
 default = 'shortlog'
 mimetype = 'text/html; charset={encoding}'
 header = header.tmpl
@@ -168,7 +172,7 @@ indexentry = '
     <td><a href="{url}{sessionvars%urlparameter}">{name|escape}</a></td>
     <td>{description}</td>
     <td>{contact|obfuscate}</td>
-    <td class="age">{lastchange|age} ago</td>
+    <td class="age">{lastchange|age}</td>
     <td class="indexlinks">
       <a href="{url}rss-log">RSS</a>
       <a href="{url}atom-log">Atom</a>

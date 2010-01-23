@@ -1,3 +1,7 @@
+
+copyrev: 82f40c8408e4098410c0c63ac9c3c5c37974348f
+copy: templates/monoblue/graph.tmpl
+
 {header}
     <title>{repo|escape}: graph</title>
     <link rel="alternate" type="application/atom+xml" href="{url}atom-log" title="Atom feed for {repo|escape}"/>
@@ -60,7 +64,7 @@
 
     var revlink = '<li style="_STYLE"><span class="desc">';
     revlink += '<a href="{url}rev/_NODEID{sessionvars%urlparameter}" title="_NODEID">_DESC</a>';
-    revlink += '</span>_TAGS<span class="info">_DATE ago, by _USER</span></li>';
+    revlink += '</span>_TAGS<span class="info">_DATE, by _USER</span></li>';
 
     graph.vertex = function(x, y, color, parity, cur) {
 

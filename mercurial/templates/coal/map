@@ -1,3 +1,7 @@
+
+copyrev: 4f90e6bc53ceb2546d9774d306fb533301731f42
+copy: templates/coal/map
+
 default = 'shortlog'
 
 mimetype = 'text/html; charset={encoding}'
@@ -181,7 +185,7 @@ indexentry = '
     <td><a href="{url}{sessionvars%urlparameter}">{name|escape}</a></td>
     <td>{description}</td>
     <td>{contact|obfuscate}</td>
-    <td class="age">{lastchange|age} ago</td>
+    <td class="age">{lastchange|age}</td>
     <td class="indexlinks">{archives%indexarchiveentry}</td>
   </tr>\n'
 indexarchiveentry = '<a href="{url}archive/{node|short}{extension|urlescape}">&nbsp;&darr;{type|escape}</a>'

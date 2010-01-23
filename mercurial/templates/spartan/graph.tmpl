@@ -1,3 +1,7 @@
+
+copyrev: 0bfb9c17be1a20eaab7182a917608c941febd8d2
+copy: templates/spartan/graph.tmpl
+
 {header}
 <title>{repo|escape}: graph</title>
 <link rel="alternate" type="application/atom+xml"
@@ -55,7 +59,7 @@ graph.edge = function(x0, y0, x1, y1, color) {
 
 var revlink = '<li style="_STYLE"><span class="desc">';
 revlink += '<a href="{url}rev/_NODEID{sessionvars%urlparameter}" title="_NODEID">_DESC</a>';
-revlink += '</span><span class="info">_DATE ago, by _USER</span></li>';
+revlink += '</span><span class="info">_DATE, by _USER</span></li>';
 
 graph.vertex = function(x, y, color, parity, cur) {
 	
