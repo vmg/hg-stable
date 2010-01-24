@@ -1,7 +1,3 @@
-
-copyrev: 39b770c04871adf091a3253c9f07f10a2687b471
-copy: templates/spartan/index.tmpl
-
 {header}
 <title>Mercurial repositories index</title>
 </head>
@@ -14,7 +10,7 @@ copy: templates/spartan/index.tmpl
         <td><a href="?sort={sort_name}">Name</a></td>
         <td><a href="?sort={sort_description}">Description</a></td>
         <td><a href="?sort={sort_contact}">Contact</a></td>
-        <td><a href="?sort={sort_lastchange}">Last change</a></td>
+        <td><a href="?sort={sort_lastchange}">Last modified</a></td>
         <td>&nbsp;</td>
     </tr>
     {entries%indexentry}
