@@ -1,7 +1,3 @@
-
-copyrev: 95bda0468a293f63221352db15c115a97cc9d925
-copy: hgext/inotify/server.py
-
 # linuxserver.py - inotify status server for linux
 #
 # Copyright 2006, 2007, 2008 Bryan O'Sullivan <bos@serpentine.com>
@@ -116,7 +112,8 @@ class pollable(object):
             timeout = None
             timeobj = None
             for obj in cls.instances.itervalues():
-                if obj.timeout is not None and (timeout is None or obj.timeout < timeout):
+                if obj.timeout is not None and (timeout is None
+                                                or obj.timeout < timeout):
                     timeout, timeobj = obj.timeout, obj
             try:
                 events = cls.poll.poll(timeout)
