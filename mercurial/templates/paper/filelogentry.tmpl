@@ -1,0 +1,9 @@
+
+copyrev: 7bec361e8cf7dbd8850934ccce67a3f7b9909f03
+copy: templates/paper/filelogentry.tmpl
+
+ <tr class="parity{parity}">
+  <td class="age">{date|age}</td>
+  <td class="author">{author|person}</td>
+  <td class="description"><a href="{url}rev/{node|short}{sessionvars%urlparameter}">{desc|strip|firstline|escape|nonempty}</a>{inbranch%changelogbranchname}{branches%changelogbranchhead}{tags%changelogtag}</td>
+ </tr>
