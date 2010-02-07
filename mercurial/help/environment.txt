@@ -1,7 +1,3 @@
-
-copyrev: 53e0ed36c835889052386d335c756b9de2ab3e3c
-copy: help/environment.txt
-
 HG
     Path to the 'hg' executable, automatically passed when running
     hooks, extensions or external tools. If unset or empty, this is
@@ -45,6 +41,16 @@ HGRCPATH
 
     - if it's a directory, all files ending with .rc are added
     - otherwise, the file itself will be added
+
+HGPLAIN
+    When set, this disables any options in .hgrc that might change
+    Mercurial's default output. This includes encoding, defaults,
+    verbose mode, debug mode, quiet mode, tracebacks, and
+    localization. This can be useful when scripting against Mercurial
+    in the face of existing user configuration.
+
+    Equivalent options set via command line flags or environment
+    variables are not overridden.
 
 HGUSER
     This is the string used as the author of a commit. If not set,
