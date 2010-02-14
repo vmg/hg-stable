@@ -1,7 +1,3 @@
-
-copyrev: a63d1329f069fad41ef6d6c765da9b120500cf69
-copy: contrib/bash/hg
-
 # bash completion for the Mercurial distributed SCM
 
 # Docs:
