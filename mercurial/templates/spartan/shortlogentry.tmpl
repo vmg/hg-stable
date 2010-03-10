@@ -1,0 +1,11 @@
+
+copyrev: 6e6f2866a6e0242d3b53f92df7de15ae65c5f63b
+copy: templates/spartan/shortlogentry.tmpl
+
+<table class="slogEntry parity{parity}">
+ <tr>
+  <td class="age">{date|age}</td>
+  <td class="author">{author|person}</td>
+  <td class="node"><a href="{url}rev/{node|short}{sessionvars%urlparameter}">{desc|strip|firstline|escape|nonempty}</a></td>
+ </tr>
+</table>
