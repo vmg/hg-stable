@@ -1,7 +1,3 @@
-
-copyrev: ef8cd9daf7e2468c7ac2769697b8168cd83d71cf
-copy: tests/test-issue352.out
-
 % test issue352
 adding hello
 abort: '\n' and '\r' disallowed in filenames: 'he\rllo'
@@ -18,7 +14,7 @@ f  hell
 o  hell
 o
 % test issue2039
-[0;35;1;4m? foo[0m
-bar
-[0;35;1;4m? foo[0m
-bar.baz
+[0;35;1;4m? foo
+bar[0m
+[0;35;1;4m? foo
+bar.baz[0m
