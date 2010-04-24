@@ -1,3 +1,7 @@
+
+copy: doc/rst2man.py
+copyrev: 840112ea17db45b102c28ad4301943a0395a1b70
+
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # $Id: manpage.py 6110 2009-08-31 14:40:33Z grubert $
@@ -1098,12 +1102,5 @@ class Translator(nodes.NodeVisitor):
     def unimplemented_visit(self, node):
         raise NotImplementedError('visiting unimplemented node type: %s'
                                   % node.__class__.__name__)
-
-# The following part is taken from the Docutils rst2man.py script:
-if __name__ == "__main__":
-    from docutils.core import publish_cmdline, default_description
-    description = ("Generates plain unix manual documents.  " +
-                   default_description)
-    publish_cmdline(writer=Writer(), description=description)
 
 # vim: set fileencoding=utf-8 et ts=4 ai :
