@@ -1,7 +1,3 @@
-
-copyrev: 5c39a11e046c356c30f6f781b1702fdb1c32a1ca
-copy: help/config.txt
-
 Mercurial reads configuration data from several files, if they exist.
 Below we list the most specific file first.
 
@@ -33,7 +29,7 @@ and followed by ``name = value`` entries::
   username = Firstname Lastname <firstname.lastname@example.net>
   verbose = True
 
-This above entries will be referred to as ``ui.username`` and
+The above entries will be referred to as ``ui.username`` and
 ``ui.verbose``, respectively. Please see the hgrc man page for a full
 description of the possible configuration values:
 
