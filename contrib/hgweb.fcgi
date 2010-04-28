@@ -1,6 +1,10 @@
+
+copy: contrib/hgwebdir.fcgi
+copyrev: b19e9226423fc45fc95021ac277a5e0940b3d4f9
+
 #!/usr/bin/env python
 #
-# An example hgweb CGI script, edit as necessary
+# An example FastCGI script for use with flup, edit as necessary
 
 # Path to repo or hgweb config to serve (see 'hg help hgweb')
 config = "/path/to/repo/or/config"
@@ -12,6 +16,7 @@ config = "/path/to/repo/or/config"
 #import cgitb; cgitb.enable()
 
 from mercurial import demandimport; demandimport.enable()
-from mercurial.hgweb import hgweb, wsgicgi
+from mercurial.hgweb import hgweb
+from flup.server.fcgi import WSGIServer
 application = hgweb(config)
-wsgicgi.launch(application)
+WSGIServer(application).run()
