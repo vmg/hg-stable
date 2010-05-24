@@ -1,0 +1,22 @@
+
+copyrev: 0e5acda3c4fa919411c10bf021e9086af81077b1
+copy: templates/gitweb/notfound.tmpl
+
+{header}
+<title>Mercurial repository not found</title>
+</head>
+
+<body>
+
+<div class="page_header">
+<a href="http://mercurial.selenic.com/" title="Mercurial" style="float: right;">Mercurial</a> Not found: {repo|escape}
+</div>
+
+<div class="page_body">
+The specified repository "{repo|escape}" is unknown, sorry.
+<br/>
+<br/>
+Please go back to the <a href="{url}">main repository list page</a>.
+</div>
+
+{footer}
