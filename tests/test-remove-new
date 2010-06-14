@@ -1,4 +1,11 @@
+
+copy: tests/test-merge3
+copyrev: 7d212925557b48e18c89e4dd8344773080b8bb0a
+
 #!/bin/sh
+
+# test that 'hg commit' does not crash if the user removes a 
+# newly added file
 
 hg init
 echo This is file a1 > a
