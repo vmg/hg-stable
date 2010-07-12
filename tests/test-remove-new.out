@@ -1,0 +1,6 @@
+
+copy: tests/test-merge3.out
+copyrev: 08024fbe59241fa568cc4f33586864a932066ff8
+
+removing b
+nothing changed
