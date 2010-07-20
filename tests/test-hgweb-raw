@@ -1,3 +1,7 @@
+
+copy: tests/test-webraw
+copyrev: fdebcb67ca3a5d9f911095c46d01473f9810fa62
+
 #!/bin/sh
 
 hg init test

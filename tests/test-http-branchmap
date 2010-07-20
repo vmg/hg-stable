@@ -1,3 +1,7 @@
+
+copy: tests/test-branchmap
+copyrev: b97f67cc52c2f7200aea6307b8c49b8591a789ff
+
 #!/bin/sh
 
 hgserve()

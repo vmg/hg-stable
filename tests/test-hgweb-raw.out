@@ -1,3 +1,7 @@
+
+copy: tests/test-webraw.out
+copyrev: 67026552cad8c7fa97d603a039eeaeda4c560a35
+
 200 Script output follows
 content-type: text/plain; charset="ascii"
 content-length: 157
