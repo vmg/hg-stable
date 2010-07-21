@@ -1,6 +1,6 @@
 
-copy: doc/rst2man.py
-copyrev: 840112ea17db45b102c28ad4301943a0395a1b70
+copy: doc/manpage.py
+copyrev: 4134379ce2ac382ff31e63755553379b5c94f7ba
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
