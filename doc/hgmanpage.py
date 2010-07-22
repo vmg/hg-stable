@@ -1,7 +1,3 @@
-
-copy: doc/manpage.py
-copyrev: 4134379ce2ac382ff31e63755553379b5c94f7ba
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # $Id: manpage.py 6110 2009-08-31 14:40:33Z grubert $
@@ -307,7 +303,7 @@ class Translator(nodes.NodeVisitor):
 
             def __init__(self, style):
                 self._style = style
-                if node.has_key('start'):
+                if 'start' in node:
                     self._cnt = node['start'] - 1
                 else:
                     self._cnt = 0
@@ -349,7 +345,7 @@ class Translator(nodes.NodeVisitor):
             def __repr__(self):
                 return 'enum_style-%s' % list(self._style)
 
-        if node.has_key('enumtype'):
+        if 'enumtype' in node:
             self._list_char.append(enum_char(node['enumtype']))
         else:
             self._list_char.append(enum_char('bullet'))
