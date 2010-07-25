@@ -1,0 +1,10 @@
+
+copyrev: 998375632af4d55a0700b54c77ba18b4210b6057
+copy: templates/rss/changelog.tmpl
+
+{header}
+    <title>{repo|escape} Changelog</title>
+    <description>{repo|escape} Changelog</description>
+    {entries%changelogentry}
+  </channel>
+</rss>
