@@ -1,6 +1,6 @@
 
 copy: tests/test-clone
-copyrev: 5f921f04400a5c6e7935bb30544e5a41fb7854a2
+copyrev: 7ff07212abd3062d1b0585201ee1d277d5c65960
 
 Prepare repo a:
 
@@ -434,4 +434,14 @@ Testing issue2267:
   3 files updated, 0 files merged, 0 files removed, 0 files unresolved
 
   $ rm -r ua
+
+cat <<EOF > branchclone.py
+from mercurial import ui, hg
+myui = ui.ui()
+repo = hg.repository(myui, 'a')
+hg.clone(myui, repo, dest="ua", branch=["stable",])
+EOF
+
+python branchclone.py
+rm -r ua
 
