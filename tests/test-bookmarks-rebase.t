@@ -1,9 +1,3 @@
-
-copy: tests/test-bookmarks-rebase
-copyrev: ef1f422b473e4127f7a4d92be695fad4427ac183
-
-  $ . $TESTDIR/helpers.sh
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "rebase=" >> $HGRCPATH
   $ echo "bookmarks=" >> $HGRCPATH
@@ -42,8 +36,8 @@ bookmark list
 
 rebase
 
-  $ hg rebase -s two -d one 2>&1 | cleanrebase
-  saved backup bundle to 
+  $ hg rebase -s two -d one
+  saved backup bundle to .*
 
   $ hg log
   changeset:   3:9163974d1cb5
