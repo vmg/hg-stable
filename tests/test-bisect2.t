@@ -1,7 +1,3 @@
-
-copy: tests/test-bisect2
-copyrev: c3b966e8094e33bc980e43357d30995d95405a49
-
 # The tests in test-bisect are done on a linear history. Here the
 # following repository history is used for testing:
 #
@@ -26,9 +22,6 @@ copyrev: c3b966e8094e33bc980e43357d30995d95405a49
 #                 1
 #                 |
 #                 0
-
-
-  $ set -e
 
 init
 
@@ -393,3 +386,11 @@ first good revision is 17
   date:        Thu Jan 01 00:00:17 1970 +0000
   summary:     17
   
+
+test unrelated revs:
+
+  $ hg bisect --reset
+  $ hg bisect -b 7
+  $ hg bisect -g 14
+  abort: starting revisions are not directly related
+  $ hg bisect --reset
