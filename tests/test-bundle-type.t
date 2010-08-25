@@ -1,7 +1,3 @@
-
-copy: tests/test-bundle-type
-copyrev: c1baa0f925106e1b11543196ec5b1b7796ae7067
-
 bundle w/o type option
 
   $ hg init t1
@@ -91,7 +87,7 @@ test garbage file
   $ hg init tgarbage
   $ cd tgarbage
   $ hg pull ../bgarbage
-  abort: ../bgarbage: not a Mercurial bundle file
+  abort: ../bgarbage: not a Mercurial bundle
   $ cd ..
 
 test invalid bundle type
