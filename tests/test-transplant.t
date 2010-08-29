@@ -1,7 +1,3 @@
-
-copy: tests/test-transplant
-copyrev: 100ca323cdaba0d4e296dda6c7f8bfc1406218f9
-
   $ cat <<EOF >> $HGRCPATH
   > [extensions]
   > transplant=
@@ -210,7 +206,7 @@ transplant --continue
   Hunk #1 FAILED at 0
   1 out of 1 hunks FAILED -- saving rejects to file foo.rej
   patch failed to apply
-  abort: Fix up the merge and run hg transplant --continue
+  abort: fix up the merge and run hg transplant --continue
 
 transplant -c shouldn't use an old changeset
 
@@ -223,7 +219,7 @@ transplant -c shouldn't use an old changeset
   Hunk #1 FAILED at 0
   1 out of 1 hunks FAILED -- saving rejects to file foo.rej
   patch failed to apply
-  abort: Fix up the merge and run hg transplant --continue
+  abort: fix up the merge and run hg transplant --continue
   $ hg transplant --continue
   a1e30dd1b8e7 transplanted as f1563cf27039
   $ hg transplant 1:3
@@ -323,7 +319,7 @@ test filter with failed patch
   file b1 already exists
   1 out of 1 hunks FAILED -- saving rejects to file b1.rej
   patch failed to apply
-  abort: Fix up the merge and run hg transplant --continue
+  abort: fix up the merge and run hg transplant --continue
   $ cd ..
 
 

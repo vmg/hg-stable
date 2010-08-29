@@ -1,7 +1,3 @@
-
-copy: tests/test-import-eol
-copyrev: 722133a0542be06db1f29d5447bb6f8f0276f0f6
-
   $ cat > makepatch.py <<EOF
   > f = file('eol.diff', 'wb')
   > w = f.write
@@ -40,7 +36,7 @@ invalid eol
 
   $ hg --config patch.eol='LFCR' import eol.diff
   applying eol.diff
-  abort: Unsupported line endings type: LFCR
+  abort: unsupported line endings type: LFCR
   $ hg revert -a
 
 

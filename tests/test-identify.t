@@ -1,13 +1,9 @@
-
-copy: tests/test-identify
-copyrev: feb8cbd14636032050af788d24ff25771459cebe
-
   $ "$TESTDIR/hghave" no-outer-repo || exit 80
 
 no repo
 
   $ hg id
-  abort: There is no Mercurial repository here (.hg not found)
+  abort: there is no Mercurial repository here (.hg not found)
 
 create repo
 

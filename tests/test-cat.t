@@ -1,7 +1,3 @@
-
-copy: tests/test-cat
-copyrev: 1a855d33806bcfab24897a909d84f874efebc074
-
   $ mkdir t
   $ cd t
   $ hg init
@@ -23,6 +19,6 @@ copyrev: 1a855d33806bcfab24897a909d84f874efebc074
   $ hg cat -r 0 b
   0
   $ hg cat -r 1 a
-  a: No such file in rev 03f6b0774996
+  a: no such file in rev 03f6b0774996
   $ hg cat -r 1 b
   1
