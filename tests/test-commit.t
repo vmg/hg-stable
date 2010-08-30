@@ -1,7 +1,3 @@
-
-copy: tests/test-commit
-copyrev: 0e6a68f7a8c5aa897b8a519d48be81aa75545233
-
 commit date test
 
   $ hg init test
@@ -15,9 +11,9 @@ commit date test
   $ hg commit -d '1 4444444' -m commit-3
   abort: impossible time zone offset: 4444444
   $ hg commit -d '1	15.1' -m commit-4
-  abort: invalid date: '1\t15.1' 
+  abort: invalid date: '1\t15.1'
   $ hg commit -d 'foo bar' -m commit-5
-  abort: invalid date: 'foo bar' 
+  abort: invalid date: 'foo bar'
   $ hg commit -d ' 1 4444' -m commit-6
   $ hg commit -d '111111111111 0' -m commit-7
   abort: date exceeds 32 bits: 111111111111
