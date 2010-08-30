@@ -1,7 +1,3 @@
-
-copy: tests/test-keyword
-copyrev: ea1960f6a17ceb89dd585e82a19bd67668c6535b
-
   $ cat <<EOF >> $HGRCPATH
   > [extensions]
   > keyword =
@@ -335,9 +331,10 @@ Cat modified file a
 
 Diff remaining chunk
 
-  $ hg diff | grep -v 'b/a'
+  $ hg diff
   diff -r d17e03c92c97 a
   --- a/a	Wed Dec 31 23:59:51 1969 -0000
+  \+\+\+ b/a	.*
   @@ -2,3 +2,4 @@
    foo
    do not process $Id:
@@ -478,9 +475,10 @@ Test different options of hg kwfiles
 
 Diff specific revision
 
-  $ hg diff --rev 1 | grep -v 'b/c'
+  $ hg diff --rev 1
   diff -r ef63ca68695b c
   --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
+  \+\+\+ b/c	.*
   @@ -0,0 +1,3 @@
   +expand $Id$
   +do not process $Id:
