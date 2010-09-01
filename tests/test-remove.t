@@ -1,9 +1,10 @@
 
 copy: tests/test-remove
-copyrev: 4df4e25c39592fe3b6a3f70ca0b117be22030501
+copyrev: 5f7924390fbd0502131241f920a71e3c5c56bb48
 
   $ remove() {
   >     hg rm $@
+  >     echo "exit code: $?"
   >     hg st
   >     # do not use ls -R, which recurses in .hg subdirs on Mac OS X 10.5
   >     find . -name .hg -prune -o -type f -print | sort
@@ -18,6 +19,7 @@ file not managed
 
   $ remove foo
   not removing foo: file is untracked
+  exit code: 1
   ? foo
   ./foo
   0 files updated, 0 files merged, 0 files removed, 0 files unresolved
@@ -32,6 +34,7 @@ the table cases
   $ hg add bar
   $ remove bar
   not removing bar: file has been marked for add (use -f to force removal)
+  exit code: 1
   A bar
   ./bar
   ./foo
@@ -40,6 +43,7 @@ the table cases
 01 state clean, options none
 
   $ remove foo
+  exit code: 0
   R foo
   ? bar
   ./bar
@@ -50,6 +54,7 @@ the table cases
   $ echo b >> foo
   $ remove foo
   not removing foo: file is modified (use -f to force removal)
+  exit code: 1
   M foo
   ? bar
   ./bar
@@ -60,6 +65,7 @@ the table cases
 
   $ rm foo
   $ remove foo
+  exit code: 0
   R foo
   ? bar
   ./bar
@@ -70,6 +76,7 @@ the table cases
   $ echo b > bar
   $ hg add bar
   $ remove -f bar
+  exit code: 0
   ? bar
   ./bar
   ./foo
@@ -79,6 +86,7 @@ the table cases
 11 state clean, options -f
 
   $ remove -f foo
+  exit code: 0
   R foo
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
 
@@ -86,6 +94,7 @@ the table cases
 
   $ echo b >> foo
   $ remove -f foo
+  exit code: 0
   R foo
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
 
@@ -93,6 +102,7 @@ the table cases
 
   $ rm foo
   $ remove -f foo
+  exit code: 0
   R foo
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
 
@@ -102,6 +112,7 @@ the table cases
   $ hg add bar
   $ remove -A bar
   not removing bar: file still exists (use -f to force removal)
+  exit code: 1
   A bar
   ./bar
   ./foo
@@ -111,6 +122,7 @@ the table cases
 
   $ remove -A foo
   not removing foo: file still exists (use -f to force removal)
+  exit code: 1
   ? bar
   ./bar
   ./foo
@@ -121,6 +133,7 @@ the table cases
   $ echo b >> foo
   $ remove -A foo
   not removing foo: file still exists (use -f to force removal)
+  exit code: 1
   M foo
   ? bar
   ./bar
@@ -131,6 +144,7 @@ the table cases
 
   $ rm foo
   $ remove -A foo
+  exit code: 0
   R foo
   ? bar
   ./bar
@@ -141,6 +155,7 @@ the table cases
   $ echo b > bar
   $ hg add bar
   $ remove -Af bar
+  exit code: 0
   ? bar
   ./bar
   ./foo
@@ -150,6 +165,7 @@ the table cases
 31 state clean, options -Af
 
   $ remove -Af foo
+  exit code: 0
   R foo
   ./foo
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
@@ -158,6 +174,7 @@ the table cases
 
   $ echo b >> foo
   $ remove -Af foo
+  exit code: 0
   R foo
   ./foo
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
@@ -166,6 +183,7 @@ the table cases
 
   $ rm foo
   $ remove -Af foo
+  exit code: 0
   R foo
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
 
@@ -184,6 +202,7 @@ dir, options none
   $ remove test
   removing test/bar
   removing test/foo
+  exit code: 0
   R test/bar
   R test/foo
   ./foo
@@ -195,6 +214,7 @@ dir, options -f
   $ remove -f test
   removing test/bar
   removing test/foo
+  exit code: 0
   R test/bar
   R test/foo
   ./foo
@@ -206,6 +226,7 @@ dir, options -A
   $ remove -A test
   not removing test/foo: file still exists (use -f to force removal)
   removing test/bar
+  exit code: 1
   R test/bar
   ./foo
   ./test/foo
@@ -217,6 +238,7 @@ dir, options -Af
   $ remove -Af test
   removing test/bar
   removing test/foo
+  exit code: 0
   R test/bar
   R test/foo
   ./foo
