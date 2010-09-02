@@ -1,17 +1,13 @@
-
-copy: tests/test-revert-unknown
-copyrev: 6449f8675520ccfffa01229e222e1a914e66c72c
-
   $ hg init
   $ touch unknown
 
   $ touch a
   $ hg add a
-  $ hg ci -m "1" -d "1000000 0"
+  $ hg ci -m "1"
 
   $ touch b
   $ hg add b
-  $ hg ci -m "2" -d "1000000 0"
+  $ hg ci -m "2"
 
 Should show unknown
 

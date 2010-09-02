@@ -1,17 +1,13 @@
-
-copy: tests/test-conflict
-copyrev: d6cf657d98b8d2d578030888734a7c8934436766
-
   $ hg init
   $ echo "nothing" > a
   $ hg add a
-  $ hg commit -m ancestor -d "1000000 0"
+  $ hg commit -m ancestor
   $ echo "something" > a
-  $ hg commit -m branch1 -d "1000000 0"
+  $ hg commit -m branch1
   $ hg co 0
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
   $ echo "something else" > a
-  $ hg commit -m branch2 -d "1000000 0"
+  $ hg commit -m branch2
   created new head
 
   $ hg merge 1
@@ -22,7 +18,7 @@ copyrev: d6cf657d98b8d2d578030888734a7c8934436766
   use 'hg resolve' to retry unresolved file merges or 'hg update -C' to abandon
 
   $ hg id
-  e7fe8eb3e180+0d24b7662d3e+ tip
+  32e80765d7fe+75234512624c+ tip
 
   $ cat a
   <<<<<<< local

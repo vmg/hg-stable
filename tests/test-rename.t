@@ -1,7 +1,3 @@
-
-copy: tests/test-rename
-copyrev: 698dd644ed8427b2e50f201de58b14d78815c1a9
-
   $ hg init
   $ mkdir d1 d1/d11 d2
   $ echo d1/a > d1/a
@@ -10,13 +6,13 @@ copyrev: 698dd644ed8427b2e50f201de58b14d78815c1a9
   $ echo d1/b > d1/b
   $ echo d2/b > d2/b
   $ hg add d1/a d1/b d1/ba d1/d11/a1 d2/b
-  $ hg commit -m "1" -d "1000000 0"
+  $ hg commit -m "1"
 
 rename a single file
 
   $ hg rename d1/d11/a1 d2/c
   $ hg sum
-  parent: 0:6f9914c7a010 tip
+  parent: 0:9b4b6e7b2c26 tip
    1
   branch: default
   commit: 1 renamed

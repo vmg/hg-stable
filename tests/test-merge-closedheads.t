@@ -1,9 +1,5 @@
-
-copy: tests/test-merge-closedheads
-copyrev: a1f131d77edc7acf351ec40c8aa30cec1d5ec4f7
-
   $ hgcommit() {
-  >    hg commit -u user -d '0 0' "$@"
+  >    hg commit -u user "$@"
   > }
 
   $ hg init clhead

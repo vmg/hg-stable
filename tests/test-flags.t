@@ -1,7 +1,3 @@
-
-copy: tests/test-flags
-copyrev: 918c7759a775ce4c22488f3dc9d3a99ceabb266c
-
   $ umask 027
   $ mkdir test1
   $ cd test1
@@ -9,7 +5,7 @@ copyrev: 918c7759a775ce4c22488f3dc9d3a99ceabb266c
   $ hg init
   $ touch a b
   $ hg add a b
-  $ hg ci -m "added a b" -d "1000000 0"
+  $ hg ci -m "added a b"
 
   $ cd ..
   $ hg clone test1 test3
@@ -30,7 +26,7 @@ copyrev: 918c7759a775ce4c22488f3dc9d3a99ceabb266c
   $ hg co
   2 files updated, 0 files merged, 0 files removed, 0 files unresolved
   $ chmod +x a
-  $ hg ci -m "chmod +x a" -d "1000000 0"
+  $ hg ci -m "chmod +x a"
 
 the changelog should mention file a:
 
@@ -39,7 +35,7 @@ the changelog should mention file a:
 
   $ cd ../test1
   $ echo 123 >>a
-  $ hg ci -m "a updated" -d "1000000 0"
+  $ hg ci -m "a updated"
 
   $ hg pull ../test2
   pulling from ../test2
@@ -50,34 +46,34 @@ the changelog should mention file a:
   added 1 changesets with 0 changes to 0 files (+1 heads)
   (run 'hg heads' to see heads, 'hg merge' to merge)
   $ hg heads
-  changeset:   2:37dccb76c058
+  changeset:   2:7f4313b42a34
   tag:         tip
-  parent:      0:4536b1c2ca69
+  parent:      0:22a449e20da5
   user:        test
-  date:        Mon Jan 12 13:46:40 1970 +0000
+  date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     chmod +x a
   
-  changeset:   1:a187cb361a5a
+  changeset:   1:c6ecefc45368
   user:        test
-  date:        Mon Jan 12 13:46:40 1970 +0000
+  date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     a updated
   
   $ hg history
-  changeset:   2:37dccb76c058
+  changeset:   2:7f4313b42a34
   tag:         tip
-  parent:      0:4536b1c2ca69
+  parent:      0:22a449e20da5
   user:        test
-  date:        Mon Jan 12 13:46:40 1970 +0000
+  date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     chmod +x a
   
-  changeset:   1:a187cb361a5a
+  changeset:   1:c6ecefc45368
   user:        test
-  date:        Mon Jan 12 13:46:40 1970 +0000
+  date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     a updated
   
-  changeset:   0:4536b1c2ca69
+  changeset:   0:22a449e20da5
   user:        test
-  date:        Mon Jan 12 13:46:40 1970 +0000
+  date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     added a b
   
 
@@ -88,7 +84,7 @@ the changelog should mention file a:
 
   $ cd ../test3
   $ echo 123 >>b
-  $ hg ci -m "b updated" -d "1000000 0"
+  $ hg ci -m "b updated"
 
   $ hg pull ../test2
   pulling from ../test2
@@ -99,34 +95,34 @@ the changelog should mention file a:
   added 1 changesets with 0 changes to 0 files (+1 heads)
   (run 'hg heads' to see heads, 'hg merge' to merge)
   $ hg heads
-  changeset:   2:37dccb76c058
+  changeset:   2:7f4313b42a34
   tag:         tip
-  parent:      0:4536b1c2ca69
+  parent:      0:22a449e20da5
   user:        test
-  date:        Mon Jan 12 13:46:40 1970 +0000
+  date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     chmod +x a
   
-  changeset:   1:d54568174d8e
+  changeset:   1:dc57ead75f79
   user:        test
-  date:        Mon Jan 12 13:46:40 1970 +0000
+  date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     b updated
   
   $ hg history
-  changeset:   2:37dccb76c058
+  changeset:   2:7f4313b42a34
   tag:         tip
-  parent:      0:4536b1c2ca69
+  parent:      0:22a449e20da5
   user:        test
-  date:        Mon Jan 12 13:46:40 1970 +0000
+  date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     chmod +x a
   
-  changeset:   1:d54568174d8e
+  changeset:   1:dc57ead75f79
   user:        test
-  date:        Mon Jan 12 13:46:40 1970 +0000
+  date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     b updated
   
-  changeset:   0:4536b1c2ca69
+  changeset:   0:22a449e20da5
   user:        test
-  date:        Mon Jan 12 13:46:40 1970 +0000
+  date:        Thu Jan 01 00:00:00 1970 +0000
   summary:     added a b
   
 
