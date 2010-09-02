@@ -1,7 +1,3 @@
-
-copy: tests/test-merge5
-copyrev: 64d660b2cc7613f56dd66d75e4ab6290c5716a23
-
   $ mkdir t
   $ cd t
   $ hg init
@@ -17,6 +13,12 @@ copyrev: 64d660b2cc7613f56dd66d75e4ab6290c5716a23
   $ hg commit -A -m"comment #2" -d "1000000 0"
   removing b
   created new head
+  $ hg update 1
+  1 files updated, 0 files merged, 0 files removed, 0 files unresolved
+  $ hg update
+  abort: crosses branches (use 'hg merge' or use 'hg update -c')
+  $ hg update -c
+  0 files updated, 0 files merged, 1 files removed, 0 files unresolved
   $ mv a c
 in theory, we shouldn't need the "-y" below, but it prevents
 this test from hanging when "hg update" erroneously prompts the
