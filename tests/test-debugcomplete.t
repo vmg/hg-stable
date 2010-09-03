@@ -1,7 +1,3 @@
-
-copy: tests/test-debugcomplete
-copyrev: 688e5e48c1af1306fc05fe36c36872e06d41c52f
-
 Show all commands except debug commands
   $ hg debugcomplete
   add
@@ -194,7 +190,7 @@ Show all commands + options
   push: force, rev, branch, new-branch, ssh, remotecmd
   remove: after, force, include, exclude
   serve: accesslog, daemon, daemon-pipefds, errorlog, port, address, prefix, name, web-conf, webdir-conf, pid-file, stdio, templates, style, ipv6, certificate
-  status: all, modified, added, removed, deleted, clean, unknown, ignored, no-status, copies, print0, rev, change, include, exclude
+  status: all, modified, added, removed, deleted, clean, unknown, ignored, no-status, copies, print0, rev, change, include, exclude, subrepos
   summary: remote
   update: clean, check, date, rev
   addremove: similarity, include, exclude, dry-run
