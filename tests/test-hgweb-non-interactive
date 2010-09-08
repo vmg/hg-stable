@@ -1,7 +1,3 @@
-
-copy: tests/test-non-interactive-wsgi
-copyrev: 2affd77a9342c829a722c718d5590d15cb59b3f0
-
 #!/bin/sh
 # Tests if hgweb can run without touching sys.stdin, as is required
 # by the WSGI standard and strictly implemented by mod_wsgi.
@@ -40,11 +36,12 @@ errors = StringIO()
 input = StringIO()
 output = StringIO()
 
-def startrsp(headers, data):
+def startrsp(status, headers):
+	print '---- STATUS'
+	print status
 	print '---- HEADERS'
 	print headers
 	print '---- DATA'
-	print data
 	return output.write
 
 env = {
