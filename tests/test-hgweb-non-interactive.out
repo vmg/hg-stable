@@ -1,3 +1,7 @@
+
+copy: tests/test-non-interactive-wsgi.out
+copyrev: 4723ba2edbfa237a789dc32f2fa10d71160443e2
+
 changeset:   0:61c9426e69fe
 tag:         tip
 user:        test
