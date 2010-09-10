@@ -1,7 +1,3 @@
-
-copy: tests/test-hgrc
-copyrev: 70ba8f9abe076165ea4f7e33b7d82c5e4ec40909
-
   $ echo "invalid" > $HGRCPATH
   $ hg version 2>&1 | sed -e "s|$HGRCPATH|\$HGRCPATH|"
   hg: parse error at $HGRCPATH:1: invalid
@@ -63,7 +59,7 @@ username expansion
   John Doe
   $ cd ..
 
-  $ hg showconfig | sed -e "s:$p:...:"
+  $ hg showconfig
   ui.username=$FAKEUSER
 
   $ unset FAKEUSER

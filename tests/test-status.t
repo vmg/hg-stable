@@ -1,7 +1,3 @@
-
-copy: tests/test-status
-copyrev: 710a511f37ed0b60bf966e1f81fac34b1db2446c
-
   $ hg init repo1
   $ cd repo1
   $ mkdir a b a/1 b/1 b/2
@@ -110,7 +106,7 @@ hg status . in repo root:
   $ cd repo2
   $ touch modified removed deleted ignored
   $ echo "^ignored$" > .hgignore
-  $ hg ci -A -m 'initial checkin' -d "1000000 0"
+  $ hg ci -A -m 'initial checkin'
   adding .hgignore
   adding deleted
   adding modified
@@ -235,7 +231,7 @@ hg status -i ignoreddir/file:
   $ hg init repo4
   $ cd repo4
   $ touch modified removed deleted
-  $ hg ci -q -A -m 'initial checkin' -d "1000000 0"
+  $ hg ci -q -A -m 'initial checkin'
   $ touch added unknown
   $ hg add added
   $ hg remove removed

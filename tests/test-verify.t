@@ -1,6 +1,6 @@
 
 copy: tests/test-verify
-copyrev: 8f251957b62188246ef65176c5ca48e1d05570a7
+copyrev: fc9d68a2164ee015131c01cf700a48fddadc0fc7
 
 prepare repo
 
@@ -87,5 +87,19 @@ test revlog corruption
   1 warnings encountered!
   1 integrity errors encountered!
   (first damaged changeset appears to be 0)
+
+  $ cd ..
+
+test revlog format 0
+
+  $ "$TESTDIR/revlog-formatv0.py"
+  $ cd formatv0
+  $ hg verify
+  repository uses revlog format 0
+  checking changesets
+  checking manifests
+  crosschecking files in changesets and manifests
+  checking files
+  1 files, 1 changesets, 1 total revisions
 
   $ exit 0
