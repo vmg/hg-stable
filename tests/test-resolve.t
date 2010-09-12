@@ -1,7 +1,3 @@
-
-copy: tests/test-resolve
-copyrev: 09ba722b4f14cef5902abd6cd590970811eb9ac1
-
 test that a commit clears the merge state.
 
   $ hg init repo
@@ -27,7 +23,7 @@ failing merge
 
   $ HGMERGE=internal:fail hg merge
   0 files updated, 0 files merged, 0 files removed, 1 files unresolved
-  use 'hg resolve' to retry unresolved file merges or 'hg update -C' to abandon
+  use 'hg resolve' to retry unresolved file merges or 'hg update -C .' to abandon
 
   $ echo resolved > file
   $ hg resolve -m file

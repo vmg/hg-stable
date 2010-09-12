@@ -1,7 +1,3 @@
-
-copy: tests/test-merge9
-copyrev: cfc8e6140928109b81f5f53986b37ee7343aa988
-
 test that we don't interrupt the merge session if
 a file-level merge failed
 
@@ -34,7 +30,7 @@ test with the rename on the remote side
   merging bar failed!
   merging foo and baz to baz
   1 files updated, 1 files merged, 0 files removed, 1 files unresolved
-  use 'hg resolve' to retry unresolved file merges or 'hg update -C' to abandon
+  use 'hg resolve' to retry unresolved file merges or 'hg update -C .' to abandon
   $ hg resolve -l
   U bar
   R baz
@@ -47,7 +43,7 @@ test with the rename on the local side
   merging bar failed!
   merging baz and foo to baz
   1 files updated, 1 files merged, 0 files removed, 1 files unresolved
-  use 'hg resolve' to retry unresolved file merges or 'hg update -C' to abandon
+  use 'hg resolve' to retry unresolved file merges or 'hg update -C .' to abandon
 
 show unresolved
   $ hg resolve -l

@@ -1,7 +1,3 @@
-
-copy: tests/test-log
-copyrev: e6789c93e5d963874058aa24b9d95843f3110d1e
-
   $ hg init a
 
   $ cd a
@@ -902,7 +898,7 @@ log -p -R repo
   warning: conflicts during merge.
   merging foo failed!
   0 files updated, 0 files merged, 0 files removed, 1 files unresolved
-  use 'hg resolve' to retry unresolved file merges or 'hg update -C' to abandon
+  use 'hg resolve' to retry unresolved file merges or 'hg update -C .' to abandon
   $ echo 'merge 1' > foo
   $ hg resolve -m foo
   $ hg ci -m "First merge, related"
@@ -912,7 +908,7 @@ log -p -R repo
   warning: conflicts during merge.
   merging foo failed!
   1 files updated, 0 files merged, 0 files removed, 1 files unresolved
-  use 'hg resolve' to retry unresolved file merges or 'hg update -C' to abandon
+  use 'hg resolve' to retry unresolved file merges or 'hg update -C .' to abandon
   $ echo 'merge 2' > foo
   $ hg resolve -m foo
   $ hg ci -m "Last merge, related"

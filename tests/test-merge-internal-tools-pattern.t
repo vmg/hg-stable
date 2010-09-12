@@ -1,7 +1,3 @@
-
-copy: tests/test-merge-internal-tools-pattern
-copyrev: 633bbfcee94b6503bfc303e658d6c05a21ac100f
-
 # Make sure that the internal merge tools (internal:fail, internal:local, and
 # internal:other) are used when matched by a merge-pattern in hgrc
 
@@ -46,7 +42,7 @@ Merge using internal:fail tool:
 
   $ hg merge
   0 files updated, 0 files merged, 0 files removed, 1 files unresolved
-  use 'hg resolve' to retry unresolved file merges or 'hg update -C' to abandon
+  use 'hg resolve' to retry unresolved file merges or 'hg update -C .' to abandon
 
   $ cat f
   line 1
