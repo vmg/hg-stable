@@ -1,7 +1,3 @@
-
-copy: tests/test-issue619
-copyrev: 3fd1fb30f6a6e28262075f4d15f73ebe66188b92
-
 # http://mercurial.selenic.com/bts/issue619
 
   $ hg init
@@ -29,6 +25,7 @@ Bogus fast-forward should fail:
 
   $ hg merge b
   abort: merging with a working directory ancestor has no effect
+  [255]
 
   $ true
 

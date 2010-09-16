@@ -1,7 +1,3 @@
-
-copy: tests/test-locate
-copyrev: 32c0ff657c721a914e677b59ad705dc44a97eb9c
-
   $ mkdir t
   $ cd t
   $ hg init
@@ -46,8 +42,11 @@ copyrev: 32c0ff657c721a914e677b59ad705dc44a97eb9c
   $ hg ci -m m
 
   $ hg locate a
+  [1]
   $ hg locate NONEXISTENT
+  [1]
   $ hg locate relpath:NONEXISTENT
+  [1]
   $ hg locate
   b
   dir.h/foo
@@ -58,7 +57,9 @@ copyrev: 32c0ff657c721a914e677b59ad705dc44a97eb9c
   $ hg locate -r 0 a
   a
   $ hg locate -r 0 NONEXISTENT
+  [1]
   $ hg locate -r 0 relpath:NONEXISTENT
+  [1]
   $ hg locate -r 0
   a
   b

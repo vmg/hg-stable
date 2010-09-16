@@ -1,7 +1,3 @@
-
-copy: tests/test-strict
-copyrev: ce051c57ac69ec69c516be6ab44c16dc0bee0698
-
   $ hg init
 
   $ echo a > a
@@ -39,6 +35,7 @@ copyrev: ce051c57ac69ec69c516be6ab44c16dc0bee0698
    update     update working directory (or switch revisions)
   
   use "hg help" for the full list of commands or "hg -v" for details
+  [255]
   $ hg annotate a
   0: a
 

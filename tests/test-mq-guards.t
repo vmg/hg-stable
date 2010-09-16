@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-guards
-copyrev: 0624da08fa330d1189904b772ea5b2861bf10227
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
 
@@ -38,12 +34,14 @@ should fail
 
   $ hg qguard does-not-exist.patch +bleh
   abort: no patch named does-not-exist.patch
+  [255]
 
 
 should fail
 
   $ hg qguard +fail
   abort: no patches applied
+  [255]
 
   $ hg qpush
   applying a.patch
@@ -66,6 +64,7 @@ should fail
 
   $ hg qpush a.patch
   cannot push 'a.patch' - guarded by ['+a']
+  [1]
 
   $ hg qguard a.patch
   a.patch: +a
@@ -84,6 +83,7 @@ test selection of an empty guard
 
   $ hg qselect ""
   abort: guard cannot be an empty string
+  [255]
   $ hg qselect a
   number of unguarded, unapplied patches has changed from 2 to 3
 

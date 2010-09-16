@@ -1,7 +1,3 @@
-
-copy: tests/test-record
-copyrev: c2ed921d37d86dff5c756eed8030326c287676e7
-
 #!/bin/sh
 
   $ echo "[ui]" >> $HGRCPATH
@@ -90,6 +86,7 @@ Select files but no hunks
   new file mode 100644
   examine changes to 'empty-rw'? [Ynsfdaq?] 
   abort: empty commit message
+  [255]
 
   $ hg tip -p
   changeset:   -1:000000000000
@@ -702,6 +699,7 @@ Help, quit
   ? - display help
   examine changes to 'subdir/f1'? [Ynsfdaq?] 
   abort: user quit
+  [255]
 
 Skip
 
@@ -714,6 +712,7 @@ Skip
   diff --git a/subdir/f2 b/subdir/f2
   1 hunks, 1 lines changed
   examine changes to 'subdir/f2'? [Ynsfdaq?] abort: response expected
+  [255]
 
 No
 
@@ -726,6 +725,7 @@ No
   diff --git a/subdir/f2 b/subdir/f2
   1 hunks, 1 lines changed
   examine changes to 'subdir/f2'? [Ynsfdaq?] abort: response expected
+  [255]
 
 f, quit
 
@@ -740,6 +740,7 @@ f, quit
   1 hunks, 1 lines changed
   examine changes to 'subdir/f2'? [Ynsfdaq?] 
   abort: user quit
+  [255]
 
 s, all
 
@@ -930,6 +931,7 @@ Abort early when a merge is in progress
 
   $ hg record -m'will abort'
   abort: cannot partially commit a merge (use hg commit instead)
+  [255]
 
   $ hg up -C
   0 files updated, 0 files merged, 1 files removed, 0 files unresolved

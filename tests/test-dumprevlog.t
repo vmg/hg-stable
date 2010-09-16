@@ -1,7 +1,3 @@
-
-copy: tests/test-dumprevlog
-copyrev: 414b35a72c6ac5c9da43cbc095eb9ac0c55762bd
-
 Set vars:
 
   $ CONTRIBDIR=$TESTDIR/../contrib
@@ -101,11 +97,13 @@ Compare repos:
   comparing with repo-a
   searching for changes
   no changes found
+  [1]
 
   $ hg -R repo-a incoming repo-c
   comparing with repo-c
   searching for changes
   no changes found
+  [1]
 
   $ exit 0
 

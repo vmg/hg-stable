@@ -1,7 +1,3 @@
-
-copy: tests/test-backout
-copyrev: 7eb6424d34cc81a85ad45fe7a59028f1e96dbb2b
-
   $ HGMERGE=true; export HGMERGE
 
   $ hg init basic
@@ -11,8 +7,10 @@ copyrev: 7eb6424d34cc81a85ad45fe7a59028f1e96dbb2b
 
   $ hg backout
   abort: please specify a revision to backout
+  [255]
   $ hg backout -r 0 0
   abort: please specify just one revision
+  [255]
 
 # basic operation
 
@@ -73,6 +71,7 @@ should fail
 
   $ hg backout 1
   abort: cannot backout change on a different branch
+  [255]
   $ echo c > c
   $ hg ci -Am2
   adding c
@@ -82,6 +81,7 @@ should fail
 
   $ hg backout 1
   abort: cannot backout change on a different branch
+  [255]
 
 # backout with merge
 
@@ -142,6 +142,7 @@ check line 1 is back
   $ hg update -C tip
   1 files updated, 0 files merged, 1 files removed, 0 files unresolved
   $ hg locate b
+  [1]
 
   $ cd ..
   $ hg init m
@@ -170,16 +171,19 @@ check line 1 is back
 
   $ hg backout 4
   abort: cannot backout a merge changeset without --parent
+  [255]
 
 # backout of merge with bad parent should fail
 
   $ hg backout --parent 0 4
   abort: cb9a9f314b8b is not a parent of b2f3bb92043e
+  [255]
 
 # backout of non-merge with parent should fail
 
   $ hg backout --parent 0 3
   abort: cannot use --parent on non-merge changeset
+  [255]
 
 # backout with valid parent should be ok
 

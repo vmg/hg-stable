@@ -1,7 +1,3 @@
-
-copy: tests/test-up-issue1456
-copyrev: 0614c130f1031e00f26033f2166cc356cbe3f092
-
   $ rm -rf a
   $ hg init a
   $ cd a
@@ -14,6 +10,7 @@ copyrev: 0614c130f1031e00f26033f2166cc356cbe3f092
   $ echo dirty > foo
   $ hg up -c
   abort: uncommitted local changes
+  [255]
   $ hg up -q
   $ cat foo
   dirty
@@ -27,6 +24,7 @@ Validate update of standalone execute bit change:
   $ chmod -x foo
   $ hg ci -m removeexec
   nothing changed
+  [1]
   $ hg up -C 0
   0 files updated, 0 files merged, 0 files removed, 0 files unresolved
   $ hg up

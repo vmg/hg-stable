@@ -1,7 +1,3 @@
-
-copy: tests/test-empty
-copyrev: fe6fb3ee0c12b814d26564686bdc58a0f652275b
-
 Create an empty repo:
 
   $ hg init a
@@ -11,6 +7,7 @@ Try some commands:
 
   $ hg log
   $ hg grep wah
+  [1]
   $ hg manifest
   $ hg verify
   checking changesets

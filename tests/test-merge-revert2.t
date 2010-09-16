@@ -1,7 +1,3 @@
-
-copy: tests/test-merge-revert2
-copyrev: 25ecad8e75c5d52244fed44d754b567efffe39d2
-
   $ hg init
 
   $ echo "added file1" > file1
@@ -52,6 +48,7 @@ copyrev: 25ecad8e75c5d52244fed44d754b567efffe39d2
   merging file1 failed!
   0 files updated, 0 files merged, 0 files removed, 1 files unresolved
   use 'hg resolve' to retry unresolved file merges
+  [1]
 
   $ hg diff --nodates
   diff -r dfab7f3c2efb file1

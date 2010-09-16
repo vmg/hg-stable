@@ -1,7 +1,3 @@
-
-copy: tests/test-journal-exists
-copyrev: 45a68ea411a32740f7cfe02937d6f9c8a4f2bd03
-
   $ hg init
   $ echo a > a
   $ hg ci -Am0
@@ -14,6 +10,7 @@ copyrev: 45a68ea411a32740f7cfe02937d6f9c8a4f2bd03
   $ echo foo > a
   $ hg ci -Am0
   abort: abandoned transaction found - run hg recover!
+  [255]
 
   $ hg recover
   rolling back interrupted transaction
@@ -31,6 +28,7 @@ Check that zero-size journals are correctly aborted:
   $ hg -R foo unbundle repo.hg
   adding changesets
   abort: Permission denied: .*
+  [255]
 
   $ if test -f foo/.hg/store/journal; then echo 'journal exists :-('; fi
 

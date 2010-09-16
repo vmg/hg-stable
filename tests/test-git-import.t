@@ -1,7 +1,3 @@
-
-copy: tests/test-git-import
-copyrev: 794c561af33c2ea830243fbc0671e47d1349ab90
-
 
   $ hg init
 
@@ -196,6 +192,7 @@ Rename and modify:
   8:c32b0d7e6f44
 
   $ hg locate copy2
+  [1]
   $ hg cat rename2
   a
   a

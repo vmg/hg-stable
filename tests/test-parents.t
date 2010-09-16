@@ -1,7 +1,3 @@
-
-copy: tests/test-parents
-copyrev: a0089f76f52e15a67f8723afef6dff05ff35f41e
-
 test parents command
 
   $ hg init repo
@@ -58,6 +54,7 @@ hg parents c, single revision
 
   $ hg parents -r 3 c
   abort: 'c' not found in manifest!
+  [255]
 
   $ hg parents -r 2
   changeset:   1:d786049f033a
@@ -75,6 +72,7 @@ hg parents c, single revision
 
   $ hg parents -r 2 ../a
   abort: ../a not under root
+  [255]
 
 
 cd dir; hg parents -r 2 ../a
@@ -97,6 +95,7 @@ cd dir; hg parents -r 2 ../a
 
   $ hg parents -r 2 glob:a
   abort: can only specify an explicit filename
+  [255]
 
 
 merge working dir with 2 parents, hg parents c

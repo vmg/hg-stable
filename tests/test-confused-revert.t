@@ -1,7 +1,3 @@
-
-copy: tests/test-confused-revert
-copyrev: 656ecfc8efb0e102007e398f8b128481767305f9
-
   $ hg init
   $ echo foo > a
   $ hg add a
@@ -64,6 +60,7 @@ Revert should fail:
 
   $ hg revert --all
   abort: uncommitted merge - please provide a specific revision
+  [255]
 
 Revert should be ok now:
 

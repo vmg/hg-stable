@@ -1,7 +1,3 @@
-
-copy: tests/test-diff-upgrade
-copyrev: 749b76c0ea2000441eab18737874a50af6212acb
-
 
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "autodiff=$TESTDIR/autodiff.py" >> $HGRCPATH
@@ -248,6 +244,7 @@ git=abort: fail on execute bit change
 
   $ hg autodiff --git=abort regular setexec
   abort: losing data for setexec
+  [255]
 
 git=abort: succeed on regular file
 

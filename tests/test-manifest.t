@@ -1,7 +1,3 @@
-
-copy: tests/test-manifest
-copyrev: 9f55c6a8a409cd33fc06c5f68a21e343a53f07e1
-
 # Source bundle was generated with the following script.
 #
 # hg init
@@ -64,9 +60,11 @@ The next two calls are expected to abort:
 
   $ hg manifest -r 2
   abort: unknown revision '2'!
+  [255]
 
   $ hg manifest -r tip tip
   abort: please specify just one revision
+  [255]
 
 
   $ true

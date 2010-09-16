@@ -1,7 +1,3 @@
-
-copy: tests/test-qrecord
-copyrev: 697f6b99d4752590e2ead275a0f642597fcec4c3
-
 Create configuration
 
   $ echo "[ui]" >> $HGRCPATH
@@ -36,6 +32,7 @@ help (no mq, so no qrecord)
    update     update working directory (or switch revisions)
   
   use "hg help" for the full list of commands or "hg -v" for details
+  [255]
 
 help (mq present)
 

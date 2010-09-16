@@ -1,7 +1,3 @@
-
-copy: tests/test-grep
-copyrev: 906a641d28cc7952cfc720c0fec6caee925dc2a1
-
   $ mkdir t
   $ cd t
   $ hg init
@@ -24,6 +20,7 @@ pattern error
 
   $ hg grep '**test**'
   grep: invalid match pattern: nothing to repeat
+  [1]
 
 simple
 
@@ -83,7 +80,9 @@ follow
   $ hg init t2
   $ cd t2
   $ hg grep foobar foo
+  [1]
   $ hg grep foobar
+  [1]
   $ echo blue >> color
   $ echo black >> color
   $ hg add color

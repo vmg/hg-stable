@@ -1,7 +1,3 @@
-
-copy: tests/test-username-newline
-copyrev: 4144cb52a6932bbe1dd9b0039856f9b265ebcf0b
-
   $ hg init
   $ touch a
 
@@ -14,15 +10,18 @@ copyrev: 4144cb52a6932bbe1dd9b0039856f9b265ebcf0b
   adding a
   abort: username 'foo\nbar1' contains a newline
   
+  [255]
   $ rm .hg/hgrc
 
   $ HGUSER=`(echo foo; echo bar2)` hg ci -Am m
   abort: username 'foo\nbar2' contains a newline
   
+  [255]
   $ hg ci -Am m -u "`(echo foo; echo bar3)`"
   transaction abort!
   rollback completed
   abort: username 'foo\nbar3' contains a newline!
+  [255]
 
   $ true
 

@@ -1,7 +1,3 @@
-
-copy: tests/test-import
-copyrev: 58292458a675655d35b551e48a6dfe1ac373a0ac
-
   $ hg init a
   $ mkdir a/d1
   $ mkdir a/d1/d2
@@ -78,6 +74,7 @@ import of plain diff should fail without message
   $ hg --cwd b import ../tip.patch
   applying ../tip.patch
   abort: empty commit message
+  [255]
   $ rm -r b
 
 
@@ -291,6 +288,7 @@ plain diff in email, no subject, no message body, should fail
   $ egrep -v '^(Subject|email)' msg.patch | hg --cwd b import -
   applying patch from stdin
   abort: empty commit message
+  [255]
   $ rm -r b
 
 
@@ -609,6 +607,7 @@ test paths outside repo root
   > EOF
   applying patch from stdin
   abort: ../outside/foo not under root
+  [255]
   $ cd ..
 
 

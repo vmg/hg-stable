@@ -1,7 +1,3 @@
-
-copy: tests/test-pull
-copyrev: 3fc5a8a0ca36c7cc5e273d9812559e0ec3cac297
-
   $ mkdir test
   $ cd test
 
@@ -73,6 +69,7 @@ Test 'file:' uri handling:
 
   $ hg pull -q file://../test-doesnt-exist
   abort: repository /test-doesnt-exist not found!
+  [255]
 
   $ hg pull -q file:../test
 

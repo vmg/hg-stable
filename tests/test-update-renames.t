@@ -1,7 +1,3 @@
-
-copy: tests/test-update-renames
-copyrev: 6eb26a8d240ee8130bdc7471d9d71f455095f88b
-
 # test update logic when there are renames
 
 # update with local changes across a file rename
@@ -28,6 +24,7 @@ copyrev: 6eb26a8d240ee8130bdc7471d9d71f455095f88b
   merging b failed!
   0 files updated, 0 files merged, 0 files removed, 1 files unresolved
   use 'hg resolve' to retry unresolved file merges
+  [1]
 
   $ cd ..
 

@@ -1,7 +1,3 @@
-
-copy: tests/test-dispatch
-copyrev: 6afd26aa770228e95f8ed8fdc2805053c745d4bd
-
 test command parsing and dispatch
 
   $ "$TESTDIR/hghave" no-outer-repo || exit 80
@@ -47,6 +43,7 @@ Missing arg:
   [+] marked option can be specified multiple times
   
   use "hg -v help cat" to show global options
+  [255]
 
 [defaults]
 
@@ -58,12 +55,14 @@ Missing arg:
   > EOF
   $ hg cat a
   a: no such file in rev 000000000000
+  [1]
 
 No repo:
 
   $ cd $dir
   $ hg cat
   abort: There is no Mercurial repository here (.hg not found)!
+  [255]
 
   $ exit 0
 

@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-eol
-copyrev: 31b042dfabe15389d658f4d211b2f448288c59aa
-
 
 Test interactions between mq and patch.eol
 
@@ -64,6 +60,7 @@ should fail in strict mode
   patch failed, unable to continue (try -v)
   patch failed, rejects left in working dir
   errors during apply, please fix and refresh eol.diff
+  [2]
   $ hg qpop
   popping eol.diff
   patch queue now empty
@@ -75,6 +72,7 @@ invalid eol
   patch failed, unable to continue (try -v)
   patch failed, rejects left in working dir
   errors during apply, please fix and refresh eol.diff
+  [2]
   $ hg qpop
   popping eol.diff
   patch queue now empty

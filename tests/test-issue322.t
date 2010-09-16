@@ -1,7 +1,3 @@
-
-copy: tests/test-issue322
-copyrev: d850435d09ae88142db860152fea3061f9927991
-
 # http://mercurial.selenic.com/bts/issue322
 
 File replaced with directory:
@@ -19,6 +15,7 @@ Should fail - would corrupt dirstate:
 
   $ hg add a/a
   abort: file 'a' in dirstate clashes with 'a/a'
+  [255]
 
   $ cd ..
 
@@ -38,6 +35,7 @@ Should fail - would corrupt dirstate:
 
   $ hg add a
   abort: directory 'a' already in dirstate
+  [255]
 
   $ cd ..
 
@@ -57,6 +55,7 @@ Should fail - would corrupt dirstate:
 
   $ hg add b
   abort: directory 'b' already in dirstate
+  [255]
 
   $ exit 0
 

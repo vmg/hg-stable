@@ -1,7 +1,3 @@
-
-copy: tests/test-extension
-copyrev: c957bec5e078f03294a5f0c43a0d7b7283663e03
-
 Test basic extension support
 
   $ "$TESTDIR/hghave" no-outer-repo || exit 80
@@ -279,6 +275,7 @@ Disabled extension commands:
       mq  manage a stack of patches
   
   use "hg help extensions" for information on enabling extensions
+  [255]
   $ hg churn
   hg: unknown command 'churn'
   'churn' is provided by the following extension:
@@ -286,6 +283,7 @@ Disabled extension commands:
       churn  command to display statistics about repository history
   
   use "hg help extensions" for information on enabling extensions
+  [255]
 
 Disabled extensions:
 
@@ -319,6 +317,7 @@ Broken disabled extension and command:
 
   $ hg --config extensions.path=./path.py help foo > /dev/null
   hg: unknown command 'foo'
+  [255]
 
   $ exit 0
 

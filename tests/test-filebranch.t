@@ -1,7 +1,3 @@
-
-copy: tests/test-filebranch
-copyrev: 89f839051c293420304f5273acced451059c2095
-
 This test makes sure that we don't mark a file as merged with its ancestor
 when we do a merge.
 
@@ -45,6 +41,7 @@ Creating branch b:
 We shouldn't have anything but n state here:
 
   $ hg debugstate --nodates | grep -v "^n"
+  [1]
 
 Merging:
 

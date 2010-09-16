@@ -1,7 +1,3 @@
-
-copy: tests/test-clone-update-order
-copyrev: cf4b3ee67b4b2a1e48adb65e02213da06f8d18c6
-
   $ hg init
   $ echo foo > bar
   $ hg commit -Am default
@@ -25,6 +21,7 @@ copyrev: cf4b3ee67b4b2a1e48adb65e02213da06f8d18c6
 
   $ hg clone -U -u . .#other ../b -r 0 -r 1 -r 2 -b other
   abort: cannot specify both --noupdate and --updaterev
+  [255]
 
   $ hg clone -U .#other ../b -r 0 -r 1 -r 2 -b other
   requesting all changes

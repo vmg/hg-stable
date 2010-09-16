@@ -1,7 +1,3 @@
-
-copy: tests/test-addremove-similar
-copyrev: c3422057b4b7bf41a1f716b4c156485e0b88a4f8
-
   $ hg init rep; cd rep
 
   $ touch empty-file
@@ -63,10 +59,13 @@ should all fail
 
   $ hg addremove -s foo
   abort: similarity must be a number
+  [255]
   $ hg addremove -s -1
   abort: similarity must be between 0 and 100
+  [255]
   $ hg addremove -s 1e6
   abort: similarity must be between 0 and 100
+  [255]
 
   $ cd ..
 

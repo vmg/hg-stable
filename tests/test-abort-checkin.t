@@ -1,7 +1,3 @@
-
-copy: tests/test-abort-checkin
-copyrev: 93ec41d4bed60c668904d33ba1c688c2e796a98d
-
   $ cat > abortcommit.py <<EOF
   > from mercurial import util
   > def hook(**args):
@@ -28,10 +24,12 @@ called and .hg/journal.dirstate will not be deleted:
   transaction abort!
   rollback completed
   abort: no commits allowed
+  [255]
   $ hg ci -m foo
   error: pretxncommit.nocommits hook failed: no commits allowed
   transaction abort!
   rollback completed
   abort: no commits allowed
+  [255]
 
   $ exit 0

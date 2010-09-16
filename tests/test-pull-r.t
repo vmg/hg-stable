@@ -1,7 +1,3 @@
-
-copy: tests/test-pull-r
-copyrev: 04d55c116da2b1b2931850c1108cbddc657396f2
-
   $ hg init repo
   $ cd repo
   $ echo foo > foo
@@ -38,6 +34,7 @@ Pull a missing revision:
 
   $ hg pull -qr missing ../repo
   abort: unknown revision 'missing'!
+  [255]
 
 Pull multiple revisions with update:
 

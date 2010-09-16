@@ -1,7 +1,3 @@
-
-copy: tests/test-diff-unified
-copyrev: 29c27e38c5c6ad27935a85e2e3c237900fa7fbf1
-
   $ hg init repo
   $ cd repo
   $ cat > a <<EOF
@@ -50,6 +46,7 @@ invalid --unified
 
   $ hg diff --nodates -U foo
   abort: diff context lines count must be an integer, not 'foo'
+  [255]
 
 
   $ hg diff --nodates -U 2
@@ -90,6 +87,7 @@ invalid diff.unified
 
   $ hg --config diff.unified=foo diff --nodates
   abort: diff context lines count must be an integer, not 'foo'
+  [255]
 
 test off-by-one error with diff -p
 

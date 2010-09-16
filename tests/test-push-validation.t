@@ -1,7 +1,3 @@
-
-copy: tests/test-push-validation
-copyrev: 2992e945eb5b01c8e6e4f791e78e992b3367d976
-
   $ hg init test
   $ cd test
 
@@ -39,6 +35,7 @@ Expected to fail:
   2 files, 2 changesets, 2 total revisions
   1 integrity errors encountered!
   (first damaged changeset appears to be 1)
+  [1]
 
 Expected to fail:
 
@@ -51,6 +48,7 @@ Expected to fail:
   transaction abort!
   rollback completed
   abort: missing file data for beta:dddc47b3ba30e54484720ce0f4f768a0f4b6efb9 - run hg verify
+  [255]
 
   $ true
 

@@ -1,7 +1,3 @@
-
-copy: tests/test-parse-date
-copyrev: 26bb9e3e018a10387647cd2205ec6ba71fb82e56
-
 This runs with TZ="GMT"
 
   $ hg init
@@ -22,10 +18,13 @@ This runs with TZ="GMT"
   $ echo "fail" >> a
   $ hg ci -d "should fail" -m "fail"
   abort: invalid date: 'should fail'
+  [255]
   $ hg ci -d "100000000000000000 1400" -m "fail"
   abort: date exceeds 32 bits: 100000000000000000
+  [255]
   $ hg ci -d "100000 1400000" -m "fail"
   abort: impossible time zone offset: 1400000
+  [255]
 
 Check with local timezone other than GMT and with DST
 

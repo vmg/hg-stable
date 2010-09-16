@@ -1,7 +1,3 @@
-
-copy: tests/test-paths
-copyrev: 0459a6cb54913ce06ca754ca3fbeb7cda745d155
-
   $ hg init a
   $ hg clone a b
   updating to branch default
@@ -12,8 +8,10 @@ copyrev: 0459a6cb54913ce06ca754ca3fbeb7cda745d155
   $ hg in dupe
   comparing with .*/test-paths.t/b
   no changes found
+  [1]
   $ cd ..
   $ hg -R a in dupe
   comparing with .*/test-paths.t/b
   no changes found
+  [1]
   $ true

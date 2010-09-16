@@ -1,7 +1,3 @@
-
-copy: tests/test-merge-force
-copyrev: cfa3c35fec910bffb8656f4ac78f8f348ca54f7c
-
   $ hg init
 
   $ echo a > a
@@ -24,6 +20,7 @@ Should fail, since there are deleted files:
 
   $ hg merge
   abort: outstanding uncommitted changes (use 'hg status' to list changes)
+  [255]
 
 Should succeed with --force:
 

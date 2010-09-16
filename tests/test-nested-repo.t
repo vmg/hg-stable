@@ -1,7 +1,3 @@
-
-copy: tests/test-nested-repo
-copyrev: 3c9967315338b5a0fd7b99f8ab0a9d97e3491cb9
-
   $ hg init a
   $ cd a
   $ hg init b
@@ -16,13 +12,16 @@ Should fail:
 
   $ hg st b/x
   abort: path 'b/x' is inside repo 'b'
+  [255]
   $ hg add b/x
   abort: path 'b/x' is inside repo 'b'
+  [255]
 
 Should fail:
 
   $ hg add b b/x
   abort: path 'b/x' is inside repo 'b'
+  [255]
   $ hg st
 
 Should arguably print nothing:
@@ -36,5 +35,6 @@ Should fail:
 
   $ hg mv a b
   abort: path 'b/a' is inside repo 'b'
+  [255]
   $ hg st
 

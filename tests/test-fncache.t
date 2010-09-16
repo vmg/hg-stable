@@ -1,7 +1,3 @@
-
-copy: tests/test-fncache
-copyrev: cb0926aca3c3d743f6f53e100abb01a547a4923f
-
 Init repo1:
 
   $ hg init repo1
@@ -58,6 +54,7 @@ Testing verify:
   3 files, 3 changesets, 3 total revisions
   3 integrity errors encountered!
   (first damaged changeset appears to be 0)
+  [1]
   $ cd ..
 
 Non store repo:

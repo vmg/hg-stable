@@ -1,7 +1,3 @@
-
-copy: tests/test-bheads
-copyrev: 1a9d4b00d741922f5e8009c70c5109f307703d0d
-
   $ heads()
   > {
   >    hg heads --template '{rev}: {desc|firstline|strip} ({branches})\n' "$@"
@@ -136,6 +132,7 @@ copyrev: 1a9d4b00d741922f5e8009c70c5109f307703d0d
 
   $ heads -r 3 .
   no open branch heads found on branches c (started at 3)
+  [1]
   $ echo $?
   0
   $ heads -r 2 .
@@ -161,6 +158,7 @@ copyrev: 1a9d4b00d741922f5e8009c70c5109f307703d0d
 -------
   $ heads -r 7 .
   no open branch heads found on branches b (started at 7)
+  [1]
   $ echo $?
   0
 

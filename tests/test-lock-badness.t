@@ -1,7 +1,3 @@
-
-copy: tests/test-lock-badness
-copyrev: a8dbd2e69dcb21d94ba9a64b2ff6ef39200cefde
-
   $ hg init a
   $ echo a > a/a
   $ hg -R a ci -A -m a
@@ -20,6 +16,7 @@ copyrev: a8dbd2e69dcb21d94ba9a64b2ff6ef39200cefde
   $ hg -R b push a
   pushing to a
   abort: could not lock repository a: Permission denied
+  [255]
 
   $ chmod 700 a/.hg/store
 

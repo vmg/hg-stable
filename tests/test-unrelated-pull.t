@@ -1,7 +1,3 @@
-
-copy: tests/test-unrelated-pull
-copyrev: c46889255c5730ea052c9d24dc3bf9c0055f9b48
-
   $ mkdir a
   $ cd a
   $ hg init
@@ -21,6 +17,7 @@ copyrev: c46889255c5730ea052c9d24dc3bf9c0055f9b48
   pulling from ../a
   searching for changes
   abort: repository is unrelated
+  [255]
 
   $ hg pull -f ../a
   pulling from ../a
