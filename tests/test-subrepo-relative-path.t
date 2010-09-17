@@ -1,7 +1,3 @@
-
-copy: tests/test-subrepo-relative-path
-copyrev: 56019c4d94cc01d0a919381d8732d9f2d5e80b5f
-
 Preparing the subrepository 'sub'
 
   $ hg init sub
@@ -71,5 +67,3 @@ subrepo debug for 'main' clone
    revision 863c1745b441bd97a8c4a096e87793073f4fb215
 
   $ "$TESTDIR/killdaemons.py"
-
-  $ exit 0
