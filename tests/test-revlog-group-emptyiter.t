@@ -1,8 +1,5 @@
-
-copy: tests/test-revlog-group-emptyiter
-copyrev: e3aaaf91728ba131baac2edae6d1199e9fc4c454
-
-# issue 1678
+issue 1678
+
 setting up base repo
   $ hg init a
   $ cd a

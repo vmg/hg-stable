@@ -1,8 +1,4 @@
-
-copy: tests/test-issue842
-copyrev: 13d1f72c75aa3087dd80d6c4f3c2577d0695dd41
-
-# http://mercurial.selenic.com/bts/issue842
+http://mercurial.selenic.com/bts/issue842
 
   $ hg init
   $ echo foo > a

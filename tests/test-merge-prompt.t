@@ -1,14 +1,9 @@
-
-copy: tests/test-merge-prompt
-copyrev: 1bfb1731b874e7e213a8de75adf1ba71170c6120
-
-# Test for
-#
-#   b5605d88dc27: Make ui.prompt repeat on "unrecognized response" again
-#                 (issue897)
-#
-#   840e2b315c1f: Fix misleading error and prompts during update/merge
-#                 (issue556)
+Test for
+b5605d88dc27: Make ui.prompt repeat on "unrecognized response" again
+ (issue897)
+
+840e2b315c1f: Fix misleading error and prompts during update/merge
+ (issue556)
 
   $ status() {
   >     [ $? -ne 0 ] && echo "failed."

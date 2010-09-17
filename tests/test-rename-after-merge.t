@@ -1,9 +1,5 @@
-
-copy: tests/test-rename-after-merge
-copyrev: 3bfadb7ead19f401fd4b9d35a0725199197b79fd
-
-# Test issue 746: renaming files brought by the
-# second parent of a merge was broken.
+Test issue 746: renaming files brought by the second parent of a merge
+was broken.
 
 Create source repository:
 
@@ -63,9 +59,8 @@ Rename back c as b:
 
   $ cd ..
 
-# Test issue 1476: renaming a first parent file into
-# another first parent file while none of them belong to
-# the second parent was broken
+Test issue 1476: renaming a first parent file into another first
+parent file while none of them belong to the second parent was broken
 
   $ hg init repo1476
   $ cd repo1476

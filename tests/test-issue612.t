@@ -1,8 +1,4 @@
-
-copy: tests/test-issue612
-copyrev: c296e33b7aa30cac6b9cd2c4e633088f4563e900
-
-# http://mercurial.selenic.com/bts/issue612
+http://mercurial.selenic.com/bts/issue612
 
   $ hg init
   $ mkdir src

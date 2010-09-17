@@ -1,8 +1,4 @@
-
-copy: tests/test-url-rev
-copyrev: c41864f268a915bd80a1c2a22c2cd5bac5ff09fc
-
-# test basic functionality of url#rev syntax
+Test basic functionality of url#rev syntax
 
   $ hg init repo
   $ cd repo
