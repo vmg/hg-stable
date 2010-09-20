@@ -1,3 +1,7 @@
+
+copy: tests/test-rename
+copyrev: 07a2511b46feac276bbd82b87de30f2237cfdb32
+
   $ hg init
   $ mkdir d1 d1/d11 d2
   $ echo d1/a > d1/a
@@ -370,6 +374,17 @@ forced overwrite of an existing file
   R d1/ba
   $ hg update -C
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
+  $ rm d1/ca
+
+attempt to overwrite an existing broken symlink
+
+  $ ln -s ba d1/ca
+  $ hg rename --traceback d1/ba d1/ca
+  d1/ca: not overwriting - file exists
+  $ hg status -C
+  ? d1/ca
+  $ hg update -C
+  0 files updated, 0 files merged, 0 files removed, 0 files unresolved
   $ rm d1/ca
 
 replace a symlink with a file
