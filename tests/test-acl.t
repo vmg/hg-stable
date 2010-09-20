@@ -1,7 +1,3 @@
-
-copy: tests/test-acl
-copyrev: 567ba063f0eb4bb8fa2102e5002c81f1a7bcc091
-
   > do_push()
   > {
   >     user=$1
@@ -1738,5 +1734,3 @@ Disable the fakegroups trick to get real failures
   acl: "unlikelytoexist" not defined in [acl.groups]
   error: pretxnchangegroup.acl hook failed: group 'unlikelytoexist' is undefined
   abort: group 'unlikelytoexist' is undefined
-
-  $ true

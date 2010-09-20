@@ -1,7 +1,3 @@
-
-copy: tests/test-empty-dir
-copyrev: 1a16a5d4958ed051aa4bc010fac37800e81aaa9e
-
   $ hg init
 
   $ echo 123 > a
@@ -24,6 +20,4 @@ copyrev: 1a16a5d4958ed051aa4bc010fac37800e81aaa9e
 
   $ test -d sub || echo "sub not present"
   sub not present
-
-  $ true
 
