@@ -1,7 +1,3 @@
-
-copyrev: f668eea01be748a2f9b02e268538c79d596f48f7
-copy: templates/static/style-monoblue.css
-
 /*** Initial Settings ***/
 * {
   margin: 0;
@@ -207,6 +203,9 @@ table tr td {
 }
 table tr td.nowrap {
   white-space: nowrap;
+}
+table tr td.closed { 
+  background-color: #99f; 
 }
 /*
 table tr.parity0:hover,
