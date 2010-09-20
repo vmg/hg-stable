@@ -1,6 +1,6 @@
 
 copy: tests/test-mq-symlinks
-copyrev: 3c29cf7d715f0ce95d05b4bff9395ba2c0787b01
+copyrev: 69de65d0f92fd2e8492e268f7f95a77ed845d1d3
 
   $ "$TESTDIR/hghave" symlink || exit 80
 
@@ -92,3 +92,33 @@ test symlink removal
   C b
   C c
   C s
+
+replace broken symlink with another broken symlink
+
+  $ ln -s linka linka
+  $ hg add linka
+  $ hg qnew link
+  $ hg mv linka linkb
+  $ ln -sf linkb linkb
+  $ hg qnew movelink
+  $ hg qpop
+  popping movelink
+  now at: link
+  $ hg qpush
+  applying movelink
+  now at: movelink
+  $ $TESTDIR/readlink.py linkb
+  linkb -> linkb
+
+check patch does not overwrite untracked symlinks
+
+  $ hg qpop
+  popping movelink
+  now at: link
+  $ ln -s linkbb linkb
+  $ hg qpush
+  applying movelink
+  patch failed, unable to continue (try -v)
+  patch failed, rejects left in working dir
+  errors during apply, please fix and refresh movelink
+  [2]
