@@ -1,8 +1,4 @@
-
-copy: tests/test-issue1306
-copyrev: 0b0c18be1628baadedc0860a297d8253d7e35b0b
-
-# http://mercurial.selenic.com/bts/issue1306
+http://mercurial.selenic.com/bts/issue1306
 
 Initialize remote repo with branches:
 

@@ -1,7 +1,3 @@
-
-copy: tests/test-update-branches
-copyrev: bb2dc5ec7fc4f90a46391397c8622839706e6b0b
-
 # Construct the following history tree:
 #
 # @  5:e1bb631146ca  b1
@@ -73,8 +69,8 @@ Test helper functions:
   >     hg stat
   > }    
 
-# Test cases are documented in a table in the update function of merge.py.
-# Cases are run as shown in that table, row by row.
+Test cases are documented in a table in the update function of merge.py.
+Cases are run as shown in that table, row by row.
 
   $ norevtest 'none clean linear' clean 4
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved

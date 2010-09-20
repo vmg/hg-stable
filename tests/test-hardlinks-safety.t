@@ -1,9 +1,5 @@
-
-copy: tests/test-hardlinks-safety
-copyrev: be1b9d864ed3cf1273b324dd8685dec3e532725f
-
+some implementations of cp can't create hardlinks
 
-# some implementations of cp can't create hardlinks
   $ cat > cp.py <<EOF
   > from mercurial import util
   > import sys

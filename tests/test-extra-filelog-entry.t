@@ -1,8 +1,4 @@
-
-copy: tests/test-extra-filelog-entry
-copyrev: 22f3ca53f16087b5d8552b43c44aa5bc0c0cdaaa
-
-# test for issue351
+test for issue351
 
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH

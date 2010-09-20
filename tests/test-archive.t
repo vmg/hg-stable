@@ -1,7 +1,3 @@
-
-copy: tests/test-archive
-copyrev: 1ce198623981220f6a441a5f308c5d60b2e07acc
-
   $ mkdir test
   $ cd test
   $ hg init
@@ -231,11 +227,9 @@ old file -- date clamped to 1980
   $ hg archive ../old.zip
   $ unzip -l ../old.zip
   Archive:  ../old.zip
-    Length      Date    Time    Name
-  ---------  ---------- -----   ----
-        147  1980-01-01 00:00   old/.hg_archival.txt
-          0  1980-01-01 00:00   old/old
-  ---------                     -------
-        147                     2 files
-
-  $ exit 0
+  \s*Length.*
+  .*-----.*
+  .*147.*80.*00:00.*old/.hg_archival.txt
+  .*0.*80.*00:00.*old/old
+  .*-----.*
+  \s*147\s+2 files

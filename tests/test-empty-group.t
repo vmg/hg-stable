@@ -1,8 +1,3 @@
-
-copy: tests/test-empty-group
-copyrev: 26c78e4117346da5fa99097b4069f399dff98f1a
-
-#
 #  A          B
 #
 #  3  4       3
@@ -19,7 +14,6 @@ copyrev: 26c78e4117346da5fa99097b4069f399dff98f1a
 #
 # (plus we test a failure where outgoing
 # wrongly reported the number of csets)
-#
 
   $ hg init a
   $ cd a
@@ -44,9 +38,6 @@ copyrev: 26c78e4117346da5fa99097b4069f399dff98f1a
   (branch merge, don't forget to commit)
   $ hg ci -A -m m1
 
-#hg log
-#hg debugindex .hg/store/00manifest.i
-
   $ hg update -C 1
   0 files updated, 0 files merged, 0 files removed, 0 files unresolved
   $ hg merge 2
@@ -54,9 +45,6 @@ copyrev: 26c78e4117346da5fa99097b4069f399dff98f1a
   (branch merge, don't forget to commit)
   $ hg ci -A -m m2
   created new head
-
-#hg log
-#hg debugindex .hg/store/00manifest.i
 
   $ cd ..
 
@@ -139,4 +127,3 @@ copyrev: 26c78e4117346da5fa99097b4069f399dff98f1a
   adding file changes
   added 1 changesets with 0 changes to 0 files (+1 heads)
   (run 'hg heads' to see heads, 'hg merge' to merge)
-

@@ -1,8 +1,4 @@
-
-copy: tests/test-issue672
-copyrev: cac79b5deb1e73adef5b84314e115d0d1f8912fa
-
-# http://mercurial.selenic.com/bts/issue672
+http://mercurial.selenic.com/bts/issue672
 
 # 0-2-4
 #  \ \ \

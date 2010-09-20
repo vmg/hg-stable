@@ -1,8 +1,4 @@
-
-copy: tests/test-issue1438
-copyrev: 51e314c0e732a42ead6b88da12592aae1cc79b89
-
-# http://mercurial.selenic.com/bts/issue1438
+http://mercurial.selenic.com/bts/issue1438
 
   $ "$TESTDIR/hghave" symlink || exit 80
 

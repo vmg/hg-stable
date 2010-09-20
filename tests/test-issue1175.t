@@ -1,8 +1,4 @@
-
-copy: tests/test-issue1175
-copyrev: b0cdfbab9ee154514ef1db1696bc9d63c9e41701
-
-# http://mercurial.selenic.com/bts/issue1175
+http://mercurial.selenic.com/bts/issue1175
 
   $ hg init
   $ touch a
