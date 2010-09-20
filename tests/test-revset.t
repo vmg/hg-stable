@@ -1,3 +1,7 @@
+
+copy: tests/test-revset
+copyrev: 663f2ff02faaedd50cdf397ba2bf11ef1a7b1a6c
+
   $ HGENCODING=utf-8
   $ export HGENCODING
 
@@ -211,6 +215,10 @@ quoting needed
   9
   $ log 'grep("issue\d+")'
   6
+  $ try 'grep("(")' # invalid regular expression
+  ('func', ('symbol', 'grep'), ('string', '('))
+  hg: parse error: invalid match pattern: unbalanced parenthesis
+  [255]
   $ log 'head()'
   0
   1
