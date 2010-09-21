@@ -1,7 +1,3 @@
-
-copy: tests/test-export
-copyrev: d72cb2cd68376779eaec04d5b30382e1be5b09ab
-
   $ hg init repo
   $ cd repo
   $ touch foo
@@ -85,13 +81,13 @@ copyrev: d72cb2cd68376779eaec04d5b30382e1be5b09ab
 Exporting 4 changesets to a file:
 
   $ hg export -o export_internal 1 2 3 4
-  $ grep HG export_internal | wc -l | sed -e 's/^ *//'
-  4
+  $ grep HG export_internal | wc -l
+  \s*4
 
 Exporting 4 changesets to a file:
 
-  $ hg export 1 2 3 4 | grep HG | wc -l | sed -e 's/^ *//'
-  4
+  $ hg export 1 2 3 4 | grep HG | wc -l
+  \s*4
 
 Exporting revision -2 to a file:
 

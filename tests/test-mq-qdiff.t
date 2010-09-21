@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qdiff
-copyrev: 57bf56e58a7467550653dfe400eafc297688e494
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
   $ echo "[mq]" >> $HGRCPATH
@@ -21,10 +17,10 @@ copyrev: 57bf56e58a7467550653dfe400eafc297688e494
 
 qdiff:
 
-  $ hg qdiff | sed -e "s/\(+++ [a-zA-Z0-9_/.-]*\).*/\1/"
+  $ hg qdiff
   diff -r d20a80d4def3 base
   --- a/base	Thu Jan 01 00:00:00 1970 +0000
-  +++ b/base
+  \+\+\+ b/base.*
   @@ -1,1 +1,1 @@
   -base
   +patched
