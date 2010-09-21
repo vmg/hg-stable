@@ -1,9 +1,3 @@
-
-copy: tests/test-simple-update
-copyrev: c57fa28a765d6a1426ecf8b75b7ee7cdd0147d4b
-
-  $ set -e
-
   $ mkdir test
   $ cd test
   $ echo foo>foo

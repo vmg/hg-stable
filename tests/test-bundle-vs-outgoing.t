@@ -1,7 +1,3 @@
-
-copy: tests/test-bundle-vs-outgoing
-copyrev: 80b0088c0dfcf4c098e5032e48a33c74ecf59c8e
-
 this structure seems to tickle a bug in bundle's search for
 changesets, so first we have to recreate it
 
@@ -30,8 +26,6 @@ o  0
   >     echo "rev $revno" > foo.txt
   >     hg -q ci -m"rev $revno"
   > }
-
-  $ set -e
 
 setup test repo1
 

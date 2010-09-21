@@ -1,10 +1,6 @@
-
-copy: tests/test-remove
-copyrev: 5f7924390fbd0502131241f920a71e3c5c56bb48
-
   $ remove() {
   >     hg rm $@
-  >     echo "exit code: $?"
+  >     echo "exit code: $?" # no-check-code
   >     hg st
   >     # do not use ls -R, which recurses in .hg subdirs on Mac OS X 10.5
   >     find . -name .hg -prune -o -type f -print | sort

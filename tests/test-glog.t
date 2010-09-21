@@ -1,7 +1,3 @@
-
-copy: tests/test-glog
-copyrev: c708874e3cb65f5d19c08189aa7cbc739f4de1b4
-
 @  (34) head
 |
 | o  (33) head
@@ -74,8 +70,6 @@ o  (0) root
 
 
   $ "$TESTDIR/hghave" no-outer-repo || exit 80
-
-  $ set -e
 
   $ commit()
   > {
@@ -685,12 +679,12 @@ File glog:
   
 
 Unused arguments:
-  $ hg glog -q foo bar || echo failed
+  $ hg glog -q foo bar
   hg glog: invalid arguments
   hg glog [OPTION]... [FILE]
   
   show revision history alongside an ASCII revision graph
-  failed
+  [255]
 
 Empty revision range - display nothing:
   $ hg glog -r 1..0

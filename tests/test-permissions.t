@@ -1,7 +1,3 @@
-
-copy: tests/test-permissions
-copyrev: f3192e7d152c4cf1505f1c49602a4b7ce2f34baf
-
   $ hg init t
   $ cd t
 
@@ -19,17 +15,17 @@ copyrev: f3192e7d152c4cf1505f1c49602a4b7ce2f34baf
 
   $ chmod -r .hg/store/data/a.i
 
-  $ hg verify || echo %%% verify failed
+  $ hg verify
   checking changesets
   checking manifests
   crosschecking files in changesets and manifests
   checking files
   abort: Permission denied: .*
-  %%% verify failed
+  [255]
 
   $ chmod +r .hg/store/data/a.i
 
-  $ hg verify || echo %%% verify failed
+  $ hg verify
   checking changesets
   checking manifests
   crosschecking files in changesets and manifests
@@ -39,10 +35,10 @@ copyrev: f3192e7d152c4cf1505f1c49602a4b7ce2f34baf
   $ chmod -w .hg/store/data/a.i
 
   $ echo barber > a
-  $ hg commit -m "2" || echo %%% commit failed
+  $ hg commit -m "2"
   trouble committing a!
   abort: Permission denied: .*
-  %%% commit failed
+  [255]
 
   $ chmod -w .
 
