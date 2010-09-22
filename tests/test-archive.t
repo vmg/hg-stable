@@ -1,6 +1,6 @@
 
 copy: tests/test-archive
-copyrev: 59eea029fe67de33b18112f16bc6be84431bbce9
+copyrev: e7479e4d6f38d057eb80de3c2df28957f80800eb
 
   $ mkdir test
   $ cd test
