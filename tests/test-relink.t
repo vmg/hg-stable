@@ -1,7 +1,3 @@
-
-copy: tests/test-relink
-copyrev: 9115805edf86a67c7fe238626a57a8a6cf83bbc7
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "relink=" >> $HGRCPATH
 
@@ -64,7 +60,7 @@ clone and pull to break links
 relink
 
   $ hg relink --debug | fix_path
-  relinking .*/.hg/store
+  relinking .*/\.hg/store
   tip has 2 files, estimated total number of files: 3
   collecting: 00changelog.i 1/3 files (33.33%)
   collecting: 00manifest.i 2/3 files (66.67%)
