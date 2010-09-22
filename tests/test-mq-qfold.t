@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qfold
-copyrev: 4e553c717e898cfef162f016c089dfcb76258441
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
   $ echo "[mq]" >> $HGRCPATH
@@ -63,7 +59,7 @@ Fold with local changes:
   [255]
 
   $ hg diff -c .
-  diff -r 07f494440405 -r ............ a
+  diff -r 07f494440405 -r ............ a (re)
   --- a/a
   +++ b/a
   @@ -1,1 +1,3 @@
@@ -89,7 +85,7 @@ Fold git patch into a regular patch, expect git patch:
 
   $ cat .hg/patches/regular
   # HG changeset patch
-  # Parent ........................................
+  # Parent ........................................ (re)
   
   diff --git a/a b/a
   --- a/a
@@ -131,7 +127,7 @@ Fold regular patch into a git patch, expect git patch:
 
   $ cat .hg/patches/git
   # HG changeset patch
-  # Parent ........................................
+  # Parent ........................................ (re)
   
   diff --git a/a b/aa
   copy from a

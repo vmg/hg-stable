@@ -1,7 +1,3 @@
-
-copy: tests/test-rename
-copyrev: 07a2511b46feac276bbd82b87de30f2237cfdb32
-
   $ hg init
   $ mkdir d1 d1/d11 d2
   $ echo d1/a > d1/a
@@ -267,8 +263,8 @@ overwrite existing files (d2/b)
   R d1/ba
   R d1/d11/a1
   $ diff -u d1/b d2/b
-  --- d1/b	.*
-  \+\+\+ d2/b	.*
+  --- d1/b	.* (re)
+  \+\+\+ d2/b	.* (re)
   @@ -1 +1 @@
   -d1/b
   +d2/b

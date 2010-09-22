@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qrefresh
-copyrev: 84770e605356e61a9aa3d8ae1ffb397b9bbc737b
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
   $ echo "[diff]" >> $HGRCPATH
@@ -259,7 +255,7 @@ qrefresh --short tests:
 diff shows what is not in patch:
 
   $ hg diff
-  diff -r ............ orphanchild
+  diff -r ............ orphanchild (re)
   --- /dev/null
   +++ b/orphanchild
   @@ -0,0 +1,1 @@
