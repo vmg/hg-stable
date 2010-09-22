@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-svn-source
-copyrev: b1539f9722ab4d1f5a4823c15bcf5c41d3cb3126
-
 
   $ "$TESTDIR/hghave" svn svn-bindings || exit 80
 
@@ -16,7 +12,6 @@ copyrev: b1539f9722ab4d1f5a4823c15bcf5c41d3cb3126
   > EOF
 
   $ svnadmin create svn-repo
-  $ svnadmin setuuid svn-repo 00000000-0000-0000-0000-000000000000
   $ svnpath=`pwd | fixpath`
 
 
@@ -179,5 +174,5 @@ This is also the only place testing more than one extra field in a revision.
   $ cd stoprev
   $ hg tip --debug | grep extra
   extra:       branch=default
-  extra:       convert_revision=svn:00000000-0000-0000-0000-000000000000/proj B/trunk@1
+  extra:       convert_revision=svn:........-....-....-....-............/proj B/trunk@1 (re)
   $ cd ..

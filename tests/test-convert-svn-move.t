@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-svn-move
-copyrev: 649115e704c44d91b31716ca0344ef78b48c14a6
-
 
   $ "$TESTDIR/hghave" svn svn-bindings || exit 80
 
@@ -91,8 +87,8 @@ Check move copy records
 Check branches
 
   $ hg branches
-  default                       13:.*
-  d1                             6:.*
+  default                       13:* (glob)
+  d1                             6:* (glob)
   $ cd ..
 
   $ mkdir test-replace
