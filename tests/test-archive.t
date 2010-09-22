@@ -1,3 +1,7 @@
+
+copy: tests/test-archive
+copyrev: 59eea029fe67de33b18112f16bc6be84431bbce9
+
   $ mkdir test
   $ cd test
   $ hg init
