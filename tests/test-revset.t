@@ -1,7 +1,3 @@
-
-copy: tests/test-revset
-copyrev: 663f2ff02faaedd50cdf397ba2bf11ef1a7b1a6c
-
   $ HGENCODING=utf-8
   $ export HGENCODING
 
@@ -218,6 +214,14 @@ quoting needed
   $ try 'grep("(")' # invalid regular expression
   ('func', ('symbol', 'grep'), ('string', '('))
   hg: parse error: invalid match pattern: unbalanced parenthesis
+  [255]
+  $ try 'grep("\bissue\d+")'
+  ('func', ('symbol', 'grep'), ('string', '\x08issue\\d+'))
+  $ try 'grep(r"\bissue\d+")'
+  ('func', ('symbol', 'grep'), ('string', '\\bissue\\d+'))
+  6
+  $ try 'grep(r"\")'
+  hg: parse error at 7: unterminated string
   [255]
   $ log 'head()'
   0
