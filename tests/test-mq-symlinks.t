@@ -1,6 +1,6 @@
 
 copy: tests/test-mq-symlinks
-copyrev: 69de65d0f92fd2e8492e268f7f95a77ed845d1d3
+copyrev: bb3841da98bc697ac7836ca24f9b8a1b8d7b1d5e
 
   $ "$TESTDIR/hghave" symlink || exit 80
 
@@ -99,7 +99,8 @@ replace broken symlink with another broken symlink
   $ hg add linka
   $ hg qnew link
   $ hg mv linka linkb
-  $ ln -sf linkb linkb
+  $ rm linkb
+  $ ln -s linkb linkb
   $ hg qnew movelink
   $ hg qpop
   popping movelink
