@@ -1,7 +1,3 @@
-
-copy: tests/test-log
-copyrev: acf6a94552db8a29d7cf62c3b6b6500c9096fc58
-
   $ hg init a
 
   $ cd a
@@ -1024,7 +1020,7 @@ log -p -R repo
   summary:     add foo, related
   
 
-Test from/for issue2383
+Issue2383: hg log showing _less_ differences than hg diff
 
   $ hg init issue2383
   $ cd issue2383

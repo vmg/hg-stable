@@ -1,7 +1,3 @@
-
-copy: tests/test-annotate
-copyrev: d909561434ccb1f6d6928146c0820ddebb24ceb8
-
   $ HGMERGE=true; export HGMERGE
 
 init
@@ -211,7 +207,7 @@ linkrev vs rev with -l
   1:2: a
   1:3: a
 
-test issue 589
+Issue589: "undelete" sequence leads to crash
 
 annotate was crashing when trying to --follow something
 

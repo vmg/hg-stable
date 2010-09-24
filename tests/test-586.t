@@ -1,8 +1,5 @@
-
-copy: tests/test-586
-copyrev: 65cf82084ead2e531f85dd801eb2bc5a5f8f39ca
-
-a test for issue586
+Issue586: removing remote files after merge appears to corrupt the
+dirstate
 
   $ hg init a
   $ cd a
@@ -35,7 +32,8 @@ a test for issue586
   C b
   $ cd ..
 
-a test for issue 1433, related to issue586
+Issue1433: Traceback after two unrelated pull, two move, a merge and
+a commit (related to issue586)
 
 create test repos
 

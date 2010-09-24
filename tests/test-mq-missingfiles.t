@@ -1,12 +1,7 @@
-
-copy: tests/test-mq-missingfiles
-copyrev: e7333f6caa235c2047d6e6769e03912aa8f3feaa
-
 
-# Test issue835:
-# qpush fails immediately when patching a missing file, but
-# remaining added files are still created empty which will
-# trick a future qrefresh.
+Issue835: qpush fails immediately when patching a missing file, but
+remaining added files are still created empty which will trick a
+future qrefresh.
 
   $ cat > writelines.py <<EOF
   > import sys

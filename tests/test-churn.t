@@ -1,7 +1,3 @@
-
-copy: tests/test-churn
-copyrev: 7c02994c2c28b835b9ecb1ee13fa0ce54a3a3a04
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "churn=" >> $HGRCPATH
 
@@ -130,7 +126,7 @@ churn with space in alias
   $ cd ..
 
 
-issue 833: ZeroDivisionError
+Issue833: ZeroDivisionError
 
   $ hg init issue-833
   $ cd issue-833
