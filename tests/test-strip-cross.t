@@ -1,7 +1,3 @@
-
-copy: tests/test-strip-cross
-copyrev: efd1a679c5c61d0e3c951f46da97682e0bc29c21
-
 test stripping of filelogs where the linkrev doesn't always increase
 
   $ . $TESTDIR/helpers.sh
@@ -14,10 +10,10 @@ test stripping of filelogs where the linkrev doesn't always increase
   >     hg up -qC null
   >     count=1
   >     for i in "$@"; do
-  > 	for f in $i; do
-  > 	    echo $count > $f
-  > 	done
-  > 	count=`expr $count + 1`
+  >         for f in $i; do
+  >             echo $count > $f
+  >         done
+  >         count=`expr $count + 1`
   >     done
   >     hg commit -qAm "$*"
   > }
