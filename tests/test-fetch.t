@@ -1,7 +1,3 @@
-
-copy: tests/test-fetch
-copyrev: 68811e539dd228b6c16462b54e051c54abc6a74e
-
 adjust to non-default HGPORT, e.g. with run-tests.py -j
 
   $ echo "[extensions]" >> $HGRCPATH
@@ -86,7 +82,7 @@ fetch over http, no auth
   1 files updated, 0 files merged, 1 files removed, 0 files unresolved
   merging with 1:5e056962225c
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
-  new changeset 3:0b6439e938f9 merges remote changes with local
+  new changeset 3:* merges remote changes with local (glob)
   $ hg --cwd d tip --template '{desc}\n'
   Automated merge with http://localhost:*/ (glob)
 
@@ -103,7 +99,7 @@ fetch over http with auth (should be hidden in desc)
   1 files updated, 0 files merged, 1 files removed, 0 files unresolved
   merging with 1:5e056962225c
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
-  new changeset 3:0b6439e938f9 merges remote changes with local
+  new changeset 3:* merges remote changes with local (glob)
   $ hg --cwd e tip --template '{desc}\n'
   Automated merge with http://localhost:*/ (glob)
   $ hg clone a f
