@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-cvs-branch
-copyrev: 99528025475c3169ee2363c693fc62f9d147cafd
-
 This is http://mercurial.selenic.com/bts/issue1148
 and http://mercurial.selenic.com/bts/issue1447
 
@@ -48,12 +44,14 @@ Branch the project
 
 Modify file a, then b, then a 
 
+  $ sleep 1
   $ echo "2" > a
   $ cvscall ci -m "mod a"
   cvs commit: Examining .
   $ echo "2" > b
   $ cvscall ci -m "mod b"
   cvs commit: Examining .
+  $ sleep 1
   $ echo "3" > a
   $ cvscall ci -m "mod a again"
   cvs commit: Examining .
