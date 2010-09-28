@@ -1,7 +1,3 @@
-
-copy: tests/test-git-import
-copyrev: f557b7556c339efcfe2009d201f9e1dadb05c796
-
 
   $ hg init
 
@@ -355,8 +351,14 @@ Move text file and patch as binary
   > 
   > EOF
   applying patch from stdin
+
   $ python $TESTDIR/printrepr.py < binary2
   a
   b
   \x00
-  $ hg st --copies --change .  abort: unknown revision '.echo'!
+
+  $ hg st --copies --change . 
+  A binary2
+    text2
+  R text2
+
