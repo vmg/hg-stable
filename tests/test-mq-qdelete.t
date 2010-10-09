@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qdelete
-copyrev: 1dbd706c84eb2b62173694cf05ac52c9482adee1
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
 
@@ -28,7 +24,9 @@ copyrev: 1dbd706c84eb2b62173694cf05ac52c9482adee1
   popping c
   now at: b
 
-  $ hg qdel c
+Delete the same patch twice in one command (issue2427)
+
+  $ hg qdel c c
 
   $ hg qseries
   a
