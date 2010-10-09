@@ -1,7 +1,3 @@
-
-copy: tests/test-rebase-rename
-copyrev: 99c718e548d0c9ff6d16f0883384961fce88b0c1
-
   $ cat >> $HGRCPATH <<EOF
   > [extensions]
   > graphlog=
@@ -50,7 +46,7 @@ Rename is tracked:
 Rebase the revision containing the rename:
 
   $ hg rebase -s 2 -d 1
-  saved backup bundle to */.hg/strip-backup/*-backup.hg (glob)
+  saved backup bundle to $TESTTMP/a/.hg/strip-backup/*-backup.hg (glob)
 
   $ hg tglog
   @  2: 'rename A'
@@ -106,7 +102,7 @@ Copy is tracked:
 Rebase the revision containing the copy:
 
   $ hg rebase -s 2 -d 1
-  saved backup bundle to */.hg/strip-backup/*-backup.hg (glob)
+  saved backup bundle to $TESTTMP/b/.hg/strip-backup/*-backup.hg (glob)
 
   $ hg tglog
   @  2: 'copy A'

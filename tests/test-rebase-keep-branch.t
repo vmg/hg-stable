@@ -1,7 +1,3 @@
-
-copy: tests/test-rebase-keep-branch
-copyrev: 048ed2a6d5ccd33d93404fb0d652c49dc40508b9
-
   $ cat >> $HGRCPATH <<EOF
   > [extensions]
   > graphlog=
@@ -57,7 +53,7 @@ Rebase a branch while preserving the branch name:
   $ hg up -q -C 3
 
   $ hg rebase -b 4 -d 3 --keepbranches
-  saved backup bundle to */.hg/strip-backup/*-backup.hg (glob)
+  saved backup bundle to $TESTTMP/a/.hg/strip-backup/*-backup.hg (glob)
 
   $ hg tglog
   @  4: 'r1' notdefault

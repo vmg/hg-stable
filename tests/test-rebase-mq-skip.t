@@ -1,7 +1,3 @@
-
-copy: tests/test-rebase-mq-skip
-copyrev: bf6edf5fdd8258ce943bc0a6bfa4233751c8b294
-
 This emulates the effects of an hg pull --rebase in which the remote repo 
 already has one local mq patch
 
@@ -52,7 +48,7 @@ already has one local mq patch
   $ hg up -q -C qtip
 
   $ hg rebase
-  saved backup bundle to */.hg/strip-backup/*-backup.hg (glob)
+  saved backup bundle to $TESTTMP/a/.hg/strip-backup/*-backup.hg (glob)
 
   $ hg tglog
   @  3: 'P0' tags: p0.patch qbase qtip tip
@@ -115,7 +111,7 @@ already has one local mq patch
   $ HGMERGE=internal:local hg resolve --all
 
   $ hg rebase --continue
-  saved backup bundle to */.hg/strip-backup/*-backup.hg (glob)
+  saved backup bundle to $TESTTMP/b/.hg/strip-backup/*-backup.hg (glob)
 
   $ hg tglog
   @  9: 'r5' tags: 5.diff qtip tip

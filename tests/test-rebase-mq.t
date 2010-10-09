@@ -1,7 +1,3 @@
-
-copy: tests/test-rebase-mq
-copyrev: 83da88c59e7bb8a6498c30e77dea90f40f21e818
-
   $ cat >> $HGRCPATH <<EOF
   > [extensions]
   > graphlog=
@@ -86,7 +82,7 @@ Fix the 2nd conflict:
   $ echo mq1r1mq2 > f
   $ hg resolve -m f
   $ hg rebase -c
-  saved backup bundle to */.hg/strip-backup/*-backup.hg (glob)
+  saved backup bundle to $TESTTMP/a/.hg/strip-backup/*-backup.hg (glob)
 
   $ hg tglog
   @  3: 'P1' tags: f2.patch qtip tip
@@ -195,7 +191,7 @@ Adding one git-style patch and one normal:
 Rebase the applied mq patches:
 
   $ hg rebase -s 2 -d 1
-  saved backup bundle to */.hg/strip-backup/*-backup.hg (glob)
+  saved backup bundle to $TESTTMP/a/.hg/strip-backup/*-backup.hg (glob)
 
   $ hg qci -m 'save patch state'
 

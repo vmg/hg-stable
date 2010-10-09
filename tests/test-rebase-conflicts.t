@@ -1,7 +1,3 @@
-
-copy: tests/test-rebase-conflicts
-copyrev: 5dc62e6e229538d5b734663f3930704b55e8459c
-
   $ cat >> $HGRCPATH <<EOF
   > [extensions]
   > graphlog=
@@ -77,7 +73,7 @@ Conclude rebase:
   $ echo 'resolved merge' >common
   $ hg resolve -m common
   $ hg rebase --continue
-  saved backup bundle to */.hg/strip-backup/*-backup.hg (glob)
+  saved backup bundle to $TESTTMP/a/.hg/strip-backup/*-backup.hg (glob)
 
   $ hg tglog
   @  5: 'L3'

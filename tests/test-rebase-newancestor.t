@@ -1,7 +1,3 @@
-
-copy: tests/test-rebase-newancestor
-copyrev: 5766d6e91b7edf512cebd19750a243964959db43
-
   $ cat >> $HGRCPATH <<EOF
   > [extensions]
   > graphlog=
@@ -45,7 +41,7 @@ copyrev: 5766d6e91b7edf512cebd19750a243964959db43
   $ hg rebase -s 1 -d 3
   merging a
   merging a
-  saved backup bundle to */.hg/strip-backup/*-backup.hg (glob)
+  saved backup bundle to $TESTTMP/repo/.hg/strip-backup/*-backup.hg (glob)
 
   $ hg tglog
   @  3: 'C'

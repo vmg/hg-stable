@@ -1,7 +1,3 @@
-
-copy: tests/test-share
-copyrev: d21e244181399f0f4b457e0b23304100cf2014e1
-
 
   $ echo "[extensions]"      >> $HGRCPATH
   $ echo "share = "          >> $HGRCPATH
@@ -30,7 +26,7 @@ share shouldn't have a store dir
 Some sed versions appends newline, some don't, and some just fails
 
   $ cat .hg/sharedpath; echo
-  */repo1/.hg (glob)
+  $TESTTMP/repo1/.hg
 
 commit in shared clone
 

@@ -1,7 +1,3 @@
-
-copy: tests/test-rebase-abort
-copyrev: 5ef65287225d9a09b64a6e8c2912b81e0dfce532
-
   $ cat >> $HGRCPATH <<EOF
   > [extensions]
   > graphlog=
@@ -60,7 +56,7 @@ Conflicting rebase:
 Abort:
 
   $ hg rebase --abort
-  saved backup bundle to */.hg/strip-backup/*-backup.hg (glob)
+  saved backup bundle to $TESTTMP/a/.hg/strip-backup/*-backup.hg (glob)
   rebase aborted
 
   $ hg tglog

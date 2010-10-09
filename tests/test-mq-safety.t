@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-safety
-copyrev: 33c2a6f3fbaebb6adb6fc62b18d64f9395e5cc28
-
   $ echo '[extensions]' >> $HGRCPATH
   $ echo 'mq =' >> $HGRCPATH
 
@@ -43,7 +39,7 @@ qpop/qrefresh on the wrong revision
   abort: popping would remove a revision not managed by this patch queue
   [255]
   $ hg qpop -n patches
-  using patch queue: */repo/.hg/patches (glob)
+  using patch queue: $TESTTMP/repo/.hg/patches
   abort: popping would remove a revision not managed by this patch queue
   [255]
   $ hg qrefresh

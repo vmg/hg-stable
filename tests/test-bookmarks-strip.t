@@ -1,7 +1,3 @@
-
-copy: tests/test-bookmarks-strip
-copyrev: c1fe09f86875bacc615dcc7a0dc10d77672964b3
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "bookmarks=" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
@@ -54,7 +50,7 @@ bookmarks updated?
 strip to revision 1
 
   $ hg strip 1
-  saved backup bundle to * (glob)
+  saved backup bundle to $TESTTMP/.hg/strip-backup/*-backup.hg (glob)
 
 list bookmarks
 
