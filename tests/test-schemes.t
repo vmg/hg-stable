@@ -1,7 +1,3 @@
-
-copy: tests/test-schemes
-copyrev: 2e0d02ccd12385edae65aa28acd78178251c2f97
-
 
   $ cat <<EOF >> $HGRCPATH
   > [extensions]
@@ -28,7 +24,7 @@ copyrev: 2e0d02ccd12385edae65aa28acd78178251c2f97
 check that {1} syntax works
 
   $ hg incoming --debug parts://localhost
-  using http://localhost:*/ (glob)
+  using http://localhost:$HGPORT/
   sending between command
   comparing with parts://localhost
   sending heads command

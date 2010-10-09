@@ -1,7 +1,3 @@
-
-copy: tests/test-http-branchmap
-copyrev: 3409e703194d4927054eb5c3a4e5dcc4fd1d0841
-
 
   $ hgserve() {
   >     hg serve -a localhost -p $HGPORT1 -d --pid-file=hg.pid -E errors.log -v $@
@@ -14,7 +10,7 @@ copyrev: 3409e703194d4927054eb5c3a4e5dcc4fd1d0841
   $ hg -R a ci -Am foo
   adding foo
   $ hgserve -R a --config web.push_ssl=False --config web.allow_push=* --encoding latin1
-  listening at http://localhost*/ (bound to 127.0.0.1:*) (glob)
+  listening at http://localhost*:$HGPORT1/ (bound to 127.0.0.1:$HGPORT1) (glob)
   $ hg --encoding utf-8 clone http://localhost:$HGPORT1 b
   requesting all changes
   adding changesets
@@ -34,7 +30,7 @@ copyrev: 3409e703194d4927054eb5c3a4e5dcc4fd1d0841
   $ echo bar >> b/foo
   $ hg -R b ci -m bar
   $ hg --encoding utf-8 -R b push
-  pushing to http://localhost:* (glob)
+  pushing to http://localhost:$HGPORT1
   searching for changes
   remote: adding changesets
   remote: adding manifests

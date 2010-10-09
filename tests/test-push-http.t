@@ -1,7 +1,3 @@
-
-copy: tests/test-push-http
-copyrev: e74a13c449703669bc7d134ce8444e7afb6d2bf2
-
 
   $ cp "$TESTDIR"/printenv.py .
   $ hg init test
@@ -29,7 +25,7 @@ copyrev: e74a13c449703669bc7d134ce8444e7afb6d2bf2
 expect ssl error
 
   $ req
-  pushing to http://localhost:*/ (glob)
+  pushing to http://localhost:$HGPORT/
   searching for changes
   remote: ssl required
   % serve errors
@@ -39,7 +35,7 @@ expect authorization error
   $ echo '[web]' > .hg/hgrc
   $ echo 'push_ssl = false' >> .hg/hgrc
   $ req
-  pushing to http://localhost:*/ (glob)
+  pushing to http://localhost:$HGPORT/
   searching for changes
   abort: authorization failed
   % serve errors
@@ -48,7 +44,7 @@ expect authorization error: must have authorized user
 
   $ echo 'allow_push = unperson' >> .hg/hgrc
   $ req
-  pushing to http://localhost:*/ (glob)
+  pushing to http://localhost:$HGPORT/
   searching for changes
   abort: authorization failed
   % serve errors
@@ -59,7 +55,7 @@ expect success
   $ echo '[hooks]' >> .hg/hgrc
   $ echo 'changegroup = python ../printenv.py changegroup 0' >> .hg/hgrc
   $ req
-  pushing to http://localhost:*/ (glob)
+  pushing to http://localhost:$HGPORT/
   searching for changes
   remote: adding changesets
   remote: adding manifests
@@ -76,7 +72,7 @@ expect authorization error: all users denied
   $ echo 'push_ssl = false' >> .hg/hgrc
   $ echo 'deny_push = *' >> .hg/hgrc
   $ req
-  pushing to http://localhost:*/ (glob)
+  pushing to http://localhost:$HGPORT/
   searching for changes
   abort: authorization failed
   % serve errors
@@ -85,7 +81,7 @@ expect authorization error: some users denied, users must be authenticated
 
   $ echo 'deny_push = unperson' >> .hg/hgrc
   $ req
-  pushing to http://localhost:*/ (glob)
+  pushing to http://localhost:$HGPORT/
   searching for changes
   abort: authorization failed
   % serve errors

@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qclone-http
-copyrev: de9239692a2e1ea7f71488df073d6f4fc18c39c3
-
 
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
@@ -145,7 +141,7 @@ test with old-style collection
 test --mq works and uses correct repository config
 
   $ hg --cwd d outgoing --mq
-  comparing with http://localhost:*/a/.hg/patches (glob)
+  comparing with http://localhost:$HGPORT2/a/.hg/patches
   searching for changes
   no changes found
   [1]

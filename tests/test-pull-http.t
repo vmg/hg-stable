@@ -1,7 +1,3 @@
-
-copy: tests/test-pull-http
-copyrev: 88440d7d0114c539ee6d3753d1e18a75b663a7f8
-
 
   $ cp "$TESTDIR"/printenv.py .
   $ hg init test
@@ -44,7 +40,7 @@ serve errors
 expect error, pulling not allowed
 
   $ req
-  pulling from http://localhost:*/ (glob)
+  pulling from http://localhost:$HGPORT/
   searching for changes
   abort: authorization failed
   % serve errors
