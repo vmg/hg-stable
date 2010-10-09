@@ -1,7 +1,3 @@
-
-copy: tests/test-hgweb-diffs
-copyrev: 33e3339986c69ffaabd2718adf96e42d01888d10
-
 setting up repo
 
   $ hg init test
@@ -48,6 +44,7 @@ revision
    <li><a href="/graph/0cd96de13884">graph</a></li>
    <li><a href="/tags">tags</a></li>
    <li><a href="/branches">branches</a></li>
+   <li><a href="/help">help</a></li>
   </ul>
   <ul>
    <li class="active">changeset</li>
@@ -56,6 +53,9 @@ revision
   </ul>
   <ul>
    
+  </ul>
+  <ul>
+   <li><a href="/help">help</a></li>
   </ul>
   </div>
   
@@ -267,6 +267,7 @@ revision
    <li><a href="/graph/0cd96de13884">graph</a></li>
    <li><a href="/tags">tags</a></li>
    <li><a href="/branches">branches</a></li>
+   <li><a href="/help">help</a></li>
   </ul>
   <ul>
    <li class="active">changeset</li>
@@ -275,6 +276,9 @@ revision
   </ul>
   <ul>
    
+  </ul>
+  <ul>
+   <li><a href="/help">help</a></li>
   </ul>
   </div>
   

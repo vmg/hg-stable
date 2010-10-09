@@ -1,7 +1,3 @@
-
-copy: tests/test-hgweb-descend-empties
-copyrev: 9a7d4537a6606240b846d2159daca1f6f9758fa0
-
 Test chains of near empty directories, terminating 3 different ways:
 - a1: file at level 4 (deepest)
 - b1: two dirs at level 3
@@ -56,6 +52,7 @@ manifest with descending
   <li><a href="/graph/9087c84a0f5d">graph</a></li>
   <li><a href="/tags">tags</a></li>
   <li><a href="/branches">branches</a></li>
+  <li><a href="/help">help</a></li>
   </ul>
   <ul>
   <li><a href="/rev/9087c84a0f5d">changeset</a></li>
@@ -63,6 +60,9 @@ manifest with descending
   </ul>
   <ul>
   
+  </ul>
+  <ul>
+   <li><a href="/help">help</a></li>
   </ul>
   </div>
   

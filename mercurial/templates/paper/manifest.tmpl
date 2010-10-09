@@ -1,7 +1,3 @@
-
-copyrev: ecdaff5156b90fe04eef5f7cd1de84ce424566df
-copy: templates/paper/manifest.tmpl
-
 {header}
 <title>{repo|escape}: {node|short} {path|escape}</title>
 </head>
@@ -25,6 +21,9 @@ copy: templates/paper/manifest.tmpl
 </ul>
 <ul>
 {archives%archiveentry}
+</ul>
+<ul>
+ <li><a href="{url}help{sessionvars%urlparameter}">help</a></li>
 </ul>
 </div>
 

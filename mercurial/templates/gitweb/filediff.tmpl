@@ -1,7 +1,3 @@
-
-copyrev: 8fe3e398a50c896deb7d74ad7b5a348deabfcb4a
-copy: templates/gitweb/filediff.tmpl
-
 {header}
 <title>{repo|escape}: diff {file|escape}</title>
 <link rel="alternate" type="application/atom+xml"
@@ -29,7 +25,8 @@ copy: templates/gitweb/filediff.tmpl
 <a href="{url}log/{node|short}/{file|urlescape}{sessionvars%urlparameter}">revisions</a> |
 <a href="{url}annotate/{node|short}/{file|urlescape}{sessionvars%urlparameter}">annotate</a> |
 diff |
-<a href="{url}raw-diff/{node|short}/{file|urlescape}">raw</a><br/>
+<a href="{url}raw-diff/{node|short}/{file|urlescape}">raw</a><br/> |
+<a href="{url}help{sessionvars%urlparameter}">help</a>
 </div>
 
 <div class="title">{file|escape}</div>

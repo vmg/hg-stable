@@ -1,3 +1,7 @@
+
+copy: mercurial/templates/gitweb/branches.tmpl
+copyrev: 6f5ba6f162af3f13aeebea5dd7dab042dee663bc
+
 {header}
 <title>{repo|escape}: Branches</title>
 <link rel="alternate" type="application/atom+xml"
@@ -18,14 +22,14 @@
 <a href="{url}graph{sessionvars%urlparameter}">graph</a> |
 <a href="{url}tags{sessionvars%urlparameter}">tags</a> |
 branches |
-<a href="{url}file/{node|short}{sessionvars%urlparameter}">files</a> |
-<a href="{url}help{sessionvars%urlparameter}">help</a>
+<a href="{url}file/{node|short}{sessionvars%urlparameter}">files</a>
 <br/>
 </div>
 
 <div class="title">&nbsp;</div>
-<table cellspacing="0">
-{entries%branchentry}
-</table>
+
+<pre>
+{doc|escape}
+</pre>
 
 {footer}

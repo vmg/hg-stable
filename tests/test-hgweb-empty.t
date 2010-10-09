@@ -1,7 +1,3 @@
-
-copy: tests/test-hgweb-empty
-copyrev: 63f3105d01c71a15d1af9303d3622122f53603e1
-
 Some tests for hgweb in an empty repository
 
   $ hg init test
@@ -37,6 +33,7 @@ Some tests for hgweb in an empty repository
   <li><a href="/graph/000000000000">graph</a></li>
   <li><a href="/tags">tags</a></li>
   <li><a href="/branches">branches</a></li>
+  <li><a href="/help">help</a></li>
   </ul>
   <ul>
   <li><a href="/rev/000000000000">changeset</a></li>
@@ -44,6 +41,9 @@ Some tests for hgweb in an empty repository
   </ul>
   <ul>
   
+  </ul>
+  <ul>
+   <li><a href="/help">help</a></li>
   </ul>
   </div>
   
@@ -116,6 +116,7 @@ Some tests for hgweb in an empty repository
   <li><a href="/graph/000000000000">graph</a></li>
   <li><a href="/tags">tags</a></li>
   <li><a href="/branches">branches</a></li>
+  <li><a href="/help">help</a></li>
   </ul>
   <ul>
   <li><a href="/rev/000000000000">changeset</a></li>
@@ -123,6 +124,9 @@ Some tests for hgweb in an empty repository
   </ul>
   <ul>
   
+  </ul>
+  <ul>
+   <li><a href="/help">help</a></li>
   </ul>
   </div>
   
@@ -196,10 +200,14 @@ Some tests for hgweb in an empty repository
   <li class="active">graph</li>
   <li><a href="/tags">tags</a></li>
   <li><a href="/branches">branches</a></li>
+  <li><a href="/help">help</a></li>
   </ul>
   <ul>
   <li><a href="/rev/000000000000">changeset</a></li>
   <li><a href="/file/000000000000">browse</a></li>
+  </ul>
+  <ul>
+   <li><a href="/help">help</a></li>
   </ul>
   </div>
   
@@ -336,6 +344,7 @@ Some tests for hgweb in an empty repository
   <li><a href="/graph/000000000000">graph</a></li>
   <li><a href="/tags">tags</a></li>
   <li><a href="/branches">branches</a></li>
+  <li><a href="/help">help</a></li>
   </ul>
   <ul>
   <li><a href="/rev/000000000000">changeset</a></li>
@@ -343,6 +352,9 @@ Some tests for hgweb in an empty repository
   </ul>
   <ul>
   
+  </ul>
+  <ul>
+   <li><a href="/help">help</a></li>
   </ul>
   </div>
   
