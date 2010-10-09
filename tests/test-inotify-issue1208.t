@@ -1,7 +1,3 @@
-
-copy: tests/test-inotify-issue1208
-copyrev: 0b286607f8737971d52d88103f1b3a134e8ae519
-
 
   $ "$TESTDIR/hghave" inotify || exit 80
   $ echo "[extensions]" >> $HGRCPATH
@@ -30,4 +26,11 @@ status
 
   $ hg status
   ? hg.pid
+
+if we try to start twice the server, make sure we get a correct error
+
+  $ hg inserve -d --pid-file=hg2.pid
+  abort: inotify-server: cannot start: socket is already bound
+  abort: child process failed to start
+  [255]
   $ kill `cat hg.pid`
