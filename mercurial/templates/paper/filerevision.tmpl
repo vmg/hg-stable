@@ -1,7 +1,3 @@
-
-copyrev: 784180a30cde834cf9e659c0e8639465f0185713
-copy: templates/paper/filerevision.tmpl
-
 {header}
 <title>{repo|escape}: {node|short} {file|escape}</title>
 </head>
@@ -30,6 +26,9 @@ copy: templates/paper/filerevision.tmpl
 <li><a href="{url}annotate/{node|short}/{file|urlescape}{sessionvars%urlparameter}">annotate</a></li>
 <li><a href="{url}log/{node|short}/{file|urlescape}{sessionvars%urlparameter}">file log</a></li>
 <li><a href="{url}raw-file/{node|short}/{file|urlescape}">raw</a></li>
+</ul>
+<ul>
+<li><a href="{url}help{sessionvars%urlparameter}">help</a></li>
 </ul>
 </div>
 

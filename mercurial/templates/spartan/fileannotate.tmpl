@@ -1,7 +1,3 @@
-
-copyrev: 7c59b8cd45561b75c89d51f58eba338cbd1e03f0
-copy: templates/spartan/fileannotate.tmpl
-
 {header}
 <title>{repo|escape}: {file|escape} annotate</title>
 </head>
@@ -18,6 +14,7 @@ copy: templates/spartan/fileannotate.tmpl
 <a href="{url}file/{node|short}/{file|urlescape}{sessionvars%urlparameter}">file</a>
 <a href="{url}log/{node|short}/{file|urlescape}{sessionvars%urlparameter}">revisions</a>
 <a href="{url}raw-annotate/{node|short}/{file|urlescape}">raw</a>
+<a href="{url}help{sessionvars%urlparameter}">help</a>
 </div>
 
 <h2>Annotate {file|escape}</h2>

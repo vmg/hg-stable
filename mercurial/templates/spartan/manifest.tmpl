@@ -1,7 +1,3 @@
-
-copyrev: 9ccff966edd6aa7ba78bab8e8c88a118e11bdb5f
-copy: templates/spartan/manifest.tmpl
-
 {header}
 <title>{repo|escape}: files for changeset {node|short}</title>
 </head>
@@ -15,6 +11,7 @@ copy: templates/spartan/manifest.tmpl
 <a href="{url}branches{sessionvars%urlparameter}">branches</a>
 <a href="{url}rev/{node|short}{sessionvars%urlparameter}">changeset</a>
 {archives%archiveentry}
+<a href="{url}help{sessionvars%urlparameter}">help</a>
 </div>
 
 <h2>files for changeset {node|short}: {path|escape}</h2>
