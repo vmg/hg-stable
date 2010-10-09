@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qimport
-copyrev: 96793af1d431a128e13c7c7502044bd32c51838a
-
 
   $ cat > writelines.py <<EOF
   > import sys
@@ -89,17 +85,18 @@ import URL
 
   $ echo foo >> foo
   $ hg add foo
-  $ hg diff > $HGTMP/url.diff
+  $ hg diff > url.diff
   $ hg revert --no-backup foo
   $ rm foo
 
 Under unix: file:///foobar/blah
 Under windows: file:///c:/foobar/blah
 
-  $ patchurl=`echo "$HGTMP"/url.diff | tr '\\\\' /`
+  $ patchurl=`pwd | tr '\\\\' /`/url.diff
   $ expr "$patchurl" : "\/" > /dev/null || patchurl="/$patchurl"
   $ hg qimport file://"$patchurl"
   adding url.diff to series file
+  $ rm url.diff
   $ hg qun
   url.diff
 
