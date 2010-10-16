@@ -1,7 +1,3 @@
-
-copy: tests/test-hgweb-non-interactive
-copyrev: bd250e28f215bc7bd21603648725ff462656b745
-
 Tests if hgweb can run without touching sys.stdin, as is required
 by the WSGI standard and strictly implemented by mod_wsgi.
 
@@ -38,28 +34,28 @@ by the WSGI standard and strictly implemented by mod_wsgi.
   > output = StringIO()
   > 
   > def startrsp(status, headers):
-  > 	print '---- STATUS'
-  > 	print status
-  > 	print '---- HEADERS'
-  > 	print [i for i in headers if i[0] != 'ETag']
-  > 	print '---- DATA'
-  > 	return output.write
+  >     print '---- STATUS'
+  >     print status
+  >     print '---- HEADERS'
+  >     print [i for i in headers if i[0] != 'ETag']
+  >     print '---- DATA'
+  >     return output.write
   > 
   > env = {
-  > 	'wsgi.version': (1, 0),
-  > 	'wsgi.url_scheme': 'http',
-  > 	'wsgi.errors': errors,
-  > 	'wsgi.input': input,
-  > 	'wsgi.multithread': False,
-  > 	'wsgi.multiprocess': False,
-  > 	'wsgi.run_once': False,
-  > 	'REQUEST_METHOD': 'GET',
-  > 	'SCRIPT_NAME': '',
-  > 	'PATH_INFO': '',
-  > 	'QUERY_STRING': '',
-  > 	'SERVER_NAME': '127.0.0.1',
-  > 	'SERVER_PORT': os.environ['HGPORT'],
-  > 	'SERVER_PROTOCOL': 'HTTP/1.0'
+  >     'wsgi.version': (1, 0),
+  >     'wsgi.url_scheme': 'http',
+  >     'wsgi.errors': errors,
+  >     'wsgi.input': input,
+  >     'wsgi.multithread': False,
+  >     'wsgi.multiprocess': False,
+  >     'wsgi.run_once': False,
+  >     'REQUEST_METHOD': 'GET',
+  >     'SCRIPT_NAME': '',
+  >     'PATH_INFO': '',
+  >     'QUERY_STRING': '',
+  >     'SERVER_NAME': '127.0.0.1',
+  >     'SERVER_PORT': os.environ['HGPORT'],
+  >     'SERVER_PROTOCOL': 'HTTP/1.0'
   > }
   > 
   > i = hgweb('.')

@@ -1,7 +1,3 @@
-
-copy: tests/test-newcgi
-copyrev: ea435ed6ba7964a0a946da05552834cb060d8cb5
-
 This tests if CGI files from after d0db3462d568 but
 before d74fc8dec2b4 still work.
 
@@ -20,7 +16,7 @@ before d74fc8dec2b4 still work.
   > from mercurial.hgweb.request import wsgiapplication
   > 
   > def make_web_app():
-  > 	return hgweb("test", "Empty test repository")
+  >     return hgweb("test", "Empty test repository")
   > 
   > wsgicgi.launch(wsgiapplication(make_web_app))
   > HGWEB
@@ -46,7 +42,7 @@ before d74fc8dec2b4 still work.
   > from mercurial.hgweb.request import wsgiapplication
   > 
   > def make_web_app():
-  > 	return hgwebdir("hgweb.config")
+  >     return hgwebdir("hgweb.config")
   > 
   > wsgicgi.launch(wsgiapplication(make_web_app))
   > HGWEBDIR

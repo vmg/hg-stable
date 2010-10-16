@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-git
-copyrev: ed14e910a46bea6281155c2a4358ed657ccfce1f
-
 
   $ "$TESTDIR/hghave" git || exit 80
   $ echo "[extensions]" >> $HGRCPATH
@@ -120,7 +116,7 @@ Remove the directory, then try to replace it with a file
   >     fmap="$prefix.fmap"
   >     repo="$prefix.repo"
   >     for i in $files; do
-  > 	echo "include $i" >> "$fmap"
+  >         echo "include $i" >> "$fmap"
   >     done
   >     hg -q convert $opts --filemap "$fmap" --datesort git-repo2 "$repo"
   >     hg up -q -R "$repo"

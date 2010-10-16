@@ -1,7 +1,3 @@
-
-copy: tests/test-rename-merge2
-copyrev: 8a1e405cec266daab5fc38c04e07ad86b912d039
-
 
   $ mkdir -p t
   $ cd t
@@ -70,8 +66,8 @@ $4 = expected result
   >     cp rev $1
   >     hg add $1 2> /dev/null
   >     if [ "$2" != "" ] ; then
-  > 	cp rev $2
-  > 	hg add $2 2> /dev/null
+  >         cp rev $2
+  >         hg add $2 2> /dev/null
   >     fi
   > }
   $ uc() { up $1; hg cp $1 $2; } # update + copy

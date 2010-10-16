@@ -1,7 +1,3 @@
-
-copy: tests/test-parentrevspec
-copyrev: 6823ce0a368f5fc237c0c739dc6d10bc72658cd2
-
 
   $ commit()
   > {
@@ -10,11 +6,11 @@ copyrev: 6823ce0a368f5fc237c0c739dc6d10bc72658cd2
   >     p2=$3
   > 
   >     if [ "$p1" ]; then
-  > 	hg up -qC $p1
+  >         hg up -qC $p1
   >     fi
   > 
   >     if [ "$p2" ]; then
-  > 	HGMERGE=true hg merge -q $p2
+  >         HGMERGE=true hg merge -q $p2
   >     fi
   > 
   >     echo >> foo
@@ -45,8 +41,8 @@ copyrev: 6823ce0a368f5fc237c0c739dc6d10bc72658cd2
   $ lookup()
   > {
   >     for rev in "$@"; do
-  > 	printf "$rev: "
-  > 	hg id -nr $rev
+  >         printf "$rev: "
+  >         hg id -nr $rev
   >     done
   >     true
   > }

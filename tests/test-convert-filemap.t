@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-filemap
-copyrev: d9b87790aeebe829375f20f1c88d262c08fcb7a0
-
 
   $ HGMERGE=true; export HGMERGE
   $ echo '[extensions]' >> $HGRCPATH
@@ -99,7 +95,7 @@ final file versions in this repo:
   >     fmap="$prefix.fmap"
   >     repo="$prefix.repo"
   >     for i in $files; do
-  > 	echo "include $i" >> "$fmap"
+  >         echo "include $i" >> "$fmap"
   >     done
   >     hg -q convert $opts --filemap "$fmap" --datesort source "$repo"
   >     hg up -q -R "$repo"
