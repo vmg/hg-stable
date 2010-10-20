@@ -1,7 +1,3 @@
-
-copy: tests/test-eol-clone
-copyrev: 1dc4f95b49b9f6df4e01c21898676e63a392d52d
-
 Testing cloning with the EOL extension
 
   $ cat > $HGRCPATH <<EOF
@@ -64,7 +60,6 @@ Test clone of revision with .hgeol
 
   $ cd ..
   $ hg clone -r 0 repo repo-4
-  requesting all changes
   adding changesets
   adding manifests
   adding file changes

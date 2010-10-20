@@ -1,7 +1,3 @@
-
-copy: tests/test-pull-pull-corruption
-copyrev: bc717e9dcdf7ada8ebadbda20a767462fa0a577f
-
 Corrupt an hg repo with two pulls.
 create one repo with a long history
 
@@ -18,7 +14,6 @@ create one repo with a long history
 create one repo with a shorter history
 
   $ hg clone -r 0 source1 source2
-  requesting all changes
   adding changesets
   adding manifests
   adding file changes
