@@ -1,7 +1,3 @@
-
-copy: tests/test-convert
-copyrev: 487457b16a0182392382969a4b1847ffab219f24
-
 
   $ cat >> $HGRCPATH <<EOF
   > [extensions]
@@ -125,7 +121,7 @@ copyrev: 487457b16a0182392382969a4b1847ffab219f24
       to a named branch.
   
       Mercurial Source
-      ----------------
+      ''''''''''''''''
   
       --config convert.hg.ignoreerrors=False    (boolean)
           ignore integrity errors when reading. Use it to fix Mercurial
@@ -139,7 +135,7 @@ copyrev: 487457b16a0182392382969a4b1847ffab219f24
           convert start revision and its descendants
   
       CVS Source
-      ----------
+      ''''''''''
   
       CVS source will use a sandbox (i.e. a checked-out copy) from CVS to
       indicate the starting point of what will be converted. Direct access to
@@ -191,7 +187,7 @@ copyrev: 487457b16a0182392382969a4b1847ffab219f24
       more details.
   
       Subversion Source
-      -----------------
+      '''''''''''''''''
   
       Subversion source detects classical trunk/branches/tags layouts. By
       default, the supplied "svn://repo/path/" source URL is converted as a
@@ -220,7 +216,7 @@ copyrev: 487457b16a0182392382969a4b1847ffab219f24
           specify start Subversion revision.
   
       Perforce Source
-      ---------------
+      '''''''''''''''
   
       The Perforce (P4) importer can be given a p4 depot path or a client
       specification as source. It will convert all files in the source to a flat
@@ -235,7 +231,7 @@ copyrev: 487457b16a0182392382969a4b1847ffab219f24
           specify initial Perforce revision.
   
       Mercurial Destination
-      ---------------------
+      '''''''''''''''''''''
   
       --config convert.hg.clonebranches=False   (boolean)
           dispatch source branches in separate clones.
