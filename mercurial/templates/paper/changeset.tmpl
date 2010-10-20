@@ -1,7 +1,3 @@
-
-copyrev: 4bb6c577bf6dde4efa5ffe2455511e23f9e7b2b1
-copy: templates/paper/changeset.tmpl
-
 {header}
 <title>{repo|escape}: {node|short}</title>
 </head>
@@ -25,6 +21,9 @@ copy: templates/paper/changeset.tmpl
 </ul>
 <ul>
  {archives%archiveentry}
+</ul>
+<ul>
+ <li><a href="{url}help{sessionvars%urlparameter}">help</a></li>
 </ul>
 </div>
 

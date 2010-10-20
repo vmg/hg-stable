@@ -1,7 +1,3 @@
-
-copyrev: 2d31b5606f3d64ecae4de33c834b7272c216d928
-copy: templates/spartan/changeset.tmpl
-
 {header}
 <title>{repo|escape}: changeset {node|short}</title>
 </head>
@@ -16,6 +12,7 @@ copy: templates/spartan/changeset.tmpl
 <a href="{url}file/{node|short}{sessionvars%urlparameter}">files</a>
 <a href="{url}raw-rev/{node|short}">raw</a>
 {archives%archiveentry}
+<a href="{url}help{sessionvars%urlparameter}">help</a>
 </div>
 
 <h2>changeset: {desc|strip|escape|firstline|nonempty}</h2>

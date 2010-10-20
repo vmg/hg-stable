@@ -1,7 +1,3 @@
-
-copyrev: 2310ad454f84d6d81011f7c10e0b249af8f145ff
-copy: templates/paper/filediff.tmpl
-
 {header}
 <title>{repo|escape}: {file|escape} diff</title>
 </head>
@@ -30,6 +26,9 @@ copy: templates/paper/filediff.tmpl
 <li><a href="{url}annotate/{node|short}/{file|urlescape}{sessionvars%urlparameter}">annotate</a></li>
 <li><a href="{url}log/{node|short}/{file|urlescape}{sessionvars%urlparameter}">file log</a></li>
 <li><a href="{url}raw-file/{node|short}/{file|urlescape}">raw</a></li>
+</ul>
+<ul>
+<li><a href="{url}help{sessionvars%urlparameter}">help</a></li>
 </ul>
 </div>
 

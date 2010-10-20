@@ -1,7 +1,3 @@
-
-copyrev: d64cff69abd0ea25c5f098c559dff08936b8646b
-copy: templates/gitweb/fileannotate.tmpl
-
 {header}
 <title>{repo|escape}: {file|escape}@{node|short} (annotated)</title>
 <link rel="alternate" type="application/atom+xml"
@@ -29,7 +25,9 @@ copy: templates/gitweb/fileannotate.tmpl
 <a href="{url}log/{node|short}/{file|urlescape}{sessionvars%urlparameter}">revisions</a> |
 annotate |
 <a href="{url}diff/{node|short}/{file|urlescape}{sessionvars%urlparameter}">diff</a> |
-<a href="{url}raw-annotate/{node|short}/{file|urlescape}">raw</a><br/>
+<a href="{url}raw-annotate/{node|short}/{file|urlescape}">raw</a> |
+<a href="{url}help{sessionvars%urlparameter}">help</a>
+<br/>
 </div>
 
 <div class="title">{file|escape}</div>

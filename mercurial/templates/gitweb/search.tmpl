@@ -1,7 +1,3 @@
-
-copyrev: 24d046f1f6695b435a0441ebfe1e39ec78f7bd48
-copy: templates/gitweb/search.tmpl
-
 {header}
 <title>{repo|escape}: Search</title>
 <link rel="alternate" type="application/atom+xml"
@@ -30,6 +26,8 @@ copy: templates/gitweb/search.tmpl
 <a href="{url}tags{sessionvars%urlparameter}">tags</a> |
 <a href="{url}branches{sessionvars%urlparameter}">branches</a> |
 <a href="{url}file/{node|short}{sessionvars%urlparameter}">files</a>{archives%archiveentry}
+ |
+ <a href="{url}help{sessionvars%urlparameter}">help</a>
 <br/>
 </div>
 
