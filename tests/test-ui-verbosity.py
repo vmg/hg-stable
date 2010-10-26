@@ -1,9 +1,3 @@
-
-copyrev: 6a0f8cf962d0496240747998dcda34a6cb6ebaa9
-copy: tests/test-ui-verbosity
-
-#!/usr/bin/env python
-
 import os
 from mercurial import ui
 

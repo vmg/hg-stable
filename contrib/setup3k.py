@@ -1,8 +1,3 @@
-
-copy: setup.py
-copyrev: 906ccc9f66bc973b97f1187ddfc4ea2d2889f389
-
-#!/usr/bin/env python
 #
 # This is an experimental py3k-enabled mercurial setup script.
 #
