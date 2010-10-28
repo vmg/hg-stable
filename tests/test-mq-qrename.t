@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qrename
-copyrev: d4b640d8bbdc5eac7542926129e9633120f3d024
-
 
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
@@ -84,4 +80,17 @@ Test overlapping renames (issue2388)
   M series
   A patchc
   R patcha
+  $ cd ..
+
+Test renames with mq repo (issue2097)
+
+  $ hg init issue2097
+  $ cd issue2097
+  $ hg qnew p0
+  $ (cd .hg/patches && hg init)
+  $ hg qren p0 p1
+  $ hg debugstate --mq
+  $ hg ci --mq -mq0
+  nothing changed
+  [1]
   $ cd ..
