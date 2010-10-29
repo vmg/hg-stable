@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qnew
-copyrev: 4627d62c955ab4d431aaf86165905c95a005af53
-
 
   $ catpatch() {
   >     cat $1 | sed -e "s/^\(# Parent \).*/\1/"
@@ -27,6 +23,7 @@ copyrev: 4627d62c955ab4d431aaf86165905c95a005af53
   >     hg qinit -c
   > 
   >     echo '% qnew with name containing slash'
+  >     hg qnew foo/
   >     hg qnew foo/bar.patch
   >     hg qseries
   >     hg qpop
@@ -109,6 +106,7 @@ plain headers
   abort: "foo#bar" cannot be used as the name of a patch
   abort: "foo:bar" cannot be used as the name of a patch
   % qnew with name containing slash
+  abort: cannot write patch "foo/": Is a directory
   foo/bar.patch
   popping foo/bar.patch
   patch queue now empty
@@ -172,6 +170,7 @@ hg headers
   abort: "foo#bar" cannot be used as the name of a patch
   abort: "foo:bar" cannot be used as the name of a patch
   % qnew with name containing slash
+  abort: cannot write patch "foo/": Is a directory
   foo/bar.patch
   popping foo/bar.patch
   patch queue now empty
