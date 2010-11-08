@@ -1,7 +1,3 @@
-
-copy: tests/test-simplemerge-cmd
-copyrev: 1db90441efc3e2ea48985b676e5de9e414de56ff
-
 
   $ cp "$TESTDIR"/../contrib/simplemerge .
   $ echo base > base
@@ -108,9 +104,9 @@ binary file
 
 binary file --text
 
-  $ python simplemerge -a -p binary-local base other 2>&1 | $TESTDIR/printrepr.py
+  $ python simplemerge -a -p binary-local base other 2>&1
   warning: binary-local looks like a binary file.
-  \x00local
+  \x00local (esc)
   base
   other
 
