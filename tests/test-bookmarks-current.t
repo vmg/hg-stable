@@ -1,7 +1,3 @@
-
-copy: tests/test-bookmarks-current
-copyrev: 79838fc24aa75be252eaff605c630d65132e84dd
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "bookmarks=" >> $HGRCPATH
 
@@ -28,7 +24,7 @@ list bookmarks with color
 
   $ hg --config extensions.color= --config color.mode=ansi \
   >     bookmark --color=always
-  [0;32m * X                         -1:000000000000[0m
+  \x1b[0;32m * X                         -1:000000000000\x1b[0m (esc)
 
 update to bookmark X
 
