@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qpush-fail
-copyrev: 95ef1ae23a6404f9d3672ddaa1d9d8df129bfca3
-
 Test that qpush cleans things up if it doesn't complete
 
   $ echo "[extensions]" >> $HGRCPATH
@@ -45,7 +41,7 @@ test qpush on empty series
   transaction abort!
   rollback completed
   cleaning up working directory...done
-  abort: decoding near 'é': 'ascii' codec can't decode byte 0xe9 in position 0: ordinal not in range(128)!
+  abort: decoding near '\xe9': 'ascii' codec can't decode byte 0xe9 in position 0: ordinal not in range(128)! (esc)
   [255]
   $ hg parents
   changeset:   0:bbd179dfa0a7

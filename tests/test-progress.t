@@ -1,7 +1,3 @@
-
-copy: tests/test-progress
-copyrev: 3a0b55fb0d4695921ea4608292fbed1bd78964bb
-
 
   $ cat > loop.py <<EOF
   > from mercurial import commands
@@ -55,7 +51,7 @@ test with delay=0, refresh=0
   loop [                                                                    ] 0/3
   loop [=====================>                                              ] 1/3
   loop [============================================>                       ] 2/3
-                                                                                  
+                                                                                  \r (esc)
 
 test refresh is taken in account
 
@@ -68,7 +64,7 @@ test format options 1
   
   0/2 loop lo
   1/2 loop lo
-                                                                                  
+                                                                                  \r (esc)
 
 test format options 2
 
@@ -76,7 +72,7 @@ test format options 2
   
   0/2 p.0 [                                                                     ]
   1/2 p.1 [=================================>                                   ]
-                                                                                  
+                                                                                  \r (esc)
 
 test format options and indeterminate progress
 
@@ -84,7 +80,7 @@ test format options and indeterminate progress
   
   0 loop.0               [ <=>                                                  ]
   1 loop.1               [  <=>                                                 ]
-                                                                                  
+                                                                                  \r (esc)
 
 make sure things don't fall over if count > total
 
@@ -96,7 +92,7 @@ make sure things don't fall over if count > total
   loop [==================================================>                 ] 3/4
   loop [===================================================================>] 4/4
   loop [ <=>                                                                ] 5/4
-                                                                                  
+                                                                                  \r (esc)
 
 test immediate progress completion
 
