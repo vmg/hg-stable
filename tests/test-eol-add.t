@@ -1,7 +1,3 @@
-
-copy: tests/test-eol-add
-copyrev: 9b84e9786d4178c5398e6327cc3a51530698c419
-
 Test adding .hgeol
 
   $ cat > $HGRCPATH <<EOF
@@ -52,7 +48,7 @@ Test adding .hgeol
   >     echo '% hg status'
   >     hg status
   >     echo '% hg tip -p'
-  >     hg tip -p | python $TESTDIR/printrepr.py
+  >     hg tip -p
   >     cd ..
   >     rm -r repo-$1
   > }
@@ -122,8 +118,8 @@ Test adding .hgeol
   -first
   -second
   -third
-  +first\r
-  +second\r
-  +third\r
+  +first\r (esc)
+  +second\r (esc)
+  +third\r (esc)
   
   $ rm -r repo
