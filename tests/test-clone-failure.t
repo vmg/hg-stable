@@ -1,7 +1,3 @@
-
-copy: tests/test-clone-failure
-copyrev: ab01033a57a043876702d134727080da32a7bc46
-
 No local source
 
   $ hg clone a b
@@ -43,7 +39,6 @@ Source of wrong type
   >     rm a
   > else
   >     echo "abort: repository a not found!"
-  >     echo 255
   > fi
   abort: repository a not found!
 
