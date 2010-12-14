@@ -1,7 +1,3 @@
-
-copy: tests/test-1102
-copyrev: 85b8398b0d802b60324fae0d84461cfb35ceb2db
-
   $ rm -rf a
   $ hg init a
   $ cd a
@@ -13,7 +9,7 @@ copyrev: 85b8398b0d802b60324fae0d84461cfb35ceb2db
 
   $ hg co 1
   1 files updated, 0 files merged, 0 files removed, 0 files unresolved
-  $ hg tag -r0 t1
+  $ hg tag -f -r0 t1
   $ hg tags
   tip                                3:a49829c4fc11
   t1                                 0:f7b1eb17ad24
