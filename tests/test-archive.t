@@ -1,7 +1,3 @@
-
-copy: tests/test-archive
-copyrev: b8e49a00b45d8cd27239fe6fe3f05dd2b82223dd
-
   $ mkdir test
   $ cd test
   $ hg init
@@ -33,7 +29,6 @@ copyrev: b8e49a00b45d8cd27239fe6fe3f05dd2b82223dd
   > }
 
 check http return codes
-
 
   $ test_archtype gz tar.gz tar.bz2 zip
   % gz allowed should give 200
@@ -154,9 +149,8 @@ The '-t' should override autodetection
   > print h1 == h2 or "md5 differ: " + repr((h1, h2))
   > EOF
 
-archive name is stored in the archive, so create similar
-
-archives and rename them afterwards.
+archive name is stored in the archive, so create similar archives and
+rename them afterwards.
 
   $ hg archive -t tgz tip.tar.gz
   $ mv tip.tar.gz tip1.tar.gz
@@ -223,6 +217,7 @@ empty repo
   $ hg archive ../test-empty
   abort: no working directory: please specify a revision
   [255]
+
 old file -- date clamped to 1980
 
   $ touch -t 197501010000 old
