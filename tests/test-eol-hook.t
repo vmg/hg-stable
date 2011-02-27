@@ -1,7 +1,3 @@
-
-copy: tests/test-eol-hook
-copyrev: e0ddf7cfb4bb78a81675d53632473051cf7b774c
-
 Test the EOL hook
 
   $ cat > $HGRCPATH <<EOF
@@ -25,6 +21,7 @@ Create repo
   $ cat > .hgeol <<EOF
   > [patterns]
   > mixed.txt = BIN
+  > crlf.txt = CRLF
   > **.txt = native
   > EOF
   $ hg add .hgeol
@@ -58,6 +55,32 @@ Create repo
 
   $ printf "first\nsecond\nthird\n" > a.txt
   $ hg commit -m 'LF a.txt (fixed)'
+  $ hg push ../main
+  pushing to ../main
+  searching for changes
+  adding changesets
+  adding manifests
+  adding file changes
+  added 2 changesets with 2 changes to 1 files
+
+  $ printf "first\nsecond\nthird\n" > crlf.txt
+  $ hg add crlf.txt
+  $ hg commit -m 'LF crlf.txt'
+  $ hg push ../main
+  pushing to ../main
+  searching for changes
+  adding changesets
+  adding manifests
+  adding file changes
+  added 1 changesets with 1 changes to 1 files
+  error: pretxnchangegroup hook failed: crlf.txt should not have LF line endings
+  transaction abort!
+  rollback completed
+  abort: crlf.txt should not have LF line endings
+  [255]
+
+  $ printf "first\r\nsecond\r\nthird\r\n" > crlf.txt
+  $ hg commit -m 'CRLF crlf.txt (fixed)'
   $ hg push ../main
   pushing to ../main
   searching for changes
