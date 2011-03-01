@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-svn-sink
-copyrev: 900b746cb18f5e5aeffb367358c95b9fcf83f3fb
-
 
   $ "$TESTDIR/hghave" svn svn-bindings no-outer-repo || exit 80
 
@@ -26,7 +22,7 @@ copyrev: 900b746cb18f5e5aeffb367358c95b9fcf83f3fb
   >     )
   > }
 
-  $ cat > $HGRCPATH <<EOF
+  $ cat >> $HGRCPATH <<EOF
   > [extensions]
   > convert = 
   > graphlog =
