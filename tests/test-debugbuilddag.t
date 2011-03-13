@@ -1,7 +1,3 @@
-
-copy: tests/test-debugbuilddag
-copyrev: 2811c8b62fad2ae3de2b6eeaa0d25d741f120560
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "graphlog=" >> $HGRCPATH
 
@@ -321,5 +317,5 @@ glog
 glog X
   $ hg glog --template '{rev}: {desc} [{branches}]\n' X
   o  2: r2 []
-  
+  |
   $ cd ..
