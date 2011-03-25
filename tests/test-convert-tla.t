@@ -1,13 +1,5 @@
-
-copy: tests/test-convert-tla
-copyrev: ce4b0fcbc59f2236339b3f5362f9b55c36d68349
-
 
   $ "$TESTDIR/hghave" tla || exit 80
-  $ mkdir do_not_use_HOME_tla
-  $ cd do_not_use_HOME_tla
-  $ HOME=`pwd`; export HOME
-  $ cd ..
   $ tla my-id "mercurial <mercurial@selenic.com>"
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "convert=" >> $HGRCPATH

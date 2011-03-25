@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-mtn
-copyrev: 7f626c770f70ddce460dc9d51eaecec5f18dc239
-
 
   $ "$TESTDIR/hghave" mtn || exit 80
 
@@ -12,7 +8,6 @@ on Windows. Having a variable here ease test patching.
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "convert=" >> $HGRCPATH
   $ echo 'graphlog =' >> $HGRCPATH
-  $ HOME=`pwd`/do_not_use_HOME_mtn; export HOME
 
 Windows version of monotone home
 
