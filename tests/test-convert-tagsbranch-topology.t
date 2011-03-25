@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-tagsbranch-topology
-copyrev: ce097802dc7ff04a05f86262176221e26bf4d0ac
-
 
   $ "$TESTDIR/hghave" git || exit 80
   $ echo "[extensions]" >> $HGRCPATH
@@ -53,6 +49,7 @@ Do a first conversion
   converting...
   0 rev1
   updating tags
+  updating bookmarks
 
 Simulate upstream  updates after first conversion
 
@@ -71,6 +68,7 @@ Perform an incremental conversion
   converting...
   0 rev2
   updating tags
+  updating bookmarks
 
 Print the log
 
