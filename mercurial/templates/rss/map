@@ -1,7 +1,3 @@
-
-copyrev: 391e217aa1cceb34896e20e61f96e1a761c2b582
-copy: templates/rss/map
-
 default = 'changelog'
 mimetype = 'text/xml; charset={encoding}'
 header = header.tmpl
@@ -11,4 +7,6 @@ filelog = filelog.tmpl
 filelogentry = filelogentry.tmpl
 tags = tags.tmpl
 tagentry = tagentry.tmpl
+bookmarks = bookmarks.tmpl
+bookmarkentry = bookmarkentry.tmpl
 error = error.tmpl

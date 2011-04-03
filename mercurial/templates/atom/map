@@ -1,7 +1,3 @@
-
-copyrev: f4690105b5638b96bce3c8a090412fdddad19919
-copy: templates/atom/map
-
 default = 'changelog'
 feedupdated = '<updated>{date|rfc3339date}</updated>'
 mimetype = 'application/atom+xml; charset={encoding}'
@@ -12,4 +8,6 @@ filelog = filelog.tmpl
 filelogentry = filelogentry.tmpl
 tags = tags.tmpl
 tagentry = tagentry.tmpl
+bookmarks = bookmarks.tmpl
+bookmarkentry = bookmarkentry.tmpl
 error = error.tmpl
