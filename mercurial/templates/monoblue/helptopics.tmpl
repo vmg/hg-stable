@@ -1,7 +1,3 @@
-
-copy: mercurial/templates/monoblue/branches.tmpl
-copyrev: 0174d5e81fbb12c885694b58afa39bf1ac394138
-
 {header}
     <title>{repo|escape}: Branches</title>
     <link rel="alternate" type="application/atom+xml" href="{url}atom-log" title="Atom feed for {repo|escape}"/>
@@ -11,7 +7,7 @@ copyrev: 0174d5e81fbb12c885694b58afa39bf1ac394138
 <body>
 <div id="container">
     <div class="page-header">
-        <h1><a href="{url}summary{sessionvars%urlparameter}">{repo|escape}</a> / Branches</h1>
+        <h1><a href="{url}summary{sessionvars%urlparameter}">{repo|escape}</a> / Help</h1>
 
         <form action="{url}log">
             {sessionvars%hiddenformentry}
@@ -27,6 +23,7 @@ copyrev: 0174d5e81fbb12c885694b58afa39bf1ac394138
             <li><a href="{url}changelog{sessionvars%urlparameter}">changelog</a></li>
             <li><a href="{url}graph/{node|short}{sessionvars%urlparameter}">graph</a></li>
             <li><a href="{url}tags{sessionvars%urlparameter}">tags</a></li>
+            <li><a href="{url}bookmarks{sessionvars%urlparameter}">bookmarks</a></li>
             <li><a href="{url}help{sessionvars%urlparameter}">branches</a></li>
             <li><a href="{url}file/{node|short}{sessionvars%urlparameter}">files</a></li>
 	    <li class="current">help</li>

@@ -1,7 +1,3 @@
-
-copy: mercurial/templates/gitweb/branches.tmpl
-copyrev: 6f5ba6f162af3f13aeebea5dd7dab042dee663bc
-
 {header}
 <title>{repo|escape}: Branches</title>
 <link rel="alternate" type="application/atom+xml"
@@ -12,7 +8,7 @@ copyrev: 6f5ba6f162af3f13aeebea5dd7dab042dee663bc
 <body>
 
 <div class="page_header">
-<a href="http://mercurial.selenic.com/" title="Mercurial" style="float: right;">Mercurial</a><a href="{url}summary{sessionvars%urlparameter}">{repo|escape}</a> / branches
+<a href="http://mercurial.selenic.com/" title="Mercurial" style="float: right;">Mercurial</a><a href="{url}summary{sessionvars%urlparameter}">{repo|escape}</a> / help
 </div>
 
 <div class="page_nav">
@@ -21,6 +17,7 @@ copyrev: 6f5ba6f162af3f13aeebea5dd7dab042dee663bc
 <a href="{url}log{sessionvars%urlparameter}">changelog</a> |
 <a href="{url}graph{sessionvars%urlparameter}">graph</a> |
 <a href="{url}tags{sessionvars%urlparameter}">tags</a> |
+<a href="{url}bookmarks{sessionvars%urlparameter}">bookmarks</a> |
 <a href="{url}branches{sessionvars%urlparameter}">branches</a> |
 <a href="{url}file/{node|short}{sessionvars%urlparameter}">files</a> |
 help
