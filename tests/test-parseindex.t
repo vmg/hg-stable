@@ -1,7 +1,3 @@
-
-copy: tests/test-parseindex
-copyrev: 6e3a5cd0c7f833d1ff5c28b540f484d655d78499
-
 revlog.parseindex must be able to parse the index file even if
 an index entry is split between two 64k blocks.  The ideal test
 would be to create an index file with inline data where
@@ -30,7 +26,7 @@ We approximate that by reducing the read buffer to 1 byte.
   summary:     change foo
   
   $ cat >> test.py << EOF
-  > from mercurial import changelog, util
+  > from mercurial import changelog, scmutil
   > from mercurial.node import *
   > 
   > class singlebyteread(object):
@@ -46,7 +42,7 @@ We approximate that by reducing the read buffer to 1 byte.
   >         return getattr(self.real, key)
   > 
   > def opener(*args):
-  >     o = util.opener(*args)
+  >     o = scmutil.opener(*args)
   >     def wrapper(*a):
   >         f = o(*a)
   >         return singlebyteread(f)
