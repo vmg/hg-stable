@@ -1,3 +1,7 @@
+
+copy: tests/test-dumprevlog.t
+copyrev: 26dab979b809e9929a1e6f01e58e13ec1b684a27
+
 Set vars:
 
   $ CONTRIBDIR=$TESTDIR/../contrib
