@@ -1,7 +1,3 @@
-
-copy: tests/test-no-symlinks
-copyrev: 3583cb65ccd84d3c9eeb1447e2029f53e8996ed1
-
   $ "$TESTDIR/hghave" no-symlink || exit 80
 
 # The following script was used to create the bundle:
@@ -20,7 +16,7 @@ Extract a symlink on a platform not supporting them
 
   $ hg init t
   $ cd t
-  $ hg pull -q "$TESTDIR/test-no-symlinks.hg"
+  $ hg pull -q "$TESTDIR/bundles/test-no-symlinks.hg"
   $ hg update
   4 files updated, 0 files merged, 0 files removed, 0 files unresolved
   $ cat a.lnk && echo
