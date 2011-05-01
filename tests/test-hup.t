@@ -1,7 +1,3 @@
-
-copy: tests/test-hup
-copyrev: 78f3ea1ec745b259d300940b933abae4564ba61c
-
 Test hangup signal in the middle of transaction
 
   $ "$TESTDIR/hghave" fifo || exit 80
@@ -21,4 +17,4 @@ Test hangup signal in the middle of transaction
   rollback completed
   killed!
   $ echo .hg/* .hg/store/*
-  .hg/00changelog.i .hg/journal.branch .hg/journal.desc .hg/journal.dirstate .hg/requires .hg/store .hg/store/00changelog.i .hg/store/00changelog.i.a
+  .hg/00changelog.i .hg/journal.bookmarks .hg/journal.branch .hg/journal.desc .hg/journal.dirstate .hg/requires .hg/store .hg/store/00changelog.i .hg/store/00changelog.i.a
