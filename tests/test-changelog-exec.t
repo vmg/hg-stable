@@ -1,7 +1,3 @@
-
-copy: tests/test-changelog-exec
-copyrev: c4a4d35793c2c5e759a1fc20c5ec3a460c574605
-
 b51a8138292a introduced a regression where we would mention in the
 changelog executable files added by the second parent of a merge. Test
 that that doesn't happen anymore
@@ -52,6 +48,6 @@ this should not mention bar:
   
   
 
-  $ hg debugindex .hg/store/data/bar.i
+  $ hg debugindex bar
      rev    offset  length   base linkrev nodeid       p1           p2
        0         0       5      0       1 b004912a8510 000000000000 000000000000
