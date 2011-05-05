@@ -1,7 +1,3 @@
-
-copy: mercurial/discovery.py
-copyrev: d93401f5479c039ecb5fee84ab7f383ad5ec8957
-
 # discovery.py - protocol changeset discovery functions
 #
 # Copyright 2010 Matt Mackall <mpm@selenic.com>
@@ -37,7 +33,7 @@ def findcommonincoming(repo, remote, heads=None, force=False):
         base.add(nullid)
         if heads != [nullid]:
             return [nullid], [nullid], list(heads)
-        return [nullid], [], []
+        return [nullid], [], heads
 
     # assume we're closer to the tip than the root
     # and start by examining the heads
@@ -50,10 +46,10 @@ def findcommonincoming(repo, remote, heads=None, force=False):
         else:
             base.add(h)
 
-    heads = unknown
     if not unknown:
-        return list(base), [], []
+        return list(base), [], list(heads)
 
+    heads = unknown
     req = set(unknown)
     reqcnt = 0
 
