@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-symlinks
-copyrev: bb3841da98bc697ac7836ca24f9b8a1b8d7b1d5e
-
   $ "$TESTDIR/hghave" symlink || exit 80
 
   $ echo "[extensions]" >> $HGRCPATH
@@ -119,6 +115,8 @@ check patch does not overwrite untracked symlinks
   $ ln -s linkbb linkb
   $ hg qpush
   applying movelink
+  cannot create linkb: destination already exists
+  1 out of 1 hunks FAILED -- saving rejects to file linkb.rej
   patch failed, unable to continue (try -v)
   patch failed, rejects left in working dir
   errors during apply, please fix and refresh movelink
