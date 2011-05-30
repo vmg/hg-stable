@@ -1,7 +1,3 @@
-
-copy: tests/test-gendoc
-copyrev: 52671fec2c10bff071b6d425c346efed55e575c7
-
 Test document extraction
 
   $ "$TESTDIR/hghave" docutils || exit 80
@@ -46,6 +42,9 @@ Test document extraction
   checking for parse errors
   
   % extracting documentation from ro
+  checking for parse errors
+  
+  % extracting documentation from ru
   checking for parse errors
   
   % extracting documentation from sv
