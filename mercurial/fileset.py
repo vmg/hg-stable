@@ -1,7 +1,3 @@
-
-copy: mercurial/revset.py
-copyrev: 753f6c4cd42ef33a4083360d24747e5c67dee166
-
 # fileset.py - file set queries for mercurial
 #
 # Copyright 2010 Matt Mackall <mpm@selenic.com>
@@ -60,7 +56,8 @@ def tokenize(program):
                 pos += 1
             else:
                 raise error.ParseError(_("unterminated string"), s)
-        elif c.isalnum() or c in '.*{}[]?' or ord(c) > 127: # gather up a symbol/keyword
+        elif c.isalnum() or c in '.*{}[]?' or ord(c) > 127:
+            # gather up a symbol/keyword
             s = pos
             pos += 1
             while pos < l: # find end of symbol
