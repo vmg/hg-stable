@@ -1,7 +1,3 @@
-
-copy: tests/test-revlog-packentry
-copyrev: 1525f2e1a41be2bcf70d943290029a7344ef6cef
-
   $ hg init repo
   $ cd repo
 
@@ -19,7 +15,7 @@ this should be stored as a delta against rev 0
   adding foo
   created new head
 
-  $ hg debugindex .hg/store/data/foo.i
+  $ hg debugindex foo
      rev    offset  length   base linkrev nodeid       p1           p2
        0         0       0      0       0 b80de5d13875 000000000000 000000000000
        1         0      24      0       1 0376abec49b8 000000000000 000000000000

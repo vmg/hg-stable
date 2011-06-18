@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-symlinks
-copyrev: bb3841da98bc697ac7836ca24f9b8a1b8d7b1d5e
-
   $ "$TESTDIR/hghave" symlink || exit 80
 
   $ echo "[extensions]" >> $HGRCPATH
@@ -110,16 +106,3 @@ replace broken symlink with another broken symlink
   now at: movelink
   $ $TESTDIR/readlink.py linkb
   linkb -> linkb
-
-check patch does not overwrite untracked symlinks
-
-  $ hg qpop
-  popping movelink
-  now at: link
-  $ ln -s linkbb linkb
-  $ hg qpush
-  applying movelink
-  patch failed, unable to continue (try -v)
-  patch failed, rejects left in working dir
-  errors during apply, please fix and refresh movelink
-  [2]

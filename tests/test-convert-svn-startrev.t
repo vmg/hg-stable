@@ -1,11 +1,7 @@
-
-copy: tests/test-convert-svn-startrev
-copyrev: a0b6d754e2e007a04db480d3d328257d69ebbe8d
-
 
   $ "$TESTDIR/hghave" svn svn-bindings || exit 80
 
-  $ cat > $HGRCPATH <<EOF
+  $ cat >> $HGRCPATH <<EOF
   > [extensions]
   > convert = 
   > graphlog =

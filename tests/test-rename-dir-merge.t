@@ -1,10 +1,5 @@
-
-copy: tests/test-rename-dir-merge
-copyrev: 429f28c1d529289be71d11e8e16fc22b1997bea9
-
-  $ mkdir t
+  $ hg init t
   $ cd t
-  $ hg init
 
   $ mkdir a
   $ echo foo > a/a
@@ -122,9 +117,8 @@ copyrev: 429f28c1d529289be71d11e8e16fc22b1997bea9
 Second scenario with two repos:
 
   $ cd ..
-  $ mkdir r1
+  $ hg init r1
   $ cd r1
-  $ hg init
   $ mkdir a
   $ echo foo > a/f
   $ hg add a

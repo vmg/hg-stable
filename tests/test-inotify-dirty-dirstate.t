@@ -1,7 +1,3 @@
-
-copy: tests/test-inotify-dirty-dirstate
-copyrev: 81529784502c7ace500313800649692aa5abff27
-
 issues when status queries are issued when dirstate is dirty
 
   $ "$TESTDIR/hghave" inotify || exit 80
@@ -11,8 +7,7 @@ issues when status queries are issued when dirstate is dirty
 
 issue1810: inotify and fetch
 
-  $ mkdir test; cd test
-  $ hg init
+  $ hg init test; cd test
   $ hg inserve -d --pid-file=../hg.pid
   $ cat ../hg.pid >> "$DAEMON_PIDS"
   $ echo foo > foo

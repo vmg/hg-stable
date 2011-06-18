@@ -1,7 +1,3 @@
-
-copy: tests/test-pull-update
-copyrev: 1b0b2679e32ed9d18616740a3b396305b7130279
-
   $ hg init t
   $ cd t
   $ echo 1 > foo
@@ -29,8 +25,7 @@ Should not update:
   adding manifests
   adding file changes
   added 1 changesets with 1 changes to 1 files (+1 heads)
-  not updating, since new heads added
-  (run 'hg heads' to see heads, 'hg merge' to merge)
+  not updating: crosses branches (merge branches or update --check to force update)
 
   $ cd ../tt
 
@@ -43,8 +38,7 @@ Should not update:
   adding manifests
   adding file changes
   added 1 changesets with 1 changes to 1 files (+1 heads)
-  not updating, since new heads added
-  (run 'hg heads' to see heads, 'hg merge' to merge)
+  not updating: crosses branches (merge branches or update --check to force update)
 
   $ HGMERGE=true hg merge
   merging foo

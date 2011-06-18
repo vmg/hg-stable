@@ -1,7 +1,3 @@
-
-copy: tests/test-impexp-branch
-copyrev: 3099f0103a3dae980233ef6d4fcc39718e5131bc
-
   $ cat >findbranch.py <<EOF
   > import re, sys
   > 
@@ -15,6 +11,7 @@ copyrev: 3099f0103a3dae980233ef6d4fcc39718e5131bc
   >         sys.exit(0)
   > sys.exit(1)
   > EOF
+
   $ hg init a
   $ cd a
   $ echo "Rev 1" >rev
@@ -24,11 +21,17 @@ copyrev: 3099f0103a3dae980233ef6d4fcc39718e5131bc
   marked working directory as branch abranch
   $ echo "Rev  2" >rev
   $ hg commit -m "With branch."
-  $ if hg export 0 | python ../findbranch.py; then
+
+  $ hg export 0 > ../r0.patch
+  $ hg export 1 > ../r1.patch
+  $ cd ..
+
+  $ if python findbranch.py < r0.patch; then
   >     echo "Export of default branch revision has Branch header" 1>&2
   >     exit 1
   > fi
-  $ if hg export 1 | python ../findbranch.py; then
+
+  $ if python findbranch.py < r1.patch; then
   >     :  # Do nothing
   > else
   >     echo "Export of branch revision is missing Branch header" 1>&2
@@ -37,18 +40,17 @@ copyrev: 3099f0103a3dae980233ef6d4fcc39718e5131bc
 
 Make sure import still works with branch information in patches.
 
-  $ cd ..
   $ hg init b
   $ cd b
-  $ hg -R ../a export 0 | hg import -
-  applying patch from stdin
-  $ hg -R ../a export 1 | hg import -
-  applying patch from stdin
+  $ hg import ../r0.patch
+  applying ../r0.patch
+  $ hg import ../r1.patch
+  applying ../r1.patch
   $ cd ..
-  $ rm -rf b
-  $ hg init b
-  $ cd b
-  $ hg -R ../a export 0 | hg import --exact -
-  applying patch from stdin
-  $ hg -R ../a export 1 | hg import --exact -
-  applying patch from stdin
+
+  $ hg init c
+  $ cd c
+  $ hg import --exact ../r0.patch
+  applying ../r0.patch
+  $ hg import --exact ../r1.patch
+  applying ../r1.patch

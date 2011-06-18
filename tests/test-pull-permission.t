@@ -1,10 +1,5 @@
-
-copy: tests/test-pull-permission
-copyrev: 6f45582c80262095a2c276d8ed9e768c6b91267c
-
-  $ mkdir a
+  $ hg init a
   $ cd a
-  $ hg init
   $ echo foo > b
   $ hg add b
   $ hg ci -m "b"
