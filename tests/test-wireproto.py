@@ -1,6 +1,10 @@
+
+copy: tests/test-wireprotocol.py
+copyrev: d8c44811f4bc1dab3cb3c8e9bd24cae897e967f9
+
 from mercurial import wireproto
 
-class proto():
+class proto(object):
     def __init__(self, args):
         self.args = args
     def getargs(self, spec):
@@ -21,7 +25,7 @@ class clientrepo(wireproto.wirerepository):
         yield wireproto.todict(name=mangle(name)), f
         yield unmangle(f.value)
 
-class serverrepo():
+class serverrepo(object):
     def greet(self, name):
         return "Hello, " + name
 
