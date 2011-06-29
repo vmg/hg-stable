@@ -1,3 +1,7 @@
+
+copy: tests/test-wireprotocol.py
+copyrev: d8c44811f4bc1dab3cb3c8e9bd24cae897e967f9
+
 from mercurial import wireproto
 
 class proto(object):
