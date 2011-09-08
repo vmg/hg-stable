@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-authormap
-copyrev: bc5439cb140ed6771fbb8214937a6b084452ab99
-
 
   $ cat >> $HGRCPATH <<EOF
   > [extensions]
@@ -31,7 +27,7 @@ Explicit --authors
   sorting...
   converting...
   0 foo
-  Writing author map file new/.hg/authormap
+  Writing author map file $TESTTMP/new/.hg/authormap
   $ cat new/.hg/authormap
   user name=Long User Name
   $ hg -Rnew log
@@ -48,7 +44,7 @@ Implicit .hg/authormap
   $ hg init new
   $ mv authormap.txt new/.hg/authormap
   $ hg convert orig new
-  Ignoring bad line in author map file new/.hg/authormap: this line is ignored
+  Ignoring bad line in author map file $TESTTMP/new/.hg/authormap: this line is ignored
   scanning source...
   sorting...
   converting...
