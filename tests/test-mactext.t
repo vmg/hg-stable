@@ -1,7 +1,3 @@
-
-copy: tests/test-mactext
-copyrev: 43f8ec739610ea8a3649f0dd35e45767fc36d521
-
 
   $ cat > unix2mac.py <<EOF
   > import sys
@@ -23,13 +19,11 @@ copyrev: 43f8ec739610ea8a3649f0dd35e45767fc36d521
   [hooks]
   pretxncommit.cr = python:hgext.win32text.forbidcr
   pretxnchangegroup.cr = python:hgext.win32text.forbidcr
-  $ echo
-  
+
   $ echo hello > f
   $ hg add f
   $ hg ci -m 1
-  $ echo
-  
+
   $ python unix2mac.py f
   $ hg ci -m 2
   Attempt to commit or push text file(s) using CR line endings

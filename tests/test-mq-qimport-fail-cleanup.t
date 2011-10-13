@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qimport-fail-cleanup
-copyrev: 0ffd325d1e9a1872e03cf0cc59cf220a95b2fde7
-
 Failed qimport of patches from files should cleanup by recording successfully
 imported patches in series file.
 
@@ -20,14 +16,10 @@ imported patches in series file.
   >  a
   > +b
   > EOF
-  $ echo
-  
 
 empty series
 
   $ hg qseries
-  $ echo
-  
 
 qimport valid patch followed by invalid patch
 
@@ -35,8 +27,6 @@ qimport valid patch followed by invalid patch
   adding b.patch to series file
   abort: unable to read file fakepatch
   [255]
-  $ echo
-  
 
 valid patches before fail added to series
 
