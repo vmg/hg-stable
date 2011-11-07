@@ -1,7 +1,5 @@
-
-copy: tests/test-git-export
-copyrev: fadeb6300e66ae991f8ae5d6208e3d4daac9092d
-
+  $ "$TESTDIR/hghave" execbit || exit 80
+
   $ hg init
   $ echo start > start
   $ hg ci -Amstart
