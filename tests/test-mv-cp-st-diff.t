@@ -1,7 +1,3 @@
-
-copy: tests/test-mv-cp-st-diff
-copyrev: 40a311d57df157ba0072818ccb14f694aaceb39f
-
 
   $ add()
   > {
@@ -1142,7 +1138,7 @@ $4 - test description
   updating to branch default
   3 files updated, 0 files merged, 0 files removed, 0 files unresolved
   created new head
-  moving x/x to y/x
+  moving x/x to y/x (glob)
   ** directory move **
   ** hg mv x y / add y/x x1 / add y/x x2
   - working to parent: 
