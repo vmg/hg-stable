@@ -1,7 +1,3 @@
-
-copy: tests/test-rebuildstate
-copyrev: c2736b2b78e9d336a3b4d022ac6d994a7796a702
-
 basic test for hg debugrebuildstate
 
   $ hg init repo
@@ -21,8 +17,8 @@ basic test for hg debugrebuildstate
 state dump after
 
   $ hg debugstate --nodates | sort
-  n 666         -1 bar
-  n 666         -1 foo
+  n 644         -1 bar
+  n 644         -1 foo
 
 status
 
