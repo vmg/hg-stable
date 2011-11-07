@@ -1,7 +1,4 @@
-
-copy: tests/test-convert-bzr
-copyrev: 3d20d8c8f9316257a5a505a116ef31ccc83fdac4
-
+  $ "$TESTDIR/hghave" symlink || exit 80
 
   $ . "$TESTDIR/bzr-definitions"
 

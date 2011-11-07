@@ -1,7 +1,5 @@
-
-copy: tests/test-merge-types
-copyrev: 79b11a6f7640646785c069d7a514081ff0e2d435
-
+  $ "$TESTDIR/hghave" symlink || exit 80
+
   $ hg init
 
   $ echo a > a
