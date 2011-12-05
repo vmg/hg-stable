@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-splicemap
-copyrev: 21422dbdf7d946919a933e7b3a0ca8f440f89fa0
-
 
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "convert=" >> $HGRCPATH
@@ -53,7 +49,7 @@ test invalid splicemap
 splice repo2 on repo1
 
   $ cat > splicemap <<EOF
-  > $CHILDID1 $PARENTID1
+  > $CHILDID1 $PARENTID1 
   > $CHILDID2 $PARENTID2,$CHILDID1
   > EOF
   $ hg clone repo1 target1
