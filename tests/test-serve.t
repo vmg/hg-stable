@@ -1,7 +1,4 @@
-
-copy: tests/test-serve
-copyrev: 103c015d3187f41890ba8f664cb429dcb0439023
-
+  $ "$TESTDIR/hghave" serve || exit 80
 
   $ hgserve()
   > {

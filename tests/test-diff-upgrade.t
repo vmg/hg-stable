@@ -1,7 +1,4 @@
-
-copy: tests/test-diff-upgrade
-copyrev: d90d41f6c652cbf88fd45db35a3e07794d7da50b
-
+  $ "$TESTDIR/hghave" execbit || exit 80
 
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "autodiff=$TESTDIR/autodiff.py" >> $HGRCPATH

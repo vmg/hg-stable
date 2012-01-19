@@ -1,7 +1,5 @@
-
-copy: tests/test-interhg
-copyrev: aea02398760307ed97bb4f7b13b2a01717b87cc3
-
+  $ "$TESTDIR/hghave" serve || exit 80
+
   $ hg init test
   $ cd test
 
