@@ -1,10 +1,6 @@
-
-copy: tests/test-diff-binary-file
-copyrev: d410f0f0922240350359f6b2e5d3aad1900b4ff7
-
   $ hg init a
   $ cd a
-  $ cp $TESTDIR/binfile.bin .
+  $ cp "$TESTDIR/binfile.bin" .
   $ hg add binfile.bin
   $ hg ci -m 'add binfile.bin'
 
