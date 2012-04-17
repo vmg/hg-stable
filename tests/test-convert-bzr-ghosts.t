@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-bzr-ghosts
-copyrev: 54c69d71f6993df1e0e9cdf7103e046f4c0ee05e
-
 
   $ . "$TESTDIR/bzr-definitions"
   $ cat > ghostcreator.py <<EOF
@@ -34,7 +30,7 @@ ghost revisions
   1 Initial layout setup
   0 Commit with ghost revision
   $ glog -R source-hg
-  o  1 "Commit with ghost revision" files: somefile
+  o  1@source "Commit with ghost revision" files: somefile
   |
-  o  0 "Initial layout setup" files: somefile
+  o  0@source "Initial layout setup" files: somefile
   
