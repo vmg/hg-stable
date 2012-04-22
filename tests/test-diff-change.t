@@ -1,7 +1,3 @@
-
-copy: tests/test-diff-change
-copyrev: fae32ba94e01b0d4e69e0c2a926e1b03b895d717
-
 Testing diff --change
 
   $ hg init a
@@ -37,8 +33,8 @@ Testing diff --change
 Testing diff --change when merge:
 
   $ for i in 1 2 3 4 5 6 7 8 9 10; do
-  $    echo $i >> file.txt
-  $ done
+  >    echo $i >> file.txt
+  > done
   $ hg commit -m "lots of text" # 3
 
   $ sed -e 's,^2$,x,' file.txt > file.txt.tmp
