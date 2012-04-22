@@ -1,3 +1,7 @@
+
+copy: tests/test-filelog
+copyrev: 43a0f7de5a664516f49e4c638537e932ac6f6fa1
+
 #!/usr/bin/env python
 """
 Tests the behaviour of filelog w.r.t. data starting with '\1\n'
