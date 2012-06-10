@@ -1,7 +1,3 @@
-
-copy: tests/test-purge
-copyrev: b558b43dae7e2a3b5e44c36d44edd0dd346fd716
-
   $ cat <<EOF >> $HGRCPATH
   > [extensions]
   > purge =
@@ -218,3 +214,5 @@ skip patterns
   $ touch directory/.svn/foo
   $ hg purge -p -X .svn -X '*/.svn'
   $ hg purge -p -X re:.*.svn
+
+  $ cd ..

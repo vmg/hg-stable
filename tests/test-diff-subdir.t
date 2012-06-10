@@ -1,7 +1,3 @@
-
-copy: tests/test-diff-subdir
-copyrev: 021e56204b3a904582e91758191ac2b1c6f7e361
-
   $ hg init
 
   $ mkdir alpha
@@ -48,3 +44,4 @@ inside beta
   @@ -0,0 +1,1 @@
   +2
 
+  $ cd ..
