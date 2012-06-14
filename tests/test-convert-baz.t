@@ -1,8 +1,4 @@
-
-copy: tests/test-convert-baz
-copyrev: dd9990f88fd1d15af5dc779abf79f5a592125bfc
-
-  $ "$TESTDIR/hghave" baz || exit 80
+  $ "$TESTDIR/hghave" baz symlink || exit 80
 
   $ baz my-id "mercurial <mercurial@selenic.com>"
 
