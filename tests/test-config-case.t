@@ -1,7 +1,6 @@
-
-copy: tests/test-config-case
-copyrev: 33d4f7f1af18f73cf7ce75e6a5815383d27daaec
-
+hide outer repo
+  $ hg init
+
   $ echo '[Section]' >> $HGRCPATH
   $ echo 'KeY = Case Sensitive' >> $HGRCPATH
   $ echo 'key = lower case' >> $HGRCPATH
