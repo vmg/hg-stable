@@ -1,14 +1,10 @@
-
-copy: tests/test-histedit-outgoing
-copyrev: fd6e09fe3cc1d333f39ffa699896cab0f06895e6
-
   $ cat >> $HGRCPATH <<EOF
   > [extensions]
   > graphlog=
   > histedit=
   > EOF
 
-  $ EDITED=`pwd`/editedhistory
+  $ EDITED="$TESTTMP/editedhistory"
   $ cat > $EDITED <<EOF
   > pick 177f92b77385 c
   > pick e860deea161a e
