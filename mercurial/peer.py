@@ -1,4 +1,8 @@
-# repo.py - repository base classes for mercurial
+
+copy: mercurial/repo.py
+copyrev: 65c304b2477e274e598defbb5312f88f34c29a87
+
+# peer.py - repository base classes for mercurial
 #
 # Copyright 2005, 2006 Matt Mackall <mpm@selenic.com>
 # Copyright 2006 Vadim Gelfer <vadim.gelfer@gmail.com>
@@ -9,16 +13,18 @@
 from i18n import _
 import error
 
-class repository(object):
+class peerrepository(object):
+
     def capable(self, name):
         '''tell whether repo supports named capability.
         return False if not supported.
         if boolean capability, return True.
         if string capability, return string.'''
-        if name in self.capabilities:
+        caps = self._capabilities()
+        if name in caps:
             return True
         name_eq = name + '='
-        for cap in self.capabilities:
+        for cap in caps:
             if cap.startswith(name_eq):
                 return cap[len(name_eq):]
         return False
@@ -31,13 +37,17 @@ class repository(object):
                   'support the %r capability') % (purpose, name))
 
     def local(self):
-        return False
+        '''return peer as a localrepo, or None'''
+        return None
+
+    def peer(self):
+        return self
 
     def peer(self):
         return self
 
     def cancopy(self):
-        return self.local()
+        return False
 
     def close(self):
         pass

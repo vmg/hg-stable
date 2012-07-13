@@ -1,4 +1,8 @@
-# sshrepo.py - ssh repository proxy class for mercurial
+
+copy: mercurial/sshrepo.py
+copyrev: cc5f91bece982eb2c88dd0c573114ebd14ec214d
+
+# sshpeer.py - ssh repository proxy class for mercurial
 #
 # Copyright 2005, 2006 Matt Mackall <mpm@selenic.com>
 #
@@ -25,7 +29,7 @@ def _serverquote(s):
         return s
     return "'%s'" % s.replace("'", "'\\''")
 
-class sshrepository(wireproto.wirerepository):
+class sshpeer(wireproto.wirepeer):
     def __init__(self, ui, path, create=False):
         self._url = path
         self.ui = ui
@@ -90,11 +94,14 @@ class sshrepository(wireproto.wirerepository):
             self._abort(error.RepoError(_('no suitable response from '
                                           'remote hg')))
 
-        self.capabilities = set()
+        self._caps = set()
         for l in reversed(lines):
             if l.startswith("capabilities:"):
-                self.capabilities.update(l[:-1].split(":")[1].split())
+                self._caps.update(l[:-1].split(":")[1].split())
                 break
+
+    def _capabilities(self):
+        return self._caps
 
     def readerr(self):
         while True:
@@ -233,4 +240,4 @@ class sshrepository(wireproto.wirerepository):
         except ValueError:
             self._abort(error.ResponseError(_("unexpected response:"), r))
 
-instance = sshrepository
+instance = sshpeer
