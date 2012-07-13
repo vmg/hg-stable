@@ -1,7 +1,3 @@
-
-copy: mercurial/repo.py
-copyrev: 65c304b2477e274e598defbb5312f88f34c29a87
-
 # peer.py - repository base classes for mercurial
 #
 # Copyright 2005, 2006 Matt Mackall <mpm@selenic.com>
@@ -48,6 +44,9 @@ class peerrepository(object):
 
     def cancopy(self):
         return False
+
+    def canpush(self):
+        return True
 
     def close(self):
         pass
