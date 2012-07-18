@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qgoto
-copyrev: 0b3efe62486927b5166dcb106ebc1eb0642cc592
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
 
@@ -79,3 +75,4 @@ Detect ambiguous non-index:
   abort: patch 14 not in series
   [255]
 
+  $ cd ..

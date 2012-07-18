@@ -1,7 +1,3 @@
-
-copy: tests/test-debugindexdot
-copyrev: e3c30db7e487734bc1adf81c0b28908b2db56a4f
-
 Just exercize debugindexdot
 Create a short file history including a merge.
   $ hg init t
@@ -25,3 +21,5 @@ Create a short file history including a merge.
   	2 -> 3
   	1 -> 3
   }
+
+  $ cd ..

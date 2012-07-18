@@ -1,7 +1,3 @@
-
-copy: tests/test-empty-file
-copyrev: 78b2166835e658735027b54af1c4df715b14cd8e
-
   $ hg init a
   $ cd a
   $ touch empty1
@@ -48,3 +44,4 @@ empty file that came from rev 1:
   b80de5d138758541c5f05265ad144ab9fa86d1db 644   empty2
   b80de5d138758541c5f05265ad144ab9fa86d1db 644   empty3
 
+  $ cd ..

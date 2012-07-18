@@ -1,7 +1,3 @@
-
-copy: tests/test-inotify
-copyrev: 0c33dbc4ea33c5bf617a3c95daf96c9df0bbc92f
-
 
   $ "$TESTDIR/hghave" inotify || exit 80
   $ hg init repo1
@@ -162,3 +158,5 @@ build/x & build/y shouldn't appear in "hg st"
 
   $ hg st
   $ kill `cat hg.pid`
+
+  $ cd ..

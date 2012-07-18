@@ -1,7 +1,3 @@
-
-copy: tests/test-merge8
-copyrev: 8de86877e166ef15c3d059f802ebd658abf41204
-
 Test for changeset ba7c74081861
 (update dirstate correctly for non-branchmerge updates)
   $ hg init a
@@ -29,3 +25,5 @@ Test for changeset ba7c74081861
   (run 'hg update' to get a working copy)
   $ hg update
   1 files updated, 0 files merged, 1 files removed, 0 files unresolved
+
+  $ cd ..

@@ -1,7 +1,3 @@
-
-copy: tests/test-manifest-merging
-copyrev: 1ca7226f681e7a54574b2ccfd0767e0e18fd9b5a
-
   $ hg init base
 
   $ cd base
@@ -38,3 +34,4 @@ Update --clean to revision 1 to simulate a failed merge:
   $ hg update --clean 1
   2 files updated, 0 files merged, 0 files removed, 0 files unresolved
 
+  $ cd ..
