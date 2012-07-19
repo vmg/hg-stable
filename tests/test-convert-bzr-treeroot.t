@@ -1,7 +1,3 @@
-
-copy: tests/test-convert-bzr-treeroot
-copyrev: bca4d558761ba77b82e71a6f4f790b20d80ee7e3
-
 
   $ . "$TESTDIR/bzr-definitions"
   $ cat > treeset.py <<EOF
@@ -35,3 +31,5 @@ change the id of the tree root
   $ manifest source-hg tip
   % manifest of tip
   644   file
+
+  $ cd ..

@@ -1,7 +1,3 @@
-
-copy: tests/test-hgk
-copyrev: 3ac50f2c53661009f152bd9d5d2fdc0d0580c9e9
-
 Minimal hgk check
 
   $ echo "[extensions]" >> $HGRCPATH
@@ -20,3 +16,5 @@ Minimal hgk check
   branch default
   
   adda
+
+  $ cd ..

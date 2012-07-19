@@ -1,7 +1,3 @@
-
-copy: tests/test-children
-copyrev: e2c72773b8b407ce3e0652128e53446d129a4434
-
 test children command
 
   $ cat <<EOF >> $HGRCPATH
@@ -125,3 +121,5 @@ hg children file0 at revision 0 (should be 2)
   date:        Thu Jan 01 00:00:02 1970 +0000
   summary:     2
   
+
+  $ cd ..

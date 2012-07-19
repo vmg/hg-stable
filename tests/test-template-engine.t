@@ -1,7 +1,3 @@
-
-copy: tests/test-template-engine
-copyrev: 39b6f7e2f6b6f3b9da8025380443115c30844d44
-
 
   $ cat > engine.py << EOF
   > 
@@ -39,3 +35,5 @@ copyrev: 39b6f7e2f6b6f3b9da8025380443115c30844d44
   adding mymap
   $ hg log --style=./mymap
   0 97e5f848f0936960273bbf75be6388cd0350a32b test
+
+  $ cd ..

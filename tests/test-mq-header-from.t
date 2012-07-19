@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-header-from
-copyrev: 008e0efef32dfc4011f7de1ff4bea3a63a326ccb
-
 
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
@@ -971,3 +967,5 @@ copyrev: 008e0efef32dfc4011f7de1ff4bea3a63a326ccb
   2: Three (again) - maria
   1: imported patch 2.patch - jane
   0: imported patch 1.patch - mary
+
+  $ cd ..
