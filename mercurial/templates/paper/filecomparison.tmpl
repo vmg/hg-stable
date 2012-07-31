@@ -1,7 +1,3 @@
-
-copy: mercurial/templates/paper/filediff.tmpl
-copyrev: b9d4a6aeb1d930857ad36bb2a4798af4385b0887
-
 {header}
 <title>{repo|escape}: {file|escape} comparison</title>
 </head>
@@ -80,7 +76,15 @@ files, or words in the commit message</div>
   <span class="legendinfo replace">replaced</span>
 </div>
 
-{comparison}
+<table class="bigtable">
+  <thead class="header">
+    <tr>
+      <th>{leftrev}:{leftnode|short}</th>
+      <th>{rightrev}:{rightnode|short}</th>
+    </tr>
+  </thead>
+  {comparison}
+</table>
 
 </div>
 </div>
