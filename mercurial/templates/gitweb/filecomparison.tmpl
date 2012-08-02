@@ -1,7 +1,3 @@
-
-copy: mercurial/templates/gitweb/filediff.tmpl
-copyrev: 29bb9f75329d10371c0dd23ca45328eb52337554
-
 {header}
 <title>{repo|escape}: comparison {file|escape}</title>
 <link rel="alternate" type="application/atom+xml"
@@ -59,7 +55,15 @@ comparison |
 </div>
 
 <div class="comparison">
-{comparison}
+  <table style="border-collapse:collapse;">
+    <thead class="header">
+      <tr>
+        <th>{leftrev}:{leftnode|short}</th>
+        <th>{rightrev}:{rightnode|short}</th>
+      </tr>
+    </thead>
+    {comparison}
+  </table>
 </div>
 
 </div>
