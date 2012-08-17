@@ -1,8 +1,4 @@
-
-copy: tests/test-mq-qrefresh-replace-log-message
-copyrev: f5da0eabf357e7bce63e6a3c6d7f6e47c74c61cf
-
-Environement setup for MQ
+Environment setup for MQ
 
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
