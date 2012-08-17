@@ -1,7 +1,3 @@
-
-copy: tests/test-filelog
-copyrev: 43a0f7de5a664516f49e4c638537e932ac6f6fa1
-
 #!/usr/bin/env python
 """
 Tests the behaviour of filelog w.r.t. data starting with '\1\n'
@@ -16,7 +12,7 @@ fl = repo.file('foobar')
 
 def addrev(text, renamed=False):
     if renamed:
-        # data doesnt matter. Just make sure filelog.renamed() returns True
+        # data doesn't matter. Just make sure filelog.renamed() returns True
         meta = dict(copyrev=hex(nullid), copy='bar')
     else:
         meta = {}
