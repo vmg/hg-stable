@@ -1,0 +1,6 @@
+
+copy: tests/test-wireprotocol.py.out
+copyrev: 498fe67496054227444076a112e4da5c125ccfd9
+
+Hello, Foobar
+['Hello, Fo, =;o', 'Hello, Bar']
