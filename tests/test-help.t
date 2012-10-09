@@ -392,6 +392,9 @@ Test command without options
       manifest, and tracked files, as well as the integrity of their crosslinks
       and indices.
   
+      Please see http://mercurial.selenic.com/wiki/RepositoryCorruption for more
+      information about recovery from corruption of the repository.
+  
       Returns 0 on success, 1 if errors are encountered.
   
   use "hg -v help verify" to show more info
@@ -802,3 +805,7 @@ Test keyword search help
   
    qclone clone main and patch repository at same time
 
+Test usage of section marks in help documents
+
+  $ cd "$TESTDIR"/../doc
+  $ python check-seclevel.py

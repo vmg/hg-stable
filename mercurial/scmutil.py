@@ -167,7 +167,7 @@ class pathauditor(object):
         # want to add "foo/bar/baz" before checking if there's a "foo/.hg"
         self.auditeddir.update(prefixes)
 
-class abstractopener(object):
+class abstractvfs(object):
     """Abstract base class; cannot be instantiated"""
 
     def __init__(self, *args, **kwargs):
@@ -204,9 +204,6 @@ class abstractopener(object):
         finally:
             fp.close()
 
-    def mkdir(self, path=None):
-        return os.mkdir(self.join(path))
-
     def exists(self, path=None):
         return os.path.exists(self.join(path))
 
@@ -219,8 +216,14 @@ class abstractopener(object):
     def makedirs(self, path=None, mode=None):
         return util.makedirs(self.join(path), mode)
 
-class opener(abstractopener):
-    '''Open files relative to a base directory
+    def mkdir(self, path=None):
+        return os.mkdir(self.join(path))
+
+    def stat(self, path=None):
+        return os.stat(self.join(path))
+
+class vfs(abstractvfs):
+    '''Operate files relative to a base directory
 
     This class is used to hide the details of COW semantics and
     remote file access from higher level code.
@@ -229,13 +232,21 @@ class opener(abstractopener):
         if expand:
             base = os.path.realpath(util.expandpath(base))
         self.base = base
-        self._audit = audit
-        if audit:
-            self.auditor = pathauditor(base)
-        else:
-            self.auditor = util.always
+        self._setmustaudit(audit)
         self.createmode = None
         self._trustnlink = None
+
+    def _getmustaudit(self):
+        return self._audit
+
+    def _setmustaudit(self, onoff):
+        self._audit = onoff
+        if onoff:
+            self.auditor = pathauditor(self.base)
+        else:
+            self.auditor = util.always
+
+    mustaudit = property(_getmustaudit, _setmustaudit)
 
     @util.propertycache
     def _cansymlink(self):
@@ -258,7 +269,7 @@ class opener(abstractopener):
             mode += "b" # for that other OS
 
         nlink = -1
-        dirname, basename = os.path.split(f)
+        dirname, basename = util.split(f)
         # If basename is empty, then the path is malformed because it points
         # to a directory. Let the posixfile() call below raise IOError.
         if basename and mode not in ('r', 'rb'):
@@ -327,8 +338,10 @@ class opener(abstractopener):
         else:
             return self.base
 
-class filteropener(abstractopener):
-    '''Wrapper opener for filtering filenames with a function.'''
+opener = vfs
+
+class filtervfs(abstractvfs):
+    '''Wrapper vfs for filtering filenames with a function.'''
 
     def __init__(self, opener, filter):
         self._filter = filter
@@ -336,6 +349,14 @@ class filteropener(abstractopener):
 
     def __call__(self, path, *args, **kwargs):
         return self._orig(self._filter(path), *args, **kwargs)
+
+    def join(self, path):
+        if path:
+            return self._orig.join(self._filter(path))
+        else:
+            return self._orig.join(path)
+
+filteropener = filtervfs
 
 def canonpath(root, cwd, myname, auditor=None):
     '''return the canonical path of myname, given cwd and root'''
@@ -375,7 +396,7 @@ def canonpath(root, cwd, myname, auditor=None):
                 name = os.path.join(*rel)
                 auditor(name)
                 return util.pconvert(name)
-            dirname, basename = os.path.split(name)
+            dirname, basename = util.split(name)
             rel.append(basename)
             if dirname == name:
                 break
@@ -619,7 +640,7 @@ def revrange(repo, revs):
 
         # fall through to new-style queries if old-style fails
         m = revset.match(repo.ui, spec)
-        dl = [r for r in m(repo, xrange(len(repo))) if r not in seen]
+        dl = [r for r in m(repo, list(repo)) if r not in seen]
         l.extend(dl)
         seen.update(dl)
 
