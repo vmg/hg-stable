@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-header-date
-copyrev: b6382c973a43630f3174acafaedda6898ef7117d
-
 
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
@@ -132,7 +128,7 @@ copyrev: b6382c973a43630f3174acafaedda6898ef7117d
   >     catlogd 6
   > 
   >     drop 6
-  >     
+  > 
   > 
   >     echo ==== qnew -u
   >     hg qnew -u jane 6.patch

@@ -1,7 +1,3 @@
-
-copy: tests/test-mq-qqueue
-copyrev: 4a2185165ad9fd503187ac8faa88cba2aa8dea91
-
   $ echo "[extensions]" >> $HGRCPATH
   $ echo "mq=" >> $HGRCPATH
 
@@ -26,7 +22,7 @@ Applied patches in default queue:
 Try to change patch (create succeeds, switch fails):
 
   $ hg qqueue foo --create
-  abort: patches applied - cannot set new queue active
+  abort: new queue created, but cannot make active as patches are applied
   [255]
 
   $ hg qqueue
@@ -141,7 +137,7 @@ Unapplied patches:
 Fail switching back:
 
   $ hg qqueue patches
-  abort: patches applied - cannot set new queue active
+  abort: new queue created, but cannot make active as patches are applied
   [255]
 
 Fail deleting current:
