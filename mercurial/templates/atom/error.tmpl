@@ -1,12 +1,8 @@
-
-copyrev: e8924c7dd209bf21587d3383d2038dcf396bf4b6
-copy: templates/atom/error.tmpl
-
 {header}
  <!-- Error -->
- <id>{urlbase}{url}</id>
- <link rel="self" href="{urlbase}{url}atom-log"/>
- <link rel="alternate" href="{urlbase}{url}"/>
+ <id>{urlbase}{url|urlescape}</id>
+ <link rel="self" href="{urlbase}{url|urlescape}atom-log"/>
+ <link rel="alternate" href="{urlbase}{url|urlescape}"/>
  <title>Error</title>
  <updated>1970-01-01T00:00:00+00:00</updated>
  <entry>

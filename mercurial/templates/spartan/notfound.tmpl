@@ -1,7 +1,3 @@
-
-copyrev: 786d91375cb5d2163b9a91d3e48e4f613f3f0e6e
-copy: templates/spartan/notfound.tmpl
-
 {header}
 <title>Mercurial repository not found</title>
 </head>
@@ -11,6 +7,6 @@ copy: templates/spartan/notfound.tmpl
 
 The specified repository "{repo|escape}" is unknown, sorry.
 
-Please go back to the <a href="{url}">main repository list page</a>.
+Please go back to the <a href="{url|urlescape}">main repository list page</a>.
 
 {footer}

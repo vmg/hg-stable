@@ -1,12 +1,8 @@
-
-copyrev: d4534016cce0b03fc0d54e98e2f35c0c083ac829
-copy: templates/atom/changelog.tmpl
-
 {header}
  <!-- Changelog -->
- <id>{urlbase}{url}</id>
- <link rel="self" href="{urlbase}{url}atom-log"/>
- <link rel="alternate" href="{urlbase}{url}"/>
+ <id>{urlbase}{url|urlescape}</id>
+ <link rel="self" href="{urlbase}{url|urlescape}atom-log"/>
+ <link rel="alternate" href="{urlbase}{url|urlescape}"/>
  <title>{repo|escape} Changelog</title>
  {latestentry%feedupdated}
 
