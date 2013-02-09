@@ -1,3 +1,7 @@
+
+copy: tests/test-interhg.t
+copyrev: 8c71ffd7d851c208e6559b1175d17f5fa353185d
+
   $ "$TESTDIR/hghave" serve || exit 80
 
   $ hg init test
@@ -5,11 +9,15 @@
 
   $ cat > .hg/hgrc <<EOF
   > [extensions]
+  > # this is only necessary to check that the mapping from
+  > # interhg to websub works
   > interhg =
   > 
-  > [interhg]
+  > [websub]
   > issues = s|Issue(\d+)|<a href="http://bts.example.org/issue\1">Issue\1</a>|
   > 
+  > [interhg]
+  > # check that we maintain some interhg backwards compatibility...
   > # yes, 'x' is a weird delimiter...
   > markbugs = sxbugx<i class="\x">bug</i>x
   > EOF
@@ -23,9 +31,8 @@
 
 log
 
-  $ "$TESTDIR/get-with-headers.py" localhost:$HGPORT '' | grep bts
-    <td class="description"><a href="/rev/1b0e7ece6bd6"><a href="http://bts.example.org/issue123">Issue123</a>: fixed the <i class="x">bug</i>!</a><span class="branchhead">default</span> <span class="tag">tip</span> </td>
-
+  $ "$TESTDIR/get-with-headers.py" localhost:$HGPORT "rev/tip" | grep bts
+  <div class="description"><a href="http://bts.example.org/issue123">Issue123</a>: fixed the <i class="x">bug</i>!</div>
 errors
 
   $ cat errors.log
