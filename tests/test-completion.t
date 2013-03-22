@@ -1,3 +1,7 @@
+
+copy: tests/test-debugcomplete.t
+copyrev: 090c919dce33a25befa696b076d69bc6e4965bd8
+
 Show all commands except debug commands
   $ hg debugcomplete
   add
