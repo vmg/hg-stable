@@ -1,7 +1,3 @@
-
-copy: tests/test-debugcomplete.t
-copyrev: 090c919dce33a25befa696b076d69bc6e4965bd8
-
 Show all commands except debug commands
   $ hg debugcomplete
   add
@@ -286,3 +282,37 @@ Show all commands + options
   unbundle: update
   verify: 
   version: 
+
+  $ hg init a
+  $ cd a
+  $ echo fee > fee
+  $ hg ci -q -Amfee
+  $ mkdir fie
+  $ echo dead > fie/dead
+  $ echo live > fie/live
+  $ hg bookmark fo
+  $ hg branch fie
+  $ hg ci -q -Amfie
+  $ echo fo > fo
+  $ hg branch default
+  $ hg ci -q -Amfo
+  $ echo Fum > Fum
+  $ hg ci -q -AmFum
+  $ hg bookmark Fum
+
+Test debugpathcomplete
+
+  $ hg debugpathcomplete f
+  $ hg debugpathcomplete -f f
+
+  $ hg rm Fum
+  $ hg debugpathcomplete -r F
+
+If one directory and no files match, give an ambiguous answer
+
+  $ hg debugpathcomplete fi
+
+Test debuglabelcomplete
+
+  $ hg debuglabelcomplete
+  $ hg debuglabelcomplete f
