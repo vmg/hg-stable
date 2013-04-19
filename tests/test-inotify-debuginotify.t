@@ -1,7 +1,3 @@
-
-copy: tests/test-inotify-debuginotify
-copyrev: fb50308dbe3ff6ce1f162c4fd4204bed3d6eefed
-
 
   $ "$TESTDIR/hghave" inotify || exit 80
   $ hg init
@@ -42,4 +38,4 @@ empty again
   directories being watched:
     /
     .hg/
-  $ kill `cat hg.pid`
+  $ "$TESTDIR/killdaemons.py" hg.pid

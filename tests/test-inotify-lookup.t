@@ -1,7 +1,3 @@
-
-copy: tests/test-inotify-lookup
-copyrev: d38f3b16a1015df65947d1b4f9d6b9da543b181a
-
 
   $ "$TESTDIR/hghave" inotify || exit 80
   $ hg init
@@ -15,4 +11,4 @@ copyrev: d38f3b16a1015df65947d1b4f9d6b9da543b181a
   $ hg st
   $ cat a
   a
-  $ kill `cat .hg/inotify.pid`
+  $ "$TESTDIR/killdaemons.py" .hg/inotify.pid
