@@ -1,0 +1,10 @@
+
+copyrev: bfa5f24bf386427b0ed81d3378487016114b22a0
+copy: templates/rss/tags.tmpl
+
+{header}
+    <title>{repo|escape}: tags </title>
+    <description>{repo|escape} tag history</description>
+    {entriesnotip%tagentry}
+  </channel>
+</rss>
