@@ -1,10 +1,6 @@
-
-copyrev: 2ff2704dbf91762e08d24675f8f50b213b2fe532
-copy: templates/atom/filelog.tmpl
-
 {header}
- <id>{urlbase}{url}atom-log/tip/{file|escape}</id>
- <link rel="self" href="{urlbase}{url}atom-log/tip/{file|urlescape}"/>
+ <id>{urlbase}{url|urlescape}atom-log/tip/{file|escape}</id>
+ <link rel="self" href="{urlbase}{url|urlescape}atom-log/tip/{file|urlescape}"/>
  <title>{repo|escape}: {file|escape} history</title>
  {latestentry%feedupdated}
 

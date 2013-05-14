@@ -1,10 +1,6 @@
-
-copyrev: b44d809f0f69a9c9a648b4ed5217db5779511c27
-copy: templates/rss/tagentry.tmpl
-
 <item>
     <title>{tag|escape}</title>
-    <link>{urlbase}{url}rev/{node|short}</link>
+    <link>{urlbase}{url|urlescape}rev/{node|short}</link>
     <description><![CDATA[{tag|strip|escape|addbreaks}]]></description>
     <pubDate>{date|rfc822date}</pubDate>
 </item>
