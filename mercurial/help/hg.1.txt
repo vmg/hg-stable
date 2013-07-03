@@ -1,3 +1,7 @@
+
+copy: doc/hg.1.txt
+copyrev: 728937a661cdab268efa0b48df005bfcf1addc9e
+
 ====
  hg
 ====

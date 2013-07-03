@@ -1,3 +1,7 @@
+
+copy: doc/common.txt
+copyrev: 4bb77354836077b5c3c021b072d5050256b95188
+
 .. Common link and substitution definitions.
 
 .. |hg(1)| replace:: **hg**\ (1)
