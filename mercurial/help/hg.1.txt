@@ -1,7 +1,3 @@
-
-copy: doc/hg.1.txt
-copyrev: 728937a661cdab268efa0b48df005bfcf1addc9e
-
 ====
  hg
 ====
@@ -116,7 +112,7 @@ Mailing list: http://selenic.com/mailman/listinfo/mercurial
 
 Copying
 """""""
-Copyright (C) 2005-2012 Matt Mackall.
+Copyright (C) 2005-2013 Matt Mackall.
 Free use of this software is granted under the terms of the GNU General
 Public License version 2 or any later version.
 
